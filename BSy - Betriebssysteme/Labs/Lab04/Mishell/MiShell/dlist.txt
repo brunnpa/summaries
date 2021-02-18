@@ -1,0 +1,12 @@
+insgesamt 88
+drwxr-xr-x 2 pascalbrunner pascalbrunner  4096 Apr 18 11:03 .
+drwxr-xr-x 6 pascalbrunner pascalbrunner  4096 Mai 15  2019 ..
+-rw-r--r-- 1 pascalbrunner pascalbrunner     0 Apr 18 11:03 dlist.txt
+-rw-r--r-- 1 pascalbrunner pascalbrunner  1437 Apr 12 18:55 getLine.c
+-rw-r--r-- 1 pascalbrunner pascalbrunner   450 Sep  5  2019 getLine.h
+-rw-r--r-- 1 pascalbrunner pascalbrunner  6592 Apr 12 18:55 getLine.o
+-rw-r--r-- 1 pascalbrunner pascalbrunner   423 Sep  5  2019 makefile
+-rwxr-xr-x 1 pascalbrunner pascalbrunner 18680 Apr 18 11:03 MiShell.e
+-rw-r--r-- 1 pascalbrunner pascalbrunner  7165 Apr 18 11:03 siShell.c
+-rwxr-xr-x 1 pascalbrunner pascalbrunner 17680 Apr 12 19:20 SiShell.e
+-rw-r--r-- 1 pascalbrunner pascalbrunner 12192 Apr 18 11:03 siShell.o

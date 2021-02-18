@@ -1,0 +1,46 @@
+5d4
+< 2 		Child
+7d5
+< 3 		Child
+8a7,8
+> 2 		Child
+> 3 		Child
+11d10
+< 5 		Child
+12a12
+> 5 		Child
+18,19d17
+< 8 		Child
+< 9 		Child
+21c19
+< 10 		Child
+---
+> 8 		Child
+22a21
+> 9 		Child
+24c23
+< 11 		Child
+---
+> 10 		Child
+26c25
+< 12 		Child
+---
+> 11 		Child
+27a27
+> 12 		Child
+31d30
+< 15 		Child
+33d31
+< 16 		Child
+34a33
+> 15 		Child
+36c35
+< 17 		Child
+---
+> 16 		Child
+38c37
+< 18 		Child
+---
+> 17 		Child
+39a39
+> 18 		Child

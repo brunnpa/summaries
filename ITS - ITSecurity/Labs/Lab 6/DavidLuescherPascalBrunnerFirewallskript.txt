@@ -1,0 +1,108 @@
+#!/usr/sbin/nft -f
+
+define iifc = eth1               # Interface name to internal network
+define i4nw = 10.0.21.0/24       # Internal IPv4 network
+define i4ad = 10.0.21.1          # Internal IPv4 address
+define i6nw = 2001:db8:2:15::/64  # Internal IPv6 network
+define i6ad = 2001:db8:2:15::1    # Internal IPv6 address
+
+define eifc = eth0               # Interface name to external network
+define e4nw = 192.168.21.0/25    # External IPv4 network
+define e4ad = 192.168.21.1       # External IPv4 address
+define e6nw = 2001:db8:3:15::/64  # External IPv6 network
+define e6ad = 2001:db8:3:15::1    # External IPv6 address
+
+define difc = eth2               # Interface name to DMZ network
+define d4nw = 192.168.21.128/25  # DMZ IPv4 network
+define d4ad = 192.168.21.129     # DMZ IPv4 address
+define d6nw = 2001:db8:1:15::/64  # DMZ IPv6 network
+define d6ad = 2001:db8:1:15::1    # DMZ IPv6 address
+
+define ssh = 22 #SSH-Port
+define ftp = 21 #ftp-Port
+
+flush ruleset
+
+# Abgabe David Luescher, Pascal Brunner
+table inet myfilter {
+  chain myinput {
+    type filter hook input priority 0; policy drop;
+    #meta nftrace set 1
+    icmpv6 type { nd-neighbor-advert, nd-neighbor-solicit, nd-router-solicit} accept
+    #ping intnenl nach firewall
+    iifname $iifc ip saddr $i4nw icmp type echo-request accept
+    iifname $iifc ip6 saddr $i6nw icmpv6 type echo-request accept
+    #ping dmz nach firewall
+    iifname $difc ip saddr $d4nw icmp type echo-request accept
+    iifname $difc ip6 saddr $d6nw icmpv6 type echo-request accept
+  }
+  chain myoutput {
+    type filter hook output priority 0; policy drop;
+    #meta nftrace set 1
+    icmpv6 type{ nd-neighbor-advert, nd-neighbor-solicit, nd-router-advert } accept
+    oifname $iifc ip daddr $i4nw icmp type echo-reply accept
+    oifname $iifc ip6 daddr $i6nw icmpv6 type echo-reply accept
+    oifname $difc ip daddr $d4nw icmp type echo-reply accept
+oifname $difc ip6 daddr $d6nw icmpv6 type echo-reply accept
+}
+  chain myforward {
+    ct state established, related accept
+    type filter hook forward priority 0; policy drop;
+    iifname $iifc ip saddr $i4nw udp dport 33434-33523 accept
+    iifname $iifc ip6 saddr $i6nw udp dport 33434-33523 accept
+
+    # Internal to DMZ
+    iifname $iifc ip saddr $i4nw oifname $difc ip daddr $d4nw ct state new goto int-to-dmz
+    iifname $iifc ip6 saddr $i6nw oifname $difc ip6 daddr $d6nw ct state new goto int-to-dmz
+
+    # Internal to External
+    iifname $iifc ip saddr $i4nw oifname $eifc ip daddr $e4nw ct state new gotoint-to-ext
+    iifname $iifc ip6 saddr $i6nw oifname $eifc ip6 daddr $e6nw ct state new goto int-to-ext
+
+    # DMZ to External
+    iifname $difc ip saddr $d4nw oifname $eifc ip daddr $e4nw ct state new goto dmz-to-ext
+    iifname $difc ip6 saddr $d6nw oifname $eifc ip6 daddr $e6nw ct state new goto dmz-to-ext
+    
+    # External to DMZ
+    iifname $eifc ip saddr $e4nw oifname $difc ip daddr $d4nw ct state new goto ext-to-dmz
+    iifname $eifc ip6 saddr $e6nw oifname $difc ip6 daddr $d6nw ct state new goto ext-to-dmz
+}
+
+ chain int-to-dmz{
+    # Allow ping
+    icmp type echo-request accept
+    icmpv6 type echo-request accept
+
+    # Allow ssh
+    tcp dport ssh accept
+ }
+
+chain int-to-ext{
+    # Allow ping
+    icmp type echo-request accept
+    icmpv6 type echo-request accept
+
+    # Allow any tcp
+    tcp dport { http, https, ssh, ftp } accept
+
+ }
+
+ chain dmz-to-ext{
+    # Allow ping
+    icmp type echo-request accept
+    icmpv6 type echo-request accept
+ }
+
+ chain ext-to-dmz{
+    # Allow ssh and ftp
+    tcp dport { ssh, ftp } accept
+ }
+}
+
+table ip mynat{
+  chain mysnat {
+    type nat hook postrouting priority 100; policy accept;
+    oifname $iifc ip saddr $i4nw masquerade
+    oifname $eifc ip daddr $e4nw masquerade
+  }
+}

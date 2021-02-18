@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Spielfeld
+comment0.text=\r\n\ Enthaelt\ Angaben\ zum\ Spielfeld\r\n
+comment1.params=breite\ hoehe
+comment1.target=Spielfeld(int,\ int)
+comment1.text=\r\n\ Konstruiert\ ein\ Spielfeld\ mit\ der\ gegebenen\ Breite\r\n\ und\ Hoehe.\r\n\ \ \r\n\ @param\ breite\ Breite\ des\ Spielfelds\r\n\ @param\ hoehe\ Hoehe\ des\ Spielfelds\r\n
+comment2.params=
+comment2.target=int\ gibHoehe()
+comment2.text=\r\n\ Gibt\ die\ Spielfeldhoehe\ zurueck\r\n\ \r\n\ @return\ die\ Hoehe\ des\ Spielfelds\r\n
+comment3.params=
+comment3.target=int\ gibBreite()
+comment3.text=\r\n\ Gibt\ die\ Spielfeldbreite\ zurueck\r\n\ \r\n\ @return\ die\ Breite\ des\ Spielfelds\r\n
+comment4.params=p
+comment4.target=boolean\ istPunktInSpielfeld(java.awt.Point)
+comment4.text=\r\n\ Testet,\ ob\ ein\ gegebener\ Standort\ innerhalb\ des\ Spielfelds\ ist.\r\n\ \r\n\ @param\ p\ zu\ pruefender\ Standort\r\n\ @return\ true,\ falls\ der\ Standort\ innerhalb\ des\ Spielfelds\ ist\r\n
+comment5.params=
+comment5.target=java.awt.Point\ erzeugeZufallspunktInnerhalb()
+comment5.text=\r\n\ Erzeugt\ ein\ Point-Objekt,\ welches\ einen\ zufaelligen\ \r\n\ Standort\ innerhalb\ des\ Spielfelds\ repraesentiert.\ \r\n\ \r\n\ @return\ zufaelliger\ Standort\ innerhalb\ des\ Spielfelds\r\n
+numComments=6

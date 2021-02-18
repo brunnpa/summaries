@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Buch
+comment0.text=\r\n\ Die\ Klasse\ Buch\ repraesentiert\ ein\ Buch\ und\ beinhaltet\ \r\n\ Buchtitel,\ ISBN-Nummer\ (ISBN-13,\ z.B.\ 978-3868949070)\ \r\n\ und\ den\ Lagerbestand.\ \r\n\ @author\ Marc\ Rennhard\r\n
+comment1.params=buchTitel\ buchISBN
+comment1.target=Buch(java.lang.String,\ java.lang.String)
+comment1.text=\r\n\ Erzeugt\ ein\ Buch\ mit\ den\ spezifizierten\ Werten\ fuer\ \r\n\ Titel\ und\ ISBN-Nummer\ und\ setzt\ den\ Bestand\ auf\ 0.\r\n\ @param\ buchTitel\ Der\ Buchtitel.\r\n
+comment2.params=
+comment2.target=int\ getBestand()
+comment2.text=\r\n\ Liefert\ den\ aktuellen\ Bestand.\r\n\ @return\ Der\ Bestand.\r\n
+comment3.params=veraenderung
+comment3.target=void\ veraendereBestand(int)
+comment3.text=\r\n\ Veraendert\ den\ Bestand\ um\ den\ angegebenen\ Wert.\r\n\ @param\ veraenderung\ Die\ Veraenderung\ des\ Bestands.\r\n
+comment4.params=
+comment4.target=void\ buchinformationenAusgeben()
+comment4.text=\r\n\ Gibt\ die\ Informationen\ eines\ Buches\ aus.\r\n
+numComments=5

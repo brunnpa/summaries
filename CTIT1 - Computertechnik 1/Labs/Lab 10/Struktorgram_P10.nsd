@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root xmlns:nsd="https://structorizer.fisch.lu" version="3.29-09" preRepeat="until " postFor="to" preReturn="return" postForIn="in" preWhile="while " output="OUTPUT" input="INPUT" preFor="for" preExit="exit" preLeave="leave" ignoreCase="true" preThrow="throw" preForIn="foreach" stepFor="by" author="pasca" created="2019-04-24" changedby="pasca" changed="2019-04-29" origin="Structorizer 3.29-09" text="&#34;Struktorgram P10&#34;" comment="" color="ffffff" type="includable" style="nice">
+	<children>
+		<while text="&#34;while (true)&#34;" comment="" color="ffffff" disabled="0">
+			<qWhile>
+				<alternative text="&#34;T0 is pressed&#34;" comment="&#34;&#34;" color="ffffff" disabled="0">
+					<qTrue>
+						<instruction text="&#34;green&#34;" comment="" color="80ff80" rotated="0" disabled="0"></instruction>
+						<instruction text="&#34;set LCD color to green&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+						<instruction text="&#34;read adc_value&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+						<instruction text="&#34;display adc_value on 7 segment&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+						<instruction text="&#34;right shift adc_value #3&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+						<repeat text="&#34;while (adc value &#62; 0)&#34;" comment="&#34;&#34;" color="ffffff" disabled="0">
+							<qRepeat>
+								<instruction text="&#34;turn on led [adc value]&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+								<instruction text="&#34;adc_value - 1&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+							</qRepeat>
+						</repeat>
+					</qTrue>
+					<qFalse>
+						<alternative text="&#34;difference(value - adc) &#62;= 0&#34;" comment="&#34;&#34;" color="ffffff" disabled="0">
+							<qTrue>
+								<instruction text="&#34;blue&#34;" comment="" color="0080ff" rotated="0" disabled="0"></instruction>
+								<instruction text="&#34;set LCD color to blue&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+								<case text="&#34;(diff)&#34;,&#34;&#60; 4&#34;,&#34;&#60; 16&#34;,&#34;default&#34;" comment="&#34;&#34;" color="ffffff" disabled="0">
+									<qCase>
+										<instruction text="&#34;display 2 Bit on LCD&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+									</qCase>
+									<qCase>
+										<instruction text="&#34;display 4 Bit on LCD&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+									</qCase>
+									<qCase>
+										<instruction text="&#34;display 8 Bit on LCD&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+									</qCase>
+								</case>
+							</qTrue>
+							<qFalse>
+								<instruction text="&#34;red&#34;" comment="" color="ff8080" rotated="0" disabled="0"></instruction>
+								<instruction text="&#34;set LCD color to red&#34;" comment="" color="ffffff" rotated="0" disabled="0"></instruction>
+								<instruction text="&#34;counter = 0&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+								<for text="&#34;for i &#60;- 0 to 7&#34;" comment="&#34;&#34;" counterVar="i" startValue="0" endValue="7" stepConst="1" style="COUNTER" color="ffffff" disabled="0">
+									<qFor>
+										<alternative text="&#34;(is diff even)&#34;" comment="&#34;&#34;" color="ffffff" disabled="0">
+											<qTrue>
+												<instruction text="&#34;counter++&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+											</qTrue>
+											<qFalse color="ffffff">
+											</qFalse>
+										</alternative>
+										<instruction text="&#34;right shift by one&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+									</qFor>
+								</for>
+								<instruction text="&#34;second line on LCD:&#34;,&#34;display counter&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+							</qFalse>
+						</alternative>
+						<instruction text="&#34;display adc_value on 7 segment&#34;" comment="&#34;&#34;" color="ffffff" rotated="0" disabled="0"></instruction>
+					</qFalse>
+				</alternative>
+			</qWhile>
+		</while>
+	</children>
+</root>

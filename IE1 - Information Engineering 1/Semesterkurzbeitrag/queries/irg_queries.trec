@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<TREC>
+  <DOC>
+    <recordId>245</recordId>
+    <text>transistor phase splitting circuits</text>
+  </DOC>
+  <DOC>
+    <recordId>891</recordId>
+    <text>the determination of the orbits of individual meteors by
+    radio methods</text>
+  </DOC>
+  <DOC>
+    <recordId>1217</recordId>
+    <text>articles on text formatting systems, including "what you
+    see is what you get" systems. examples: t/nroff, scribe,
+    bravo.</text>
+  </DOC>
+  <DOC>
+    <recordId>1741</recordId>
+    <text>i am interested in cognitive models of library use. what
+    studies or articles are there looking at the psychology of
+    library and information use, i.e. strategies of seeking,
+    information and the way its usefulness is perceived. use of
+    libraries, library materials, user behaviour, information
+    seeking behaviour or use, usefulness, psychology of library and
+    information use, library user, user satisfaction.</text>
+  </DOC>
+  <DOC>
+    <recordId>2405</recordId>
+    <text>memory management aspects of operating systems</text>
+  </DOC>
+  <DOC>
+    <recordId>3777</recordId>
+    <text>determination of the current systems in the upper
+    atmosphere during magnetic storms</text>
+  </DOC>
+  <DOC>
+    <recordId>4233</recordId>
+    <text>articles about the sensitivity of the eigenvalue
+    decomposition of real matrices, in particular, zero-one
+    matrices. i'm especially interested in the separation of
+    eigenspaces corresponding to distinct eigenvalues. articles on
+    the subject: c. davis and w.m. kahn, "the rotation of
+    eigenvectors by a permutation:, siam j. numerical analysis,
+    vol. 7, no. 1 (1970); g.w. stewart, "error bounds for
+    approximate invariant subspaces of closed linear operators",
+    siam j. numerical analysis., vol. 8, no. 4 (1971).</text>
+  </DOC>
+  <DOC>
+    <recordId>4767</recordId>
+    <text>number representation in binary machines</text>
+  </DOC>
+  <DOC>
+    <recordId>5899</recordId>
+    <text>simultaneous observations of whistlers and lightning
+    discharges</text>
+  </DOC>
+  <DOC>
+    <recordId>6324</recordId>
+    <text>what does type compatibility mean in languages that allow
+    programmer defined types? (you might want to restrict this to
+    "extensible" languages that allow definition of abstract data
+    types or programmer-supplied definitions of operators like *,
+    +.)</text>
+  </DOC>
+  <DOC>
+    <recordId>7328</recordId>
+    <text>the effect of oxidation on circuit breaker
+    contacts</text>
+  </DOC>
+  <DOC>
+    <recordId>8141</recordId>
+    <text>articles describing the relationship between data types
+    and concurrency (e.g. what is the type of a process? when is a
+    synchronization attempt between two processes "type correct"?
+    in a message-passing system is there any notion of the types of
+    messages?--i.e. any way to check that the sender of the message
+    and the receiver are both treating the bit stream as some
+    particular type)</text>
+  </DOC>
+  <DOC>
+    <recordId>9125</recordId>
+    <text>addressing schemes for resources in networks; resource
+    addressing in network operating systems</text>
+  </DOC>
+  <DOC>
+    <recordId>9983</recordId>
+    <text>details of available low voltage capacitors</text>
+  </DOC>
+  <DOC>
+    <recordId>10637</recordId>
+    <text>i would be interested to receive information on non-users
+    of libraries, including any studies of who are non-users and
+    why they are non-users. i would be especially grateful for
+    papers giving the methodological approaches used in these
+    studies and the results obtained. non-use, library use, user
+    studies.</text>
+  </DOC>
+  <DOC>
+    <recordId>10893</recordId>
+    <text>i'd like to find articles describing the use of singular
+    value decomposition in digital image processing. applications
+    include finding approximations to the original image and
+    restoring images that are subject to noise. an article on the
+    subject is h.c. andrews and c.l. patterson "outer product
+    expansions and their uses in digital image processing",
+    american mathematical monthly, vol. 82.</text>
+  </DOC>
+  <DOC>
+    <recordId>11961</recordId>
+    <text>the effect of small distortions in the surface of a
+    cavity resonator</text>
+  </DOC>
+  <DOC>
+    <recordId>13280</recordId>
+    <text>the role of information retrieval in knowledge based
+    systems (i.e., expert systems).</text>
+  </DOC>
+  <DOC>
+    <recordId>14000</recordId>
+    <text>i would be pleased to receive any papers describing free
+    text retrieval packages like cairs, assasin, status, deco or
+    stairs, especially if the features of different packages are
+    compared, or if the implementation and use of a system is
+    described. i am especially interested in packages for minis and
+    micros and in any association between free text retrieval
+    packages and database management systems. minicomputers,
+    microcomputers, database management systems, free text
+    retrieval</text>
+  </DOC>
+  <DOC>
+    <recordId>14536</recordId>
+    <text>i am interested in information and less developed
+    countries. this would include the particular problems of less
+    developed countries now, and their expected future problems
+    (such as electronic publishing). also, the information policies
+    of less developed countries and the factors which may affect
+    their practical implementation. what are the priorities and
+    suggested practical stages in the solution of problems and
+    implementation of policies. less developed countries, under
+    developed countries, developing countries.</text>
+  </DOC>
+  <DOC>
+    <recordId>15349</recordId>
+    <text>analysis and perception of shape by humans and computers.
+    shape descriptions, shape recognition by computer.
+    two-dimensional shapes. measures of circularity. shape
+    matching.</text>
+  </DOC>
+  <DOC>
+    <recordId>15842</recordId>
+    <text>i would be pleased to receive any information on the use
+    of journals in libraries (any types of library), both current
+    and back issues. i am also interested in information on the
+    ways in which libraries have coped with cuts in periodicals
+    budgets. periodicals, journals, libraries, user studies, cuts
+    in public libraries, academic libraries, university libraries,
+    polytechnic libraries, higher education libraries.</text>
+  </DOC>
+  <DOC>
+    <recordId>18179</recordId>
+    <text>references on electric field theories of the
+    aurora</text>
+  </DOC>
+  <DOC>
+    <recordId>19262</recordId>
+    <text>computer performance evaluation techniques using pattern
+    recognition and clustering.</text>
+  </DOC>
+  <DOC>	
+    <recordId>19982</recordId>
+    <text>please send abstracts on the source spectra of lightning
+    discharges</text>
+  </DOC>
+  <DOC>
+    <recordId>21083</recordId>
+    <text>measurements of ionospheric drifts near the
+    equator</text>
+  </DOC>
+  <DOC>
+    <recordId>21265</recordId>
+    <text>the theory of stability in relation to control systems
+    with relay elements</text>
+  </DOC>
+  <DOC>
+    <recordId>21278</recordId>
+    <text>i would like details of the work which has been done to
+    extend the frequency range of magnetic amplifiers</text>
+  </DOC>
+  <DOC>
+    <recordId>21731</recordId>
+    <text>portable operating systems</text>
+  </DOC>
+  <DOC>
+    <recordId>22423</recordId>
+    <text>mathematical expressions and graphs for the design of
+    transistorised tuned pass band amplifiers</text>
+  </DOC>
+  <DOC>
+    <recordId>22698</recordId>
+    <text>measurement of plasma temperatures in arc discharge using
+    shock wave techniques</text>
+  </DOC>
+  <DOC>
+    <recordId>23223</recordId>
+    <text>advantages of parametric amplifiers</text>
+  </DOC>
+  <DOC>
+    <recordId>23242</recordId>
+    <text>i am doing a study of the librarian's christian
+    fellowship from a professional angle. i am looking for
+    literature which reflects a distinctly christian view of
+    librarianship, particularly prior to 1973. anything on the
+    historical development of the librarian's christian fellowship
+    would be of interest. also coverage of the group in the
+    professional press since 1973, including their pronouncements
+    and views of members and non-members of christian activity and
+    attitudes in the profession (especially subjects like ethics,
+    censorship, selection etc.). christian, evangelical, ethics,
+    censorship, librarian's christian fellowship, lcf.</text>
+  </DOC>
+  <DOC>
+    <recordId>24081</recordId>
+    <text>estimates of the density of ionization and temperature in
+    the solar corona</text>
+  </DOC>
+  <DOC>
+    <recordId>24894</recordId>
+    <text>analysis of nonlinear systems using phase plane
+    techniques</text>
+  </DOC>
+  <DOC>
+    <recordId>25733</recordId>
+    <text>concurrency control mechanisms in operating
+    systems</text>
+  </DOC>
+  <DOC>
+    <recordId>28098</recordId>
+    <text>i wish to calculate the inductance and loss in coils made
+    using printed circuit or other miniaturization ideas. a
+    suitable article please</text>
+  </DOC>
+  <DOC>
+    <recordId>30535</recordId>
+    <text>similarities between the diffraction theory of
+    electromagnetic waves and that of electron streams</text>
+  </DOC>
+  <DOC>
+    <recordId>33367</recordId>
+    <text>the behaviour of a beam of charged particles in the
+    presence of plane conductors</text>
+  </DOC>
+  <DOC>
+    <recordId>35418</recordId>
+    <text>i am interested in information policy, e.g. national
+    (including those of national 'centres' and 'foci'), scientific
+    and technological (in medicine, industry, agriculture). sources
+    may include various professional bodies, parliamentary
+    committees, counterparts in other countries, such as the
+    various presidential committees in the usa, national centres,
+    and, of course, those of international 'conferences' and bodies
+    such as unesco. i am more interested in implementation than in
+    paper declarations which are not backed up by sufficient
+    resources. planning, aims and objectives, government,
+    international, policy, information policy, national policies,
+    cooperation.</text>
+  </DOC>
+  <DOC>
+    <recordId>35491</recordId>
+    <text>control characteristics of sampling servo systems</text>
+  </DOC>
+  <DOC>
+    <recordId>35645</recordId>
+    <text>interested in articles on robotics, motion planning
+    particularly the geometric and combinatorial aspects. we are
+    not interested in the dynamics of arm motion.</text>
+  </DOC>
+  <DOC>
+    <recordId>35727</recordId>
+    <text>fast algorithm for context-free language recognition or
+    parsing</text>
+  </DOC>
+  <DOC>
+    <recordId>37026</recordId>
+    <text>transistor sweep generators</text>
+  </DOC>
+  <DOC>
+    <recordId>37202</recordId>
+    <text>high stability high input impedance transistorised
+    analogue amplifier</text>
+  </DOC>
+  <DOC>
+    <recordId>37294</recordId>
+    <text>i am interested in decision support systems (management
+    information systems) both computerised and non-computerised but
+    especially in the uk. i am interested in case studies of their
+    behavioural, psychological and sociological impact. decision
+    support systems, management information systems.</text>
+  </DOC>
+  <DOC>
+    <recordId>37511</recordId>
+    <text>the application of fuzzy subset theory to clustering and
+    information retrieval problems. this includes performance
+    evaluation and automatic indexing considerations.</text>
+  </DOC>
+  <DOC>
+    <recordId>37845</recordId>
+    <text>the use of lunar radio reflections in investigations of
+    the nature of the moons surface</text>
+  </DOC>
+  <DOC>
+    <recordId>38367</recordId>
+    <text>what references on integral spectrum of primary cosmic
+    rays</text>
+  </DOC>
+  <DOC>
+    <recordId>39228</recordId>
+    <text>i would be interested in any information on online
+    education and training using computer based training aids for
+    online searching. i am also interested in the training of end
+    users. training, education, online information retrieval,
+    computer assisted instruction, teaching packages, end
+    users.</text>
+  </DOC>
+</TREC>

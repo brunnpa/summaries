@@ -1,0 +1,48 @@
+POST https://ehealthsuisse.ihe-europe.net/PAMSimulator-ejb/PIXManager_Service/PIXManager_PortType?wsdl HTTP/1.1
+content-type: application/xml
+<?xml version="1.0" encoding="UTF-8"?>
+<env:Envelope xmlns:env="http://www.w3.org/2003/05/soap-envelope">
+  <env:Header>
+    <Action xmlns="http://www.w3.org/2005/08/addressing">urn:hl7-org:v3:PRPA_IN201309UV02</Action>
+    <MessageID xmlns="http://www.w3.org/2005/08/addressing">4e5dc9b4-21d0-4853-a270-2ec713079c5f</MessageID>
+    <To xmlns="http://www.w3.org/2005/08/addressing">https://ehealthsuisse.ihe-europe.net/PAMSimulator-ejb/PIXManager_Service/PIXManager_PortType?wsdl</To>
+    <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+      <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+    </ReplyTo>
+  </env:Header>
+  <env:Body>
+    <PRPA_IN201309UV02 xmlns="urn:hl7-org:v3" ITSVersion="XML_1.0">
+      <id extension="1754" root="1.3.6.1.4.1.12559.11.25.1.1.7.1"/>
+      <creationTime value="20201021102328"/>
+      <interactionId extension="PRPA_IN201309UV02" root="2.16.840.1.113883.1.18"/>
+      <processingCode code="T"/>
+      <processingModeCode code="T"/>
+      <acceptAckCode code="AL"/>
+      <receiver typeCode="RCV">
+        <device classCode="DEV" determinerCode="INSTANCE">
+          <id root="1.3.6.1.4.1.12559.11.20.1.10"/>
+          <telecom value="https://ehealthsuisse.ihe-europe.net/PAMSimulator-ejb/PIXManager_Service/PIXManager_PortType?wsdl"/>
+        </device>
+      </receiver>
+      <sender typeCode="SND">
+        <device classCode="DEV" determinerCode="INSTANCE">
+          <id root="1.3.6.1.4.1.12559.11.25.1.1.7"/>
+        </device>
+      </sender>
+      <controlActProcess classCode="CACT" moodCode="EVN">
+        <code code="PRPA_TE201309UV02" displayName="2.16.840.1.113883.1.18"/>
+        <queryByParameter>
+          <queryId extension="1753" root="1.3.6.1.4.1.12559.11.25.1.1.7.2"/>
+          <statusCode code="new"/>
+          <responsePriorityCode code="I"/>
+          <parameterList>
+            <patientIdentifier>
+              <value extension="CHPAM9810" root="1.3.6.1.4.1.12559.11.20.1"/>
+              <semanticsText>Patient.id</semanticsText>
+            </patientIdentifier>
+          </parameterList>
+        </queryByParameter>
+      </controlActProcess>
+    </PRPA_IN201309UV02>
+  </env:Body>
+</env:Envelope>

@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=Auto
+comment0.text=\r\n\ Die\ Klasse\ Auto\ soll\ f\u00FCr\ die\ Verwaltung\ einen\ Autoh\u00E4ndler\ sein,\ damit\ dieser\ seine\ Fahrzeuge\ verwalten\ kann.\ Es\ besitzt\ die\ Datenfelder\ Marke,\r\n\ Typ,\ Hubraum,\ turboMotor,\ sowie\ lagerbestand.\ \r\n\r\n\ \r\n\ @author\ (Pascal\ Brunner)\ \r\n\ \r\n
+comment1.params=marke\ typ\ hubraum\ turboMotor
+comment1.target=Auto(java.lang.String,\ java.lang.String,\ double,\ boolean)
+comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Auto.\ Die\ Strings\ Marke\ und\ Typ\ werden\ auf\ die\ Zeichenl\u00E4nger\ \u00FCberpr\u00FCft\ (Min.\ 3\ und\ Max.\ 10\ Zeichen).\r\n\ Das\ Datenfeld\ Hubraum\ hat\ einen\ Min.-\ und\ Max.-Wert\ von\ 0.5\ bis\ 8.0\r\n
+comment2.params=markeEingeben
+comment2.target=java.lang.String\ setMarke(java.lang.String)
+comment2.text=\r\n\ Setter-Methode\ zum\ Aendern\ des\ Markennames\ inkl.\ Ueberpruefung\ der\ Eingabegrenze\ (Min.\ 3\ &\ Max.\ 10)\ \r\n
+comment3.params=typEingeben
+comment3.target=java.lang.String\ setTyp(java.lang.String)
+comment3.text=\r\n\ Setter-Methode\ zum\ Aendern\ des\ Typs\ inkl.\ Ueberpruefung\ der\ Eingabegrenze\ (Min.\ 3\ &\ Max.\ 10)\ \r\n
+comment4.params=hubraumEingeben
+comment4.target=double\ setHubraum(double)
+comment4.text=\r\n\ Setter-Methode\ zum\ Aendern\ des\ Hubraumes\ inkl.\ Ueberpruefung\ der\ Eingabegrenze\ (Min.\ 0.5\ &\ Max.\ 8.0)\ \r\n
+comment5.params=turboEingabe
+comment5.target=boolean\ setTurboMotor(boolean)
+comment5.text=\r\n\ Methode\ zum\ Aendern\ des\ boolean\ ob\ ein\ Turbo\ vorhanden\ ist\ oder\ nicht\r\n
+comment6.params=lagerAenderungen
+comment6.target=int\ setLagerbestand(int)
+comment6.text=\r\n\ Setter-Methode\ zum\ Aendern\ des\ Lagerbestandes\ inkl.\ Ueberpruefung\ der\ Eingabegrenze\ (maximaler\ \u00C4nderungswert\ +/-\ 10)\ \r\n
+comment7.params=
+comment7.target=void\ getInformation()
+comment7.text=\r\n\ Getter-Methode\ zum\ Abfragen\ der\ Informationen\ zum\ Auto\ \r\n
+numComments=8

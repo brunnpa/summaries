@@ -1,0 +1,2 @@
+## Task 7 Query data on the test server
+GET http://hapi.fhir.org/baseR4/Patient/_search?birthdate=ge1960-01-01&birthdate=le1980-12-31 HTTP/1.1

@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.target=Schlange
+comment0.text=\r\n\ Repraesentiert\ eine\ Schlange\r\n\ \r\n
+comment1.params=x\ y
+comment1.target=Schlange(int,\ int)
+comment1.text=\r\n\ Konstruiert\ eine\ Schlangen\ mit\ Startposition\r\n\ bei\ den\ angegebenen\ Koordinaten.\ \r\n\ \r\n\ @param\ x\ x-Koordinate\ der\ Schlangenposition\r\n\ @param\ y\ y-Koordinate\ der\ Schlangenposition\r\n
+comment2.params=standort
+comment2.target=boolean\ istAufPunkt(java.awt.Point)
+comment2.text=\r\n\ Prueft,\ ob\ die\ Schlange\ am\ bezeichneten\ Standort\ ist\r\n\ \r\n\ @param\ standort\r\n\ @return\ true,\ falls\ die\ Schlange\ am\ bezeichneten\ Standort\ ist\r\n
+comment3.params=standort
+comment3.target=boolean\ istKopfAufPunkt(java.awt.Point)
+comment3.text=\r\n\ Prueft,\ ob\ der\ Schlangenkopf\ am\ bezeichneten\ Standort\ ist\r\n\ \r\n\ @param\ standort\r\n\ @return\ wahr,\ falls\ der\ Schlangenkopf\ am\ bezeichneten\ Standort\ ist\r\n
+comment4.params=richtung
+comment4.target=void\ bewege(char)
+comment4.text=\r\n\ Bewege\ die\ Schlange\ in\ die\ angegebene\ Richtung.\r\n\ Gueltige\ Richtungen\ sind\:\r\n\r\n\ w\ \ (oben)\r\n\ s\ \ (unten)\r\n\ a\ \ (links)\r\n\ d\ \ (rechts)\r\n\ \r\n\ @param\ richtung\ Richtung,\ in\ die\ sich\ die\ Schlange\ bewegen\ soll\r\n
+comment5.params=
+comment5.target=boolean\ istKopfAufKoerper()
+comment5.text=\r\n\ Testet,\ ob\ der\ Kopf\ der\ Schlange\ auf\ dem\ Koerper\ liegt.\r\n\ \r\n\ @return\ true,\ falls\ der\ Kopf\ auf\ dem\ Koerper\ liegt\r\n
+comment6.params=
+comment6.target=void\ wachsen()
+comment6.text=\r\n\ Laesst\ die\ Schlange\ um\ eine\ Einheit\ laenger\ werden.\r\n
+comment7.params=
+comment7.target=java.awt.Point\ gibPosition()
+comment7.text=\r\n\ Liefert\ die\ Position\ des\ Kopfs\ der\ Schlange\ zurueck.\r\n\ \r\n\ @return\ die\ aktuelle\ Position\ (Kopf)\ der\ Schlange\r\n
+comment8.params=
+comment8.target=java.awt.Point\ kopf()
+numComments=9

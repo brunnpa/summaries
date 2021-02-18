@@ -1,0 +1,22 @@
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="b720bbfc-1ad7-4eaa-89cc-60daf261367c" />
+  <meta>
+    <versionId value="e40801eb-66c3-4433-8968-e7f2d10e49ad" />
+    <lastUpdated value="2020-10-14T07:55:27.052+00:00" />
+  </meta>
+  <identifier>
+    <use value="usual" />
+    <value value="Abc123" />
+  </identifier>
+  <name>
+    <use value="usual" />
+    <text value="Franz Muster" />
+  </name>
+  <gender value="male" />
+  <birthDate value="1967-10-02" />
+  <address>
+    <use value="home" />
+    <type value="both" />
+    <text value="Leidensweg 10, 9876 Specimendorf" />
+  </address>
+</Patient>

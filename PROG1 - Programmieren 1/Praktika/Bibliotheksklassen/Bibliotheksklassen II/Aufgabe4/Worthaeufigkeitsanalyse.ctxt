@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Worthaeufigkeitsanalyse
+comment0.text=\r\n\ Zaehlt\ die\ Anzahl\ Vorkommnisse\ von\ Woertern\ ueber\ mehrere\ Zeichenketten.\r\n\ Es\ lassen\ sich\ eine\ beliebige\ Anzahl\ an\ Zeichenketten\ uebergeben.\ Die\r\n\ Statistik\ wird\ fortlaufend\ gefuehrt.\ Die\ Wortzaehlung\ laesst\ sich\ jederzeit\r\n\ ausgeben.\ Die\ Satzeichen\ .\ ,\ ?\ \!\ "\ \:\ ;\ werden\ entfernt.\ Alle\ Buchstaben\r\n\ werden\ in\ Kleinbuchstaben\ umgewandelt\ um\ beispielsweise\ das\ Wort\ 'die'\r\n\ inmitten\ eines\ Satzes\ und\ das\ Wort\ 'Die'\ am\ Anfang\ eines\ Satzes\ als\ gleiches\r\n\ Wort\ werten\ zu\ koennen.\r\n\ \r\n\ @version\ 1.0\r\n\ @author\ David\ Luescher,\ Pascal\ Brunner\r\n
+comment1.params=
+comment1.target=Worthaeufigkeitsanalyse()
+comment1.text=\r\n\ Konstruktor\r\n
+comment2.params=text
+comment2.target=void\ druckeStatistik(java.lang.String)
+comment2.text=\r\n\ Methode\ zum\ die\ Statistik\ auszugeben\r\n
+comment3.params=
+comment3.target=void\ verarbeiteText()
+comment3.text=\r\n\ Methode\ zum\ einen\ Text\ in\ einzelne\ Woerter\ umzuwandeln\r\n
+numComments=4

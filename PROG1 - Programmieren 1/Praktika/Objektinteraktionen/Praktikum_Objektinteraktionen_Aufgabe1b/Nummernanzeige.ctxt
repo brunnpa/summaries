@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Nummernanzeige
+comment0.text=\r\n\ Die\ Klasse\ Nummernanzeige\ repr\u00E4sentiert\ Darstellungen\ von\r\n\ digitalen\ Werten,\ die\ von\ null\ bis\ zu\ einem\ vorgegebenen\ Limit\r\n\ reichen\ k\u00F6nnen.\ Das\ Limit\ wird\ definiert,\ wenn\ eine\ Nummernanzeige\r\n\ erzeugt\ wird.\ Die\ darstellbaren\ Werte\ reichen\ von\ null\ bis\ Limit-1.\r\n\ Wenn\ beispielsweise\ eine\ Nummernanzeige\ f\u00FCr\ die\ Sekunden\ einer\r\n\ digitalen\ Uhr\ verwendet\ werden\ soll,\ w\u00FCrde\ man\ ihr\ Limit\ auf\ 60\r\n\ setzen,\ damit\ die\ dargestellten\ Werte\ von\ 0\ bis\ 59\ reichen.\r\n\ Wenn\ der\ Wert\ einer\ Nummernanzeige\ erh\u00F6ht\ wird,\ wird\ bei\ Erreichen\r\n\ des\ Limits\ der\ Wert\ automatisch\ auf\ null\ zur\u00FCckgesetzt.\r\n\ \r\n\ @author\ Michael\ K\u00F6lling\ und\ David\ J.\ Barnes\r\n\ @version\ 31.07.2011\r\n
+comment1.params=anzeigeLimit
+comment1.target=Nummernanzeige(int)
+comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Exemplare\ der\ Klasse\ Nummernanzeige.\r\n\ Setzt\ das\ Limit,\ bei\ dem\ die\ Anzeige\ zur\u00FCckgesetzt\ wird.\r\n
+comment2.params=
+comment2.target=int\ gibWert()
+comment2.text=\r\n\ Liefere\ den\ aktuellen\ Wert\ als\ int.\r\n
+comment3.params=
+comment3.target=java.lang.String\ gibAnzeigewert()
+comment3.text=\r\n\ Liefere\ den\ Anzeigewert,\ also\ den\ Wert\ dieser\ Anzeige\ als\r\n\ einen\ String\ mit\ zwei\ Ziffern.\ Wenn\ der\ Wert\ der\ Anzeige\r\n\ kleiner\ als\ zehn\ ist,\ wird\ die\ Anzeige\ mit\ einer\ f\u00FChrenden\r\n\ null\ einger\u00FCckt.\r\n
+comment4.params=ersatzwert
+comment4.target=void\ setzeWert(int)
+comment4.text=\r\n\ Setze\ den\ Wert\ der\ Anzeige\ auf\ den\ angegebenen\ 'ersatzwert'.\r\n\ Wenn\ der\ angegebene\ Wert\ unter\ null\ oder\ \u00FCber\ dem\ Limit\ liegt,\r\n\ tue\ nichts.\r\n
+comment5.params=
+comment5.target=void\ erhoehen()
+comment5.text=\r\n\ Erh\u00F6he\ den\ Wert\ um\ eins.\ Wenn\ das\ Limit\ erreicht\ ist,\ setze\r\n\ den\ Wert\ wieder\ auf\ null.\r\n
+numComments=6

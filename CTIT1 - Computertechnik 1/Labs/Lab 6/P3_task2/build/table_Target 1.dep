@@ -1,0 +1,35 @@
+Dependencies for Project 'table', Target 'Target 1': (DO NOT MODIFY !)
+F (.\app\table.s)(0x5C9F8D24)(--cpu Cortex-M0 --pd "__EVAL SETA 1" -g --apcs=interwork -I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\Device\Include-IC:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\Device\Include\m0-IC:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\HAL\Include-IC:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 526" --pd "_RTE_ SETA 1"--list .\build\table.lst --xref -o .\build\table.o --depend .\build\table.d)
+F (RTE\Device\CT_Board_HS14_M0\datainit_ctboard.s)(0x5C518288)(--cpu Cortex-M0 --pd "__EVAL SETA 1" -g --apcs=interwork -I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\Device\Include-IC:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\Device\Include\m0-IC:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\HAL\Include-IC:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 526" --pd "_RTE_ SETA 1"--list .\build\datainit_ctboard.lst --xref -o .\build\datainit_ctboard.o --depend .\build\datainit_ctboard.d)
+F (RTE\Device\CT_Board_HS14_M0\startup_ctboard.s)(0x5C518288)(--cpu Cortex-M0 --pd "__EVAL SETA 1" -g --apcs=interwork -I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\Device\Include-IC:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\Device\Include\m0-IC:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\HAL\Include-IC:\Keil_v5\ARM\CMSIS\Include--pd "__UVISION_VERSION SETA 526" --pd "_RTE_ SETA 1"--list .\build\startup_ctboard.lst --xref -o .\build\startup_ctboard.o --depend .\build\startup_ctboard.d)
+F (RTE\Device\CT_Board_HS14_M0\system_ctboard.c)(0x5C598324)(-c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork -I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\Device\Include-IC:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\Device\Include\m0-IC:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\HAL\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="526" -D_RTE_-o .\build\system_ctboard.o --omf_browse .\build\system_ctboard.crf --depend .\build\system_ctboard.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F3DAE)
+I (C:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\Device\Include\system_ctboard.h)(0x5C518288)
+I (C:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\Device\Include\m0\platform_ctboard.h)(0x5C518288)
+I (C:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\HAL\Include\hal_gpio.h)(0x5C518288)
+I (C:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\Device\Include\reg_stm32f4xx.h)(0x5C598324)
+I (C:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\HAL\Include\hal_common.h)(0x5C518288)
+I (C:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\HAL\Include\hal_fmc.h)(0x5C518288)
+I (C:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\HAL\Include\hal_pwr.h)(0x5C518288)
+I (C:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\HAL\Include\hal_rcc.h)(0x5C518288)
+I (C:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\Device\Include\reg_ctboard.h)(0x5C6AB678)
+F (RTE\HAL\CT_Board_HS14_M0\hal_fmc.c)(0x5C518288)(-c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork -I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\Device\Include-IC:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\Device\Include\m0-IC:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\HAL\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="526" -D_RTE_-o .\build\hal_fmc.o --omf_browse .\build\hal_fmc.crf --depend .\build\hal_fmc.d)
+I (C:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\HAL\Include\hal_fmc.h)(0x5C518288)
+I (C:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\HAL\Include\hal_common.h)(0x5C518288)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F3DAE)
+I (C:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\Device\Include\reg_stm32f4xx.h)(0x5C598324)
+F (RTE\HAL\CT_Board_HS14_M0\hal_gpio.c)(0x5C5ADCC0)(-c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork -I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\Device\Include-IC:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\Device\Include\m0-IC:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\HAL\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="526" -D_RTE_-o .\build\hal_gpio.o --omf_browse .\build\hal_gpio.crf --depend .\build\hal_gpio.d)
+I (C:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\HAL\Include\hal_gpio.h)(0x5C518288)
+I (C:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\Device\Include\reg_stm32f4xx.h)(0x5C598324)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F3DAE)
+I (C:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\HAL\Include\hal_common.h)(0x5C518288)
+F (RTE\HAL\CT_Board_HS14_M0\hal_pwr.c)(0x5C518288)(-c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork -I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\Device\Include-IC:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\Device\Include\m0-IC:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\HAL\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="526" -D_RTE_-o .\build\hal_pwr.o --omf_browse .\build\hal_pwr.crf --depend .\build\hal_pwr.d)
+I (C:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\HAL\Include\hal_pwr.h)(0x5C518288)
+I (C:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\HAL\Include\hal_common.h)(0x5C518288)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F3DAE)
+I (C:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\Device\Include\reg_stm32f4xx.h)(0x5C598324)
+F (RTE\HAL\CT_Board_HS14_M0\hal_rcc.c)(0x5C598324)(-c --cpu Cortex-M0 -D__EVAL -g -O0 --apcs=interwork -I.\RTE\_Target_1-IC:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\Device\Include-IC:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\Device\Include\m0-IC:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\HAL\Include-IC:\Keil_v5\ARM\CMSIS\Include-D__UVISION_VERSION="526" -D_RTE_-o .\build\hal_rcc.o --omf_browse .\build\hal_rcc.crf --depend .\build\hal_rcc.d)
+I (C:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\HAL\Include\hal_rcc.h)(0x5C518288)
+I (C:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\HAL\Include\hal_common.h)(0x5C518288)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x599F3DAE)
+I (C:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\Device\Include\reg_stm32f4xx.h)(0x5C598324)

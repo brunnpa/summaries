@@ -1,0 +1,14 @@
+--cpu Cortex-M0
+".\build\main.o"
+".\build\utils_ctboard.o"
+".\build\datainit_ctboard.o"
+".\build\startup_ctboard.o"
+".\build\system_ctboard.o"
+".\build\hal_fmc.o"
+".\build\hal_gpio.o"
+".\build\hal_pwr.o"
+".\build\hal_rcc.o"
+--ro-base 0x08000000 --entry 0x08000000 --rw-base 0x20000000 --entry Reset_Handler --first __Vectors --strict
+--diag_suppress 6314 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\build\lab1.map" -o .\build\lab1.axf

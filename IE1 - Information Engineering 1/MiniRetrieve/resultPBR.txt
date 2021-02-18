@@ -1,0 +1,10 @@
+99 	 Q0 	 0 	 0.01665613256795162 	 miniRetrieve 
+99 	 Q0 	 1 	 0.01998295747462084 	 miniRetrieve 
+99 	 Q0 	 2 	 0.02088372932626275 	 miniRetrieve 
+99 	 Q0 	 3 	 0.021178954545405793 	 miniRetrieve 
+99 	 Q0 	 4 	 0.021229396759230846 	 miniRetrieve 
+99 	 Q0 	 5 	 0.021997630851098706 	 miniRetrieve 
+99 	 Q0 	 6 	 0.022697969984376197 	 miniRetrieve 
+99 	 Q0 	 7 	 0.022947390096063447 	 miniRetrieve 
+99 	 Q0 	 8 	 0.023485748427005654 	 miniRetrieve 
+99 	 Q0 	 9 	 0.02360563290279958 	 miniRetrieve 

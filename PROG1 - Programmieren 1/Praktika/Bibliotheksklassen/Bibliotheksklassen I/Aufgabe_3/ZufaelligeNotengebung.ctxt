@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=ZufaelligeNotengebung
+comment0.text=\r\n\ Simuliert\ Pruefungsergebnisse\ zum\ Testen\ der\ Pruefungsverwaltung.\r\n
+comment1.params=
+comment1.target=void\ fuehreAus()
+comment1.text=\r\n\ Fuehrt\ die\ Simulation\ aus.\r\n
+comment2.params=
+comment2.target=double\ generiereZufaelligePruefungsnote()
+numComments=3

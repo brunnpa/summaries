@@ -1,0 +1,34 @@
+# ---------------------------------------------------------------------------
+# Makefile fuer Programmbeispiel mit mehreren Modulen
+# Fach:	   BS
+# Autoren: J.Zeman, M. Thaler
+# Version: v.fs20
+# File:    makefile.macros2
+# ---------------------------------------------------------------------------
+
+# Macros
+
+CC	= gcc
+CFLAGS	= -Wall -g -std=gnu99
+
+main_m2.e:	main_m2.o func1.o func2.o
+		$(CC) main_m2.o func1.o func2.o -o $@
+
+main.o:		main_m2.c mydefs.h func1.h func2.h
+		$(CC) $(CFLAGS) -c main_m2.c -o $@
+
+func1.o:	func1.c mydefs.h func1.h
+		$(CC) $(CFLAGS) -c func1.c -o $@
+
+func2.o:	func2.c mydefs.h func2.h
+		$(CC) $(CFLAGS) -c func2.c -o $@
+
+clean:		
+		rm -f main_m2.e *.o
+		@echo "directory cleaned"
+
+all:
+		@rm -f  *.o
+		make main_m2.e
+
+#-----------------------------------------------------------------------------

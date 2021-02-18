@@ -1,0 +1,36 @@
+# ---------------------------------------------------------------------------
+# Makefile fuer Programmbeispiel mit searaten Dateien
+# Fach:	    BS, J. Zeman, Sept. 99
+#	        update M. Thaler, Feb. 2015
+# File:	    makefile 
+# Version:  v.fs20
+# ---------------------------------------------------------------------------
+
+#macros
+CC     = gcc
+CFLAGS = -Wall -g
+MAIN   = main_m3
+
+$(MAIN).e:		$(MAIN).o func1.o func2.o
+		$(CC) $(CFLAGS) $(MAIN).o func1.o func2.o -o $@ 
+
+$(MAIN).o:	$(MAIN).c mydefs.h func1.h func2.h
+
+func1.o:	func1.c mydefs.h func1.h
+
+func2.o:	func2.c mydefs.h func2.h
+
+.cc.o:
+		$(CC) $(CFLAGS) -c $<
+.c.o:
+		$(CC) $(CFLAGS) -c $<
+
+clean:		
+		rm main
+		rm *.o
+		@echo "directory cleaned"
+
+all:
+		@rm -f  *.o
+		make main
+#-----------------------------------------------------------------------------

@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Tuer
+comment0.text=\r\n\ Repraesentiert\ eine\ Tuer.\r\n
+comment1.params=x\ y
+comment1.target=Tuer(int,\ int)
+comment1.text=\r\n\ Konstruiert\ eine\ Tuer\ mit\ Standort\r\n\ bei\ den\ angegebenen\ Koordinaten.\ \r\n\ \r\n\ @param\ x\ x-Koordinate\ der\ Tuer\r\n\ @param\ y\ y-Koordinate\ der\ Tuer\r\n
+comment2.params=standort
+comment2.target=boolean\ istAufPunkt(java.awt.Point)
+comment2.text=\r\n\ Prueft,\ ob\ die\ Tuer\ am\ bezeichneten\ Standort\ ist\r\n\ \r\n\ @param\ standort\r\n\ @return\ wahr,\ falls\ die\ Tuer\ am\ bezeichneten\ Standort\ ist\r\n
+numComments=3

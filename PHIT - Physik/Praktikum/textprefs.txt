@@ -1,0 +1,4 @@
+fontName = SansSerif
+fontStyle = 0
+fontSize = 10
+showBackground = false

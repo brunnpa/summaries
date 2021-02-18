@@ -1,0 +1,14 @@
+{
+    "resourceType" : "Patient",
+    "name": [{
+        "use": "usual",
+        "text": "Franz Muster"
+    }],
+    "gender": "male",
+    "address": [{
+        "use": "home",
+        "type": "both",
+        "text": "Leidensweg 10, 9876 Specimendorf"
+    }],
+    "birthDate": "1967-10-02"
+}

@@ -1,0 +1,404 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         ; ------------------------------------------------------
+                       ------------
+    2 00000000         ; --  _____       ______  _____                         
+                                  -
+    3 00000000         ; -- |_   _|     |  ____|/ ____|                        
+                                  -
+    4 00000000         ; --   | |  _ __ | |__  | (___    Institute of Embedded 
+                       Systems    -
+    5 00000000         ; --   | | | '_ \|  __|  \___ \   Zurich University of  
+                                  -
+    6 00000000         ; --  _| |_| | | | |____ ____) |  Applied Sciences      
+                                  -
+    7 00000000         ; -- |_____|_| |_|______|_____/   8401 Winterthur, Switz
+                       erland     -
+    8 00000000         ; ------------------------------------------------------
+                       ------------
+    9 00000000         ; --
+   10 00000000         ; -- main.s
+   11 00000000         ; --
+   12 00000000         ; -- CT1 P06 "ALU und Sprungbefehle" mit MUL
+   13 00000000         ; --
+   14 00000000         ; -- $Id: main.s 3728 2016-10-24 07:59:17Z kesr $
+   15 00000000         ; ------------------------------------------------------
+                       ------------
+   16 00000000         ;Directives
+   17 00000000                 PRESERVE8
+   18 00000000                 THUMB
+   19 00000000         
+   20 00000000         ; ------------------------------------------------------
+                       ------------
+   21 00000000         ; -- Address Defines
+   22 00000000         ; ------------------------------------------------------
+                       ------------
+   23 00000000         
+   24 00000000 60000100 
+                       ADDR_LED_15_0
+                               EQU              0x60000100
+   25 00000000 60000102 
+                       ADDR_LED_31_16
+                               EQU              0x60000102
+   26 00000000 60000200 
+                       ADDR_DIP_SWITCH_7_0
+                               EQU              0x60000200
+   27 00000000 60000201 
+                       ADDR_DIP_SWITCH_15_8
+                               EQU              0x60000201
+   28 00000000 60000114 
+                       ADDR_7_SEG_BIN_DS3_0
+                               EQU              0x60000114
+   29 00000000 60000210 
+                       ADDR_BUTTONS
+                               EQU              0x60000210
+   30 00000000         
+   31 00000000 60000340 
+                       ADDR_LCD_RED
+                               EQU              0x60000340
+   32 00000000 60000342 
+                       ADDR_LCD_GREEN
+                               EQU              0x60000342
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+   33 00000000 60000344 
+                       ADDR_LCD_BLUE
+                               EQU              0x60000344
+   34 00000000 0000FFFF 
+                       LCD_BACKLIGHT_FULL
+                               EQU              0xffff
+   35 00000000 00000000 
+                       LCD_BACKLIGHT_OFF
+                               EQU              0x0000
+   36 00000000         
+   37 00000000 60000330 
+                       ADDR_LCD_BIN
+                               EQU              0x60000330
+   38 00000000 0000000F 
+                       MASK_LOWER_4_BITS
+                               EQU              0x0F
+   39 00000000 00000001 
+                       MASK_LAST_BIT
+                               EQU              0x1
+   40 00000000         
+   41 00000000         ; ------------------------------------------------------
+                       ------------
+   42 00000000         ; -- myCode
+   43 00000000         ; ------------------------------------------------------
+                       ------------
+   44 00000000                 AREA             myCode, CODE, READONLY
+   45 00000000         
+   46 00000000                 ENTRY
+   47 00000000         
+   48 00000000         main    PROC
+   49 00000000                 export           main
+   50 00000000         
+   51 00000000         ; STUDENTS: To be programmed
+   52 00000000         
+   53 00000000         ; load address of bitmask (0x0F) to R6
+   54 00000000 4E27            LDR              R6, =MASK_LOWER_4_BITS
+   55 00000002         ; load address of dip_switch_7_0 to R7
+   56 00000002 4F28            LDR              R7, =ADDR_DIP_SWITCH_7_0
+   57 00000004         ; store input value from dip_switch_7_0 to R1
+   58 00000004 7839            LDRB             R1, [R7]
+   59 00000006         ; use bitmask to get lower 4 bits (0000 xxxx)
+   60 00000006 4031            ANDS             R1, R6
+   61 00000008         
+   62 00000008         ; load address to dip_switch_15_8 to R7
+   63 00000008 4F27            LDR              R7, =ADDR_DIP_SWITCH_15_8
+   64 0000000A         ; load input of dip_switch_15_8 to R2
+   65 0000000A 783A            LDRB             R2, [R7]
+   66 0000000C         ; use bitmask to get lower 4 bits (0000 xxxx)
+   67 0000000C 4032            ANDS             R2, R6
+   68 0000000E         
+   69 0000000E         ; shift value of dip_switch_15_8 to upper 4 bits
+   70 0000000E 0112            LSLS             R2, R2, #4
+   71 00000010         ; combine values from dip_switch_15_8(R2) and dip_switch
+                       _7_0(R1)
+   72 00000010         ; combination will get the bcd
+   73 00000010         ; store it in R3
+   74 00000010 188B            ADDS             R3, R1, R2
+   75 00000012         ; store bcd value in R10 -> will be the output on LED_7_
+                       0
+
+
+
+ARM Macro Assembler    Page 3 
+
+
+   76 00000012 469A            MOV              R10, R3     ;--> HIER
+   77 00000014         ; Shift "ten-bits" in R2 back to the lower 4 bits
+   78 00000014 0912            LSRS             R2, R2, #4
+   79 00000016         
+   80 00000016         ; --- Button T0 ---  
+   81 00000016         
+   82 00000016         ; load address of buttons in R5
+   83 00000016 4D25            LDR              R5, =ADDR_BUTTONS
+   84 00000018         ; load address of Bitmask for last bit in R6
+   85 00000018         ; use bitmask to get the value of T0 bit only
+   86 00000018 4E25            LDR              R6, =MASK_LAST_BIT
+   87 0000001A         ; read state values from buttons and load it to R3
+   88 0000001A 782B            LDRB             R3, [R5]
+   89 0000001C         ; check if last bit is set? 
+   90 0000001C         ; Z == 0 if pressed
+   91 0000001C 4233            TST              R3, R6
+   92 0000001E         ; BNE = Branch not Equal
+   93 0000001E         ; if pressed use shift and add operations (if Z == 0)
+   94 0000001E         ; else us muls
+   95 0000001E D103            BNE              use_shift_add
+   96 00000020         
+   97 00000020         ; -- MULS Instruction --
+   98 00000020         
+   99 00000020         ; load value of tens digit
+  100 00000020 4C24            LDR              R4, =10
+  101 00000022         ; Multiply tens digit from dip_switch_15_8 by 10
+  102 00000022 4354            MULS             R4, R2, R4
+  103 00000024         ; Add ones digit to already multiplied value in R4
+  104 00000024 1864            ADDS             R4, R4, R1
+  105 00000026         ; switch to Branch blue_lcd
+  106 00000026 E00C            B                blue_lcd
+  107 00000028         
+  108 00000028         ; -- Branch use_shift_add --
+  109 00000028         use_shift_add
+  110 00000028         ; copy tens digit to R4
+  111 00000028 4614            MOV              R4, R2
+  112 0000002A         ; Multiply by 2 --> R2 * 2^1
+  113 0000002A 0064            LSLS             R4, #1
+  114 0000002C         ; Multiply R2 by 8
+  115 0000002C 00D2            LSLS             R2, #3
+  116 0000002E         ; Add R4 = R2 * 2 - R2 = R2 * 8 = R2 * 10
+  117 0000002E 18A4            ADDS             R4, R2      ; -> Hier
+  118 00000030         ; add ones digit
+  119 00000030 1864            ADDS             R4, R1
+  120 00000032         ; switch to Branch red_lcd
+  121 00000032 E7FF            B                red_lcd
+  122 00000034         
+  123 00000034         ; -- Branch red_lcd --
+  124 00000034         red_lcd
+  125 00000034         ; - turn off blue light -
+  126 00000034         
+  127 00000034         ; load brightness value = 0% for LCD
+  128 00000034 4F20            LDR              R7, =LCD_BACKLIGHT_OFF
+  129 00000036         ; load address of "blue register" of LCD
+  130 00000036 4D21            LDR              R5, =ADDR_LCD_BLUE
+  131 00000038         ; turn off blue lcd backlight
+  132 00000038 802F            STRH             R7, [R5]
+  133 0000003A         
+  134 0000003A         ; - turn on red light - 
+
+
+
+ARM Macro Assembler    Page 4 
+
+
+  135 0000003A         
+  136 0000003A         ; load brightness value = 100% for LCD
+  137 0000003A 4F21            LDR              R7, =LCD_BACKLIGHT_FULL
+  138 0000003C         ; load address of "red register" of LCD
+  139 0000003C 4D21            LDR              R5, =ADDR_LCD_RED
+  140 0000003E         ; turn on red LCD backlight
+  141 0000003E 802F            STRH             R7, [R5]
+  142 00000040         ; switch to branch show_result
+  143 00000040 E006            B                show_result
+  144 00000042         
+  145 00000042         ; -- Branch blue_lcd --
+  146 00000042         blue_lcd
+  147 00000042         ; - turn off red light -
+  148 00000042         
+  149 00000042         ; load brightness value = 0% for LCD
+  150 00000042 4F1D            LDR              R7, =LCD_BACKLIGHT_OFF
+  151 00000044         ; load address of "red register" of LCD
+  152 00000044 4D1F            LDR              R5, =ADDR_LCD_RED
+  153 00000046         ; turn off red lcd backlight
+  154 00000046 802F            STRH             R7, [R5]
+  155 00000048         
+  156 00000048         ; - turn on blue light -
+  157 00000048         
+  158 00000048         ; load brightness value = 100% for LCD
+  159 00000048 4D1C            LDR              R5, =ADDR_LCD_BLUE
+  160 0000004A         ; load address of "blue register" of LCD
+  161 0000004A 4F1D            LDR              R7, =LCD_BACKLIGHT_FULL
+  162 0000004C         ; turn on blue lcd backlight
+  163 0000004C 802F            STRH             R7, [R5]
+  164 0000004E         ; switch to branch show_result
+  165 0000004E E7FF            B                show_result
+  166 00000050         
+  167 00000050         ; -- Branch show_result -- 
+  168 00000050         show_result
+  169 00000050         
+  170 00000050         ; - display value on LEDs -
+  171 00000050         
+  172 00000050         ; load address of led_7_0
+  173 00000050 4F19            LDR              R7, =ADDR_LED_7_0
+  174 00000052         ; load stored BCD value (R10) into R3
+  175 00000052 4653            MOV              R3, R10
+  176 00000054         ; write BCD value to led_7_0
+  177 00000054 703B            STRB             R3, [R7]
+  178 00000056         ; load address of led_15_0
+  179 00000056 4F18            LDR              R7, =ADDR_LED_15_8
+  180 00000058         ; write value to led_15_8 
+  181 00000058 703C            STRB             R4, [R7]
+  182 0000005A         
+  183 0000005A         ; - display value on LCD -
+  184 0000005A         
+  185 0000005A         ; load address if LCD     ; ---> Hier
+  186 0000005A 4E1D            LDR              R6, =ADDR_LCD_BIN
+  187 0000005C         ; write value to LCD
+  188 0000005C 7034            STRB             R4, [R6]
+  189 0000005E         
+  190 0000005E         ; - display value on 7 segment display -
+  191 0000005E         ; load adress of 7 segment display
+  192 0000005E 4F1D            LDR              R7, =ADDR_7_SEG_BIN_DS3_0
+  193 00000060         ; copy calculated result from R4 to R0
+
+
+
+ARM Macro Assembler    Page 5 
+
+
+  194 00000060 4620            MOV              R0, R4      ; --> Hier
+  195 00000062         ; Shift value up 8 bits
+  196 00000062 0200            LSLS             R0, #8
+  197 00000064         ; Combine value with bcd value
+  198 00000064 18C0            ADDS             R0, R0, R3
+  199 00000066         ; write value to 7 segment display
+  200 00000066 8038            STRH             R0, [R7]
+  201 00000068         
+  202 00000068         ; - Init registers for create_bar loop -
+  203 00000068         ; set value of R0 to zero to avoid displaying previous s
+                       et values
+  204 00000068 4813            LDR              R0, =0
+  205 0000006A         
+  206 0000006A         ; -- Branch create_bar_loop -- 
+  207 0000006A         create_bar_loop
+  208 0000006A         ; Shift last digit into carry flag
+  209 0000006A 0864            LSRS             R4, #1
+  210 0000006C         ; If last digit set, switch to add_one
+  211 0000006C         ; BCS -> Branch if Carry is Set
+  212 0000006C D201            BCS              add_one
+  213 0000006E         ; BEQ -> Branch if Equal
+  214 0000006E         ; If value (in R4) is no 0, end loop
+  215 0000006E D003            BEQ              disco
+  216 00000070         ; switch to Branch create_bar_loop
+  217 00000070 E7FB            B                create_bar_loop
+  218 00000072         
+  219 00000072         ; -- Branch add_one --
+  220 00000072         add_one
+  221 00000072         ; Shift bar storage to the left
+  222 00000072 0040            LSLS             R0, #1
+  223 00000074         ; Add one to the bar
+  224 00000074 3001            ADDS             R0, #1
+  225 00000076         ; switch to Branch create_bar_loop
+  226 00000076 E7F8            B                create_bar_loop
+  227 00000078         
+  228 00000078         ; -- Branch disco -- 
+  229 00000078         disco
+  230 00000078         ; - Move disco-bar into start position -
+  231 00000078         ; Copy value R0 to R1
+  232 00000078 4601            MOV              R1, R0
+  233 0000007A         ; Shift values half word up
+  234 0000007A 0409            LSLS             R1, R1, #16
+  235 0000007C         ; Combine value to form full word with duplicated halfwo
+                       rds
+  236 0000007C 4308            ORRS             R0, R0, R1
+  237 0000007E         
+  238 0000007E         ; Init registers for disco-loop
+  239 0000007E         ; load address of LED_31_16 to R7
+  240 0000007E 4F16            LDR              R7, =ADDR_LED_31_16
+  241 00000080         ; Loop 1 times for all 16 bits of the halfword
+  242 00000080 4D16            LDR              R5, =16
+  243 00000082         ; Bitcount to rotate R0 
+  244 00000082 490B            LDR              R1, =1
+  245 00000084         
+  246 00000084         ; -- Branch disco_loop -- 
+  247 00000084         disco_loop
+  248 00000084         ; Output bars on leds
+  249 00000084 8038            STRH             R0, [R7]
+  250 00000086         ; Right cyclic rotate by 1 bit
+
+
+
+ARM Macro Assembler    Page 6 
+
+
+  251 00000086 41C8            RORS             R0, R0, R1
+  252 00000088         ; Branch with link
+  253 00000088 F7FF FFFE       BL               pause
+  254 0000008C         ; decrement loop variable, sets Z flag to 1 if R5 is now
+                        0
+  255 0000008C 3D01            SUBS             R5, #1
+  256 0000008E         ; If loop counter in R5 is not 0 (if Z == 0), continue l
+                       oop
+  257 0000008E         ; BNE -> If Branch is not equal
+  258 0000008E D1F9            BNE              disco_loop
+  259 00000090         
+  260 00000090         
+  261 00000090         ; END: To be programmed
+  262 00000090         
+  263 00000090 E7FE            B                main
+  264 00000092                 ENDP
+  265 00000092         
+  266 00000092         ;----------------------------------------------------
+  267 00000092         ; Subroutines
+  268 00000092         ;----------------------------------------------------
+  269 00000092         
+  270 00000092         ;----------------------------------------------------
+  271 00000092         ; pause for disco_lights
+  272 00000092         pause   PROC
+  273 00000092 B403            PUSH             {R0, R1}
+  274 00000094 4906            LDR              R1, =1
+  275 00000096 4812            LDR              R0, =0x000FFFFF
+  276 00000098         
+  277 00000098         loop
+  278 00000098 1A40            SUBS             R0, R0, R1
+  279 0000009A D2FD            BCS              loop
+  280 0000009C         
+  281 0000009C BC03            POP              {R0, R1}
+  282 0000009E 4770            BX               LR
+  283 000000A0                 ALIGN
+  284 000000A0                 ENDP
+  285 000000A0         
+  286 000000A0         ; ------------------------------------------------------
+                       ------------
+  287 000000A0         ; End of code
+  288 000000A0         ; ------------------------------------------------------
+                       ------------
+  289 000000A0                 END
+              0000000F 
+              60000200 
+              60000201 
+              60000210 
+              00000001 
+              0000000A 
+              00000000 
+              60000344 
+              0000FFFF 
+              60000340 
+              00000000 
+              00000000 
+              60000330 
+              60000114 
+              60000102 
+              00000010 
+
+
+
+ARM Macro Assembler    Page 7 
+
+
+              000FFFFF 
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M0 --apcs=interw
+ork --depend=.\build\main.d -o.\build\main.o -I.\RTE\_Target_1 -IC:\Keil_v5\ARM
+\PACK\InES\CTBoard14_DFP\4.0.2\Device\Include -IC:\Keil_v5\ARM\PACK\InES\CTBoar
+d14_DFP\4.0.2\Device\Include\m0 -IC:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\
+HAL\Include -IC:\Keil_v5\ARM\CMSIS\Include --predefine="__EVAL SETA 1" --predef
+ine="__UVISION_VERSION SETA 526" --predefine="_RTE_ SETA 1" --list=.\build\main
+.lst app\main.s

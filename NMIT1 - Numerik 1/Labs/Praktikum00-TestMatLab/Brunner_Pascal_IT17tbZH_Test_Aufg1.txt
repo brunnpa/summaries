@@ -1,0 +1,615 @@
+A = [1 2 3 4; 2 3 4 1; 3 4 1 2; 4 1 2 3]
+
+A =
+
+     1     2     3     4
+     2     3     4     1
+     3     4     1     2
+     4     1     2     3
+
+B = [5 4 3 2; 4 3 2 5; 3 2 5 4; 2 5 4 3]
+
+B =
+
+     5     4     3     2
+     4     3     2     5
+     3     2     5     4
+     2     5     4     3
+
+b = [1; 2; 3; 4]
+
+b =
+
+     1
+     2
+     3
+     4
+
+det(A)
+
+ans =
+
+   160
+
+det(B)
+
+ans =
+
+  -224
+
+inv(A)
+
+ans =
+
+   -0.2250    0.0250    0.0250    0.2750
+    0.0250    0.0250    0.2750   -0.2250
+    0.0250    0.2750   -0.2250    0.0250
+    0.2750   -0.2250    0.0250    0.0250
+
+inv(B)
+
+ans =
+
+    0.2679    0.0179    0.0179   -0.2321
+    0.0179    0.0179   -0.2321    0.2679
+    0.0179   -0.2321    0.2679    0.0179
+   -0.2321    0.2679    0.0179    0.0179
+
+A * inv(A)
+
+ans =
+
+    1.0000    0.0000    0.0000   -0.0000
+    0.0000    1.0000    0.0000   -0.0000
+    0.0000    0.0000    1.0000         0
+    0.0000         0    0.0000    1.0000
+
+inv(A) * A
+
+ans =
+
+    1.0000    0.0000    0.0000    0.0000
+    0.0000    1.0000    0.0000         0
+    0.0000    0.0000    1.0000    0.0000
+   -0.0000   -0.0000         0    1.0000
+
+B * inv(B)
+
+ans =
+
+    1.0000         0   -0.0000   -0.0000
+         0    1.0000    0.0000   -0.0000
+         0   -0.0000    1.0000    0.0000
+    0.0000   -0.0000         0    1.0000
+
+inv(B) * B
+
+ans =
+
+    1.0000         0         0    0.0000
+         0    1.0000   -0.0000   -0.0000
+   -0.0000    0.0000    1.0000         0
+   -0.0000   -0.0000    0.0000    1.0000
+
+A'
+
+ans =
+
+     1     2     3     4
+     2     3     4     1
+     3     4     1     2
+     4     1     2     3
+
+B'
+
+ans =
+
+     5     4     3     2
+     4     3     2     5
+     3     2     5     4
+     2     5     4     3
+
+A' * A
+
+ans =
+
+    30    24    22    24
+    24    30    24    22
+    22    24    30    24
+    24    22    24    30
+
+B' * B
+
+ans =
+
+    54    48    46    48
+    48    54    48    46
+    46    48    54    48
+    48    46    48    54
+
+A(4, :) * B(:, 2)
+
+ans =
+
+    38
+
+linsolve(A, b)
+
+ans =
+
+     1
+     0
+     0
+     0
+
+linsolve(B, b)
+
+ans =
+
+   -0.5714
+    0.4286
+    0.4286
+    0.4286
+
+Brunner_Pascal_IT17tbZH_Test_Aufg2
+Brunner_Pascal_IT17tbZH_Test_Aufg2
+Brunner_Pascal_IT17tbZH_Test_Aufg2
+Brunner_Pascal_IT17tbZH_Test_Aufg2
+
+g =
+
+       -1179        -211          25          27           5           1           9          95         517        1845        5081
+
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('plot')" style="font-weight:bold">plot</a>
+Vectors must be the same length.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Brunner_Pascal_IT17tbZH_Test_Aufg2', 'C:\Users\pasca\OneDrive\Dokumente\MATLAB\Brunner_Pascal_IT17tbZH_Test_Aufg2.m', 13)" style="font-weight:bold">Brunner_Pascal_IT17tbZH_Test_Aufg2</a> (<a href="matlab: opentoline('C:\Users\pasca\OneDrive\Dokumente\MATLAB\Brunner_Pascal_IT17tbZH_Test_Aufg2.m',13,0)">line 13</a>)
+    plot(z, g);
+} 
+Brunner_Pascal_IT17tbZH_Test_Aufg2
+
+g =
+
+  Columns 1 through 11
+
+      -69709      -39131      -20295       -9463       -3785       -1179        -211          25          27           5           1
+
+  Columns 12 through 21
+
+           9          95         517        1845        5081       11779       24165       45257       78985      130311
+
+Brunner_Pascal_IT17tbZH_Test_Aufg2
+
+g =
+
+  Columns 1 through 11
+
+      -69709      -39131      -20295       -9463       -3785       -1179        -211          25          27           5           1
+
+  Columns 12 through 21
+
+           9          95         517        1845        5081       11779       24165       45257       78985      130311
+
+Brunner_Pascal_IT17tbZH_Test_Aufg2
+
+g =
+
+  Columns 1 through 11
+
+      -69709      -39131      -20295       -9463       -3785       -1179        -211          25          27           5           1
+
+  Columns 12 through 21
+
+           9          95         517        1845        5081       11779       24165       45257       78985      130311
+
+Brunner_Pascal_IT17tbZH_Test_Aufg2
+
+g =
+
+  Columns 1 through 11
+
+      -69709      -39131      -20295       -9463       -3785       -1179        -211          25          27           5           1
+
+  Columns 12 through 21
+
+           9          95         517        1845        5081       11779       24165       45257       78985      130311
+
+help plot
+ <strong>plot</strong>   Linear plot. 
+    <strong>plot</strong>(X,Y) plots vector Y versus vector X. If X or Y is a matrix,
+    then the vector is plotted versus the rows or columns of the matrix,
+    whichever line up.  If X is a scalar and Y is a vector, disconnected
+    line objects are created and plotted as discrete points vertically at
+    X.
+ 
+    <strong>plot</strong>(Y) plots the columns of Y versus their index.
+    If Y is complex, <strong>plot</strong>(Y) is equivalent to <strong>plot</strong>(real(Y),imag(Y)).
+    In all other uses of <strong>plot</strong>, the imaginary part is ignored.
+ 
+    Various line types, plot symbols and colors may be obtained with
+    <strong>plot</strong>(X,Y,S) where S is a character string made from one element
+    from any or all the following 3 columns:
+ 
+           b     blue          .     point              -     solid
+           g     green         o     circle             :     dotted
+           r     red           x     x-mark             -.    dashdot 
+           c     cyan          +     plus               --    dashed   
+           m     magenta       *     star             (none)  no line
+           y     yellow        s     square
+           k     black         d     diamond
+           w     white         v     triangle (down)
+                               ^     triangle (up)
+                               <     triangle (left)
+                               >     triangle (right)
+                               p     pentagram
+                               h     hexagram
+                          
+    For example, <strong>plot</strong>(X,Y,'c+:') plots a cyan dotted line with a plus 
+    at each data point; <strong>plot</strong>(X,Y,'bd') plots blue diamond at each data 
+    point but does not draw any line.
+ 
+    <strong>plot</strong>(X1,Y1,S1,X2,Y2,S2,X3,Y3,S3,...) combines the plots defined by
+    the (X,Y,S) triples, where the X's and Y's are vectors or matrices 
+    and the S's are strings.  
+ 
+    For example, <strong>plot</strong>(X,Y,'y-',X,Y,'go') plots the data twice, with a
+    solid yellow line interpolating green circles at the data points.
+ 
+    The <strong>plot</strong> command, if no color is specified, makes automatic use of
+    the colors specified by the axes ColorOrder property.  By default,
+    <strong>plot</strong> cycles through the colors in the ColorOrder property.  For
+    monochrome systems, <strong>plot</strong> cycles over the axes LineStyleOrder property.
+ 
+    Note that RGB colors in the ColorOrder property may differ from
+    similarly-named colors in the (X,Y,S) triples.  For example, the 
+    second axes ColorOrder property is medium green with RGB [0 .5 0],
+    while <strong>plot</strong>(X,Y,'g') plots a green line with RGB [0 1 0].
+ 
+    If you do not specify a marker type, <strong>plot</strong> uses no marker. 
+    If you do not specify a line style, <strong>plot</strong> uses a solid line.
+ 
+    <strong>plot</strong>(AX,...) plots into the axes with handle AX.
+ 
+    <strong>plot</strong> returns a column vector of handles to lineseries objects, one
+    handle per plotted line. 
+ 
+    The X,Y pairs, or X,Y,S triples, can be followed by 
+    parameter/value pairs to specify additional properties 
+    of the lines. For example, <strong>plot</strong>(X,Y,'LineWidth',2,'Color',[.6 0 0]) 
+    will create a plot with a dark red line width of 2 points.
+ 
+    Example
+       x = -pi:pi/10:pi;
+       y = tan(sin(x)) - sin(tan(x));
+       plot(x,y,'--rs','LineWidth',2,...
+                       'MarkerEdgeColor','k',...
+                       'MarkerFaceColor','g',...
+                       'MarkerSize',10)
+ 
+    See also <a href="matlab:help plottools">plottools</a>, <a href="matlab:help semilogx">semilogx</a>, <a href="matlab:help semilogy">semilogy</a>, <a href="matlab:help loglog">loglog</a>, <a href="matlab:help plotyy">plotyy</a>, <a href="matlab:help plot3">plot3</a>, <a href="matlab:help grid">grid</a>,
+    <a href="matlab:help title">title</a>, <a href="matlab:help xlabel">xlabel</a>, <a href="matlab:help ylabel">ylabel</a>, <a href="matlab:help axis">axis</a>, <a href="matlab:help axes">axes</a>, <a href="matlab:help hold">hold</a>, <a href="matlab:help legend">legend</a>, <a href="matlab:help subplot">subplot</a>, <a href="matlab:help scatter">scatter</a>.
+
+    <a href="matlab:doc plot">Reference page for plot</a>
+    <a href="matlab:matlab.internal.language.introspective.overloads.displayOverloads('plot')">Other functions named plot</a>
+
+Brunner_Pascal_IT17tbZH_Test_Aufg2
+
+g =
+
+  Columns 1 through 11
+
+      -69709      -39131      -20295       -9463       -3785       -1179        -211          25          27           5           1
+
+  Columns 12 through 21
+
+           9          95         517        1845        5081       11779       24165       45257       78985      130311
+
+
+h =
+
+    1.0000    0.5403   -0.4161   -0.9900   -0.6536    0.2837    0.9602    0.7539   -0.1455   -0.9111   -0.8391    0.0044    0.8439
+
+Brunner_Pascal_IT17tbZH_Test_Aufg2
+
+g =
+
+  Columns 1 through 11
+
+      -69709      -39131      -20295       -9463       -3785       -1179        -211          25          27           5           1
+
+  Columns 12 through 21
+
+           9          95         517        1845        5081       11779       24165       45257       78985      130311
+
+
+h =
+
+    1.0000    0.5403   -0.4161   -0.9900   -0.6536    0.2837    0.9602    0.7539   -0.1455   -0.9111   -0.8391    0.0044    0.8439
+
+Brunner_Pascal_IT17tbZH_Test_Aufg2
+
+g =
+
+  Columns 1 through 11
+
+      -69709      -39131      -20295       -9463       -3785       -1179        -211          25          27           5           1
+
+  Columns 12 through 21
+
+           9          95         517        1845        5081       11779       24165       45257       78985      130311
+
+
+h =
+
+  Columns 1 through 13
+
+    1.0000    0.9950    0.9801    0.9553    0.9211    0.8776    0.8253    0.7648    0.6967    0.6216    0.5403    0.4536    0.3624
+
+  Columns 14 through 26
+
+    0.2675    0.1700    0.0707   -0.0292   -0.1288   -0.2272   -0.3233   -0.4161   -0.5048   -0.5885   -0.6663   -0.7374   -0.8011
+
+  Columns 27 through 39
+
+   -0.8569   -0.9041   -0.9422   -0.9710   -0.9900   -0.9991   -0.9983   -0.9875   -0.9668   -0.9365   -0.8968   -0.8481   -0.7910
+
+  Columns 40 through 52
+
+   -0.7259   -0.6536   -0.5748   -0.4903   -0.4008   -0.3073   -0.2108   -0.1122   -0.0124    0.0875    0.1865    0.2837    0.3780
+
+  Columns 53 through 65
+
+    0.4685    0.5544    0.6347    0.7087    0.7756    0.8347    0.8855    0.9275    0.9602    0.9833    0.9965    0.9999    0.9932
+
+  Columns 66 through 78
+
+    0.9766    0.9502    0.9144    0.8694    0.8157    0.7539    0.6845    0.6084    0.5261    0.4385    0.3466    0.2513    0.1534
+
+  Columns 79 through 91
+
+    0.0540   -0.0460   -0.1455   -0.2435   -0.3392   -0.4314   -0.5193   -0.6020   -0.6787   -0.7486   -0.8111   -0.8654   -0.9111
+
+  Columns 92 through 104
+
+   -0.9477   -0.9748   -0.9922   -0.9997   -0.9972   -0.9847   -0.9624   -0.9304   -0.8892   -0.8391   -0.7806   -0.7143   -0.6408
+
+  Columns 105 through 117
+
+   -0.5610   -0.4755   -0.3853   -0.2913   -0.1943   -0.0954    0.0044    0.1042    0.2030    0.2997    0.3935    0.4833    0.5683
+
+  Columns 118 through 126
+
+    0.6476    0.7204    0.7861    0.8439    0.8932    0.9336    0.9647    0.9862    0.9978
+
+Brunner_Pascal_IT17tbZH_Test_Aufg2
+
+g =
+
+  Columns 1 through 11
+
+      -69709      -39131      -20295       -9463       -3785       -1179        -211          25          27           5           1
+
+  Columns 12 through 21
+
+           9          95         517        1845        5081       11779       24165       45257       78985      130311
+
+
+h =
+
+  Columns 1 through 13
+
+    1.0000    0.9950    0.9801    0.9553    0.9211    0.8776    0.8253    0.7648    0.6967    0.6216    0.5403    0.4536    0.3624
+
+  Columns 14 through 26
+
+    0.2675    0.1700    0.0707   -0.0292   -0.1288   -0.2272   -0.3233   -0.4161   -0.5048   -0.5885   -0.6663   -0.7374   -0.8011
+
+  Columns 27 through 39
+
+   -0.8569   -0.9041   -0.9422   -0.9710   -0.9900   -0.9991   -0.9983   -0.9875   -0.9668   -0.9365   -0.8968   -0.8481   -0.7910
+
+  Columns 40 through 52
+
+   -0.7259   -0.6536   -0.5748   -0.4903   -0.4008   -0.3073   -0.2108   -0.1122   -0.0124    0.0875    0.1865    0.2837    0.3780
+
+  Columns 53 through 65
+
+    0.4685    0.5544    0.6347    0.7087    0.7756    0.8347    0.8855    0.9275    0.9602    0.9833    0.9965    0.9999    0.9932
+
+  Columns 66 through 78
+
+    0.9766    0.9502    0.9144    0.8694    0.8157    0.7539    0.6845    0.6084    0.5261    0.4385    0.3466    0.2513    0.1534
+
+  Columns 79 through 91
+
+    0.0540   -0.0460   -0.1455   -0.2435   -0.3392   -0.4314   -0.5193   -0.6020   -0.6787   -0.7486   -0.8111   -0.8654   -0.9111
+
+  Columns 92 through 104
+
+   -0.9477   -0.9748   -0.9922   -0.9997   -0.9972   -0.9847   -0.9624   -0.9304   -0.8892   -0.8391   -0.7806   -0.7143   -0.6408
+
+  Columns 105 through 117
+
+   -0.5610   -0.4755   -0.3853   -0.2913   -0.1943   -0.0954    0.0044    0.1042    0.2030    0.2997    0.3935    0.4833    0.5683
+
+  Columns 118 through 126
+
+    0.6476    0.7204    0.7861    0.8439    0.8932    0.9336    0.9647    0.9862    0.9978
+
+Brunner_Pascal_IT17tbZH_Test_Aufg2
+
+g =
+
+  Columns 1 through 11
+
+      -69709      -39131      -20295       -9463       -3785       -1179        -211          25          27           5           1
+
+  Columns 12 through 21
+
+           9          95         517        1845        5081       11779       24165       45257       78985      130311
+
+
+h =
+
+  Columns 1 through 13
+
+    1.0000    0.9950    0.9801    0.9553    0.9211    0.8776    0.8253    0.7648    0.6967    0.6216    0.5403    0.4536    0.3624
+
+  Columns 14 through 26
+
+    0.2675    0.1700    0.0707   -0.0292   -0.1288   -0.2272   -0.3233   -0.4161   -0.5048   -0.5885   -0.6663   -0.7374   -0.8011
+
+  Columns 27 through 39
+
+   -0.8569   -0.9041   -0.9422   -0.9710   -0.9900   -0.9991   -0.9983   -0.9875   -0.9668   -0.9365   -0.8968   -0.8481   -0.7910
+
+  Columns 40 through 52
+
+   -0.7259   -0.6536   -0.5748   -0.4903   -0.4008   -0.3073   -0.2108   -0.1122   -0.0124    0.0875    0.1865    0.2837    0.3780
+
+  Columns 53 through 65
+
+    0.4685    0.5544    0.6347    0.7087    0.7756    0.8347    0.8855    0.9275    0.9602    0.9833    0.9965    0.9999    0.9932
+
+  Columns 66 through 78
+
+    0.9766    0.9502    0.9144    0.8694    0.8157    0.7539    0.6845    0.6084    0.5261    0.4385    0.3466    0.2513    0.1534
+
+  Columns 79 through 91
+
+    0.0540   -0.0460   -0.1455   -0.2435   -0.3392   -0.4314   -0.5193   -0.6020   -0.6787   -0.7486   -0.8111   -0.8654   -0.9111
+
+  Columns 92 through 104
+
+   -0.9477   -0.9748   -0.9922   -0.9997   -0.9972   -0.9847   -0.9624   -0.9304   -0.8892   -0.8391   -0.7806   -0.7143   -0.6408
+
+  Columns 105 through 117
+
+   -0.5610   -0.4755   -0.3853   -0.2913   -0.1943   -0.0954    0.0044    0.1042    0.2030    0.2997    0.3935    0.4833    0.5683
+
+  Columns 118 through 126
+
+    0.6476    0.7204    0.7861    0.8439    0.8932    0.9336    0.9647    0.9862    0.9978
+
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('plot')" style="font-weight:bold">plot</a>
+Data must be a single matrix Y or a list of pairs X,Y.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Brunner_Pascal_IT17tbZH_Test_Aufg2', 'C:\Users\pasca\OneDrive\Dokumente\MATLAB\Brunner_Pascal_IT17tbZH_Test_Aufg2.m', 19)" style="font-weight:bold">Brunner_Pascal_IT17tbZH_Test_Aufg2</a> (<a href="matlab: opentoline('C:\Users\pasca\OneDrive\Dokumente\MATLAB\Brunner_Pascal_IT17tbZH_Test_Aufg2.m',19,0)">line 19</a>)
+    plot(x, g, x, h, x);
+} 
+Brunner_Pascal_IT17tbZH_Test_Aufg2
+
+g =
+
+  Columns 1 through 11
+
+      -69709      -39131      -20295       -9463       -3785       -1179        -211          25          27           5           1
+
+  Columns 12 through 21
+
+           9          95         517        1845        5081       11779       24165       45257       78985      130311
+
+
+h =
+
+  Columns 1 through 13
+
+    1.0000    0.9950    0.9801    0.9553    0.9211    0.8776    0.8253    0.7648    0.6967    0.6216    0.5403    0.4536    0.3624
+
+  Columns 14 through 26
+
+    0.2675    0.1700    0.0707   -0.0292   -0.1288   -0.2272   -0.3233   -0.4161   -0.5048   -0.5885   -0.6663   -0.7374   -0.8011
+
+  Columns 27 through 39
+
+   -0.8569   -0.9041   -0.9422   -0.9710   -0.9900   -0.9991   -0.9983   -0.9875   -0.9668   -0.9365   -0.8968   -0.8481   -0.7910
+
+  Columns 40 through 52
+
+   -0.7259   -0.6536   -0.5748   -0.4903   -0.4008   -0.3073   -0.2108   -0.1122   -0.0124    0.0875    0.1865    0.2837    0.3780
+
+  Columns 53 through 65
+
+    0.4685    0.5544    0.6347    0.7087    0.7756    0.8347    0.8855    0.9275    0.9602    0.9833    0.9965    0.9999    0.9932
+
+  Columns 66 through 78
+
+    0.9766    0.9502    0.9144    0.8694    0.8157    0.7539    0.6845    0.6084    0.5261    0.4385    0.3466    0.2513    0.1534
+
+  Columns 79 through 91
+
+    0.0540   -0.0460   -0.1455   -0.2435   -0.3392   -0.4314   -0.5193   -0.6020   -0.6787   -0.7486   -0.8111   -0.8654   -0.9111
+
+  Columns 92 through 104
+
+   -0.9477   -0.9748   -0.9922   -0.9997   -0.9972   -0.9847   -0.9624   -0.9304   -0.8892   -0.8391   -0.7806   -0.7143   -0.6408
+
+  Columns 105 through 117
+
+   -0.5610   -0.4755   -0.3853   -0.2913   -0.1943   -0.0954    0.0044    0.1042    0.2030    0.2997    0.3935    0.4833    0.5683
+
+  Columns 118 through 126
+
+    0.6476    0.7204    0.7861    0.8439    0.8932    0.9336    0.9647    0.9862    0.9978
+
+Brunner_Pascal_IT17tbZH_Test_Aufg2
+
+g =
+
+  Columns 1 through 11
+
+      -69709      -39131      -20295       -9463       -3785       -1179        -211          25          27           5           1
+
+  Columns 12 through 21
+
+           9          95         517        1845        5081       11779       24165       45257       78985      130311
+
+Brunner_Pascal_IT17tbZH_Test_Aufg2
+
+g =
+
+  Columns 1 through 11
+
+      -69709      -39131      -20295       -9463       -3785       -1179        -211          25          27           5           1
+
+  Columns 12 through 21
+
+           9          95         517        1845        5081       11779       24165       45257       78985      130311
+
+Brunner_Pascal_IT17tbZH_Test_Aufg2
+
+g =
+
+  Columns 1 through 11
+
+      -69709      -39131      -20295       -9463       -3785       -1179        -211          25          27           5           1
+
+  Columns 12 through 21
+
+           9          95         517        1845        5081       11779       24165       45257       78985      130311
+
+Brunner_Pascal_IT17tbZH_Test_Aufg2
+
+g =
+
+  Columns 1 through 11
+
+      -69709      -39131      -20295       -9463       -3785       -1179        -211          25          27           5           1
+
+  Columns 12 through 21
+
+           9          95         517        1845        5081       11779       24165       45257       78985      130311
+
+Brunner_Pascal_IT17tbZH_Test_Aufg2
+
+g =
+
+  Columns 1 through 11
+
+      -69709      -39131      -20295       -9463       -3785       -1179        -211          25          27           5           1
+
+  Columns 12 through 21
+
+           9          95         517        1845        5081       11779       24165       45257       78985      130311
+
+diary off

@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Kuenstler
+comment0.text=\r\n\ Die\ Klasse\ Kuenstler\ kann\ von\ der\ Klasse\ Event\ verwendet\ werden.\ In\ der\ Klasse\ Kuenstler\ kann\ ein\ Objekt\ Kuenstler\ mit\ Gage\ erzeugt\ werden.\r\n\ \r\n\ @author\ Pascal\ Brunner\r\n\ @version\ 07102017\r\n
+comment1.params=kuenstlerName\ gage
+comment1.target=Kuenstler(java.lang.String,\ int)
+comment1.text=\r\n\ Konstruktor\ f\u00FCr\ mit\ Parameter\ Objekte\ der\ Klasse\ Kuenstler\r\n\ @param\ KuenstlerName\ Der\ Name\ des\ Kuenstlers\r\n\ @param\ gage\ Die\ Gage\ des\ Kuenstlers\ \ \ \ \r\n
+comment2.params=
+comment2.target=Kuenstler()
+comment2.text=\r\n\ Konstruktor\ ohne\ Parameter\ mit\ Defaultwerten\r\n\ @param\ KuenstlerName\ Der\ Name\ des\ Kuenstlers\r\n\ @param\ gage\ Die\ Gage\ des\ Kuenstlers\ \ \ \ \r\n
+comment3.params=kuenstlerName\ gage
+comment3.target=void\ setKuenstler(java.lang.String,\ int)
+comment3.text=\r\n\ Setzt\ einen\ Namen\ und\ Gage\ f\u00FCr\ den\ Kuenstler\r\n\ \r\n\ @param\ kuenstlerName\ Der\ Namen\ des\ Kuenstlers\r\n\ @param\ gage\ Die\ Gage\ des\ Kuenstlers\r\n
+comment4.params=
+comment4.target=int\ getGage()
+comment4.text=\r\n\ Liefert\ die\ Gage\ des\ Kuenstlers\r\n\ @return\ Liefert\ die\ Gage\r\n
+comment5.params=
+comment5.target=java.lang.String\ getName()
+comment5.text=\r\n\ Liefert\ den\ Namen\ des\ Kuenstlers\ \r\n\ @return\ liefert\ den\ Namen\ des\ Kuenstlers\r\n
+numComments=6

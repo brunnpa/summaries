@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<s:Envelope xmlns:a="http://www.w3.org/2005/08/addressing"
+            xmlns:s="http://www.w3.org/2003/05/soap-envelope">
+   <s:Header>
+      <a:Action s:mustUnderstand="1">urn:ihe:iti:2007:ProvideAndRegisterDocumentSet-b</a:Action>
+      <a:MessageID>urn:uuid:08dd72b7-2461-4140-9052-fc817d116132</a:MessageID>
+      <a:ReplyTo>
+         <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>
+      </a:ReplyTo>
+      <a:To s:mustUnderstand="1">https://ehealthsuisse.ihe-europe.net:10443/xdstools7/sim/default__ahdis/rep/prb</a:To>
+   </s:Header>
+   <s:Body>
+      <xdsb:ProvideAndRegisterDocumentSetRequest xmlns:lcm="urn:oasis:names:tc:ebxml-regrep:xsd:lcm:3.0"
+                                                 xmlns:rim="urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0"
+                                                 xmlns:rs="urn:oasis:names:tc:ebxml-regrep:xsd:rs:3.0"
+                                                 xmlns:xdsb="urn:ihe:iti:xds-b:2007"
+                                                 xmlns:xop="http://www.w3.org/2004/08/xop/include">
+         <lcm:SubmitObjectsRequest>
+            <rim:RegistryObjectList>
+               <rim:RegistryPackage id="urn:uuid:95500759-42a5-4352-aa10-f91a23fb450d"
+                                    objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:RegistryPackage">
+                  <rim:Slot name="submissionTime">
+                    <rim:ValueList>
+                        <rim:Value>20201021105201</rim:Value>
+                    </rim:ValueList>
+                  </rim:Slot>
+                  <rim:Name>
+                    <rim:LocalizedString value="XDS Submission Set"/>
+                  </rim:Name>
+                  <rim:Classification classificationScheme="urn:uuid:aa543740-bdda-424e-8c96-df4873be8500"
+                                      classifiedObject="urn:uuid:95500759-42a5-4352-aa10-f91a23fb450d"
+                                      id="urn:uuid:5724f100-f954-47b8-9afd-48f4d7b3cbec"
+                                      nodeRepresentation="71388002"
+                                      objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification">
+                    <rim:Slot name="codingScheme">
+                        <rim:ValueList>
+                            <rim:Value>2.16.840.1.113883.6.96</rim:Value>
+                        </rim:ValueList>
+                    </rim:Slot>
+                    <rim:Name>
+                        <rim:LocalizedString value="Procedure (procedure)"/>
+                    </rim:Name>
+                  </rim:Classification>
+                  <rim:Classification classificationNode="urn:uuid:a54d6aa5-d40d-43f9-88c5-b4633d873bdd"
+                                      classifiedObject="urn:uuid:95500759-42a5-4352-aa10-f91a23fb450d"
+                                      id="urn:uuid:b6597ab1-a124-4fff-a158-45ccac48954b"
+                                      objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification"/>
+                  <rim:ExternalIdentifier id="urn:uuid:1d919c5b-2ccf-4096-a0eb-86efccc52e7c"
+                                          identificationScheme="urn:uuid:554ac39e-e3fe-47fe-b233-965d2a147832"
+                                          objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:ExternalIdentifier"
+                                          registryObject="urn:uuid:95500759-42a5-4352-aa10-f91a23fb450d"
+                                          value="1.3.6.1.4.1.12559.11.13.2.5">
+                    <rim:Name>
+                        <rim:LocalizedString value="XDSSubmissionSet.sourceId"/>
+                    </rim:Name>
+                  </rim:ExternalIdentifier>
+                  <rim:ExternalIdentifier id="urn:uuid:bee06e26-8094-479d-b06e-d9b5abf78bbd"
+                                          identificationScheme="urn:uuid:96fdda7c-d067-4183-912e-bf5ee74998a8"
+                                          objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:ExternalIdentifier"
+                                          registryObject="urn:uuid:95500759-42a5-4352-aa10-f91a23fb450d"
+                                          value="1.3.6.1.4.1.12559.11.13.2.6.3399">
+                    <rim:Name>
+                        <rim:LocalizedString value="XDSSubmissionSet.uniqueId"/>
+                    </rim:Name>
+                  </rim:ExternalIdentifier>
+                  <rim:ExternalIdentifier id="a9ba004e-e7ef-4d9e-9c8c-604890d44451"
+                                          identificationScheme="urn:uuid:6b5aea1a-874d-4603-a4bc-96a0a7b38446"
+                                          objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:ExternalIdentifier"
+                                          registryObject="urn:uuid:95500759-42a5-4352-aa10-f91a23fb450d"
+                                          value="ZHAW2^^^&amp;1.3.6.1.4.1.12559.11.20.1&amp;ISO">
+                    <rim:Name>
+                        <rim:LocalizedString value="XDSSubmissionSet.patientId"/>
+                    </rim:Name>
+                  </rim:ExternalIdentifier>
+               </rim:RegistryPackage>
+               <rim:ExtrinsicObject id="urn:uuid:4d6e17b1-1b91-4836-8360-99dde776ef73"
+                                    mimeType="application/pdf"
+                                    objectType="urn:uuid:7edca82f-054d-47f2-a032-9b2a5b5186c1"
+                                    status="urn:oasis:names:tc:ebxml-regrep:StatusType:Approved">
+                  <rim:Slot name="languageCode">
+                    <rim:ValueList>
+                        <rim:Value>en-us</rim:Value>
+                    </rim:ValueList>
+                  </rim:Slot>
+                  <rim:Slot name="creationTime">
+                    <rim:ValueList>
+                        <rim:Value>20201021104944</rim:Value>
+                    </rim:ValueList>
+                  </rim:Slot>
+                  <rim:Slot name="sourcePatientId">
+                    <rim:ValueList>
+                        <rim:Value>ZHAW2^^^&amp;1.3.6.1.4.1.12559.11.20.1&amp;ISO</rim:Value>
+                    </rim:ValueList>
+                  </rim:Slot>
+                  <rim:Name>
+                    <rim:LocalizedString value="Lab04-pdfToUpload-ristovel-brunnpa7"/>
+                  </rim:Name>
+                  <rim:Classification classificationScheme="urn:uuid:41a5887f-8865-4c09-adf7-e362475b143a"
+                                      classifiedObject="urn:uuid:4d6e17b1-1b91-4836-8360-99dde776ef73"
+                                      id="urn:uuid:8e2fd658-7033-45e2-8abf-7213b7b5f254"
+                                      nodeRepresentation="371538006"
+                                      objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification">
+                    <rim:Slot name="codingScheme">
+                        <rim:ValueList>
+                            <rim:Value>2.16.840.1.113883.6.96</rim:Value>
+                        </rim:ValueList>
+                    </rim:Slot>
+                    <rim:Name>
+                        <rim:LocalizedString value="Advance directive report (record artifact)"/>
+                    </rim:Name>
+                  </rim:Classification>
+                  <rim:Classification classificationScheme="urn:uuid:f4f85eac-e6cb-4883-b524-f2705394840f"
+                                      classifiedObject="urn:uuid:4d6e17b1-1b91-4836-8360-99dde776ef73"
+                                      id="urn:uuid:bdb81c3c-97ac-4655-8a1a-daa61685ce74"
+                                      nodeRepresentation="263856008"
+                                      objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification">
+                    <rim:Slot name="codingScheme">
+                        <rim:ValueList>
+                            <rim:Value>2.16.840.1.113883.6.96</rim:Value>
+                        </rim:ValueList>
+                    </rim:Slot>
+                    <rim:Name>
+                        <rim:LocalizedString value="Restricted (qualifier value)"/>
+                    </rim:Name>
+                  </rim:Classification>
+                  <rim:Classification classificationScheme="urn:uuid:a09d5840-386c-46f2-b5ad-9c3699a4309d"
+                                      classifiedObject="urn:uuid:4d6e17b1-1b91-4836-8360-99dde776ef73"
+                                      id="urn:uuid:e944c3de-ec21-442a-bd7f-f87c779d77b0"
+                                      nodeRepresentation="urn:ihe:iti:xds-sd:pdf:2008"
+                                      objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification">
+                    <rim:Slot name="codingScheme">
+                        <rim:ValueList>
+                            <rim:Value>1.3.6.1.4.1.19376.1.2.3</rim:Value>
+                        </rim:ValueList>
+                    </rim:Slot>
+                    <rim:Name>
+                        <rim:LocalizedString value="Scanned Documents (PDF)"/>
+                    </rim:Name>
+                  </rim:Classification>
+                  <rim:Classification classificationScheme="urn:uuid:f33fb8ac-18af-42cc-ae0e-ed0b0bdb91e1"
+                                      classifiedObject="urn:uuid:4d6e17b1-1b91-4836-8360-99dde776ef73"
+                                      id="urn:uuid:6617865a-a6a7-4187-a3cc-2ea2f4608da7"
+                                      nodeRepresentation="225728007"
+                                      objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification">
+                    <rim:Slot name="codingScheme">
+                        <rim:ValueList>
+                            <rim:Value>2.16.840.1.113883.6.96</rim:Value>
+                        </rim:ValueList>
+                    </rim:Slot>
+                    <rim:Name>
+                        <rim:LocalizedString value="Accident and Emergency department (environment)"/>
+                    </rim:Name>
+                  </rim:Classification>
+                  <rim:Classification classificationScheme="urn:uuid:cccf5598-8b07-4b77-a05e-ae952c785ead"
+                                      classifiedObject="urn:uuid:4d6e17b1-1b91-4836-8360-99dde776ef73"
+                                      id="urn:uuid:908e08af-852d-4e7b-8118-b80583c81f0b"
+                                      nodeRepresentation="394576009"
+                                      objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification">
+                    <rim:Slot name="codingScheme">
+                        <rim:ValueList>
+                            <rim:Value>2.16.840.1.113883.6.96</rim:Value>
+                        </rim:ValueList>
+                    </rim:Slot>
+                    <rim:Name>
+                        <rim:LocalizedString value="Accident &amp; emergency (qualifier value)"/>
+                    </rim:Name>
+                  </rim:Classification>
+                  <rim:Classification classificationScheme="urn:uuid:f0306f51-975f-434e-a61c-c59651d33983"
+                                      classifiedObject="urn:uuid:4d6e17b1-1b91-4836-8360-99dde776ef73"
+                                      id="urn:uuid:1c46d8d0-5b60-4034-b496-ff04c9e2f2aa"
+                                      nodeRepresentation="445300006"
+                                      objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:Classification">
+                    <rim:Slot name="codingScheme">
+                        <rim:ValueList>
+                            <rim:Value>2.16.840.1.113883.6.96</rim:Value>
+                        </rim:ValueList>
+                    </rim:Slot>
+                    <rim:Name>
+                        <rim:LocalizedString value="Emergency department record (record artifact)"/>
+                    </rim:Name>
+                  </rim:Classification>
+                  <rim:ExternalIdentifier id="urn:uuid:c6fc541f-0211-4e33-b95e-37e2ea99eaa8"
+                                          identificationScheme="urn:uuid:2e82c1f6-a085-4c72-9da3-8640a32e42ab"
+                                          objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:ExternalIdentifier"
+                                          registryObject="urn:uuid:4d6e17b1-1b91-4836-8360-99dde776ef73"
+                                          value="1.3.6.1.4.1.12559.11.13.2.1.3403">
+                    <rim:Name>
+                        <rim:LocalizedString value="XDSDocumentEntry.uniqueId"/>
+                    </rim:Name>
+                  </rim:ExternalIdentifier>
+                  <rim:ExternalIdentifier id="03afbad9-b3d3-4fce-bd2b-9ea86dfe9d02"
+                                          identificationScheme="urn:uuid:58a6f841-87b3-4a3e-92fd-a8ffeff98427"
+                                          objectType="urn:oasis:names:tc:ebxml-regrep:ObjectType:RegistryObject:ExternalIdentifier"
+                                          registryObject="urn:uuid:4d6e17b1-1b91-4836-8360-99dde776ef73"
+                                          value="ZHAW2^^^&amp;1.3.6.1.4.1.12559.11.20.1&amp;ISO">
+                    <rim:Name>
+                        <rim:LocalizedString value="XDSDocumentEntry.patientId"/>
+                    </rim:Name>
+                  </rim:ExternalIdentifier>
+               </rim:ExtrinsicObject>
+               <rim:Association associationType="urn:oasis:names:tc:ebxml-regrep:AssociationType:HasMember"
+                                id="05c8f5b3-ee5c-4936-aa26-1df910205a9f"
+                                sourceObject="urn:uuid:95500759-42a5-4352-aa10-f91a23fb450d"
+                                targetObject="urn:uuid:4d6e17b1-1b91-4836-8360-99dde776ef73">
+                  <rim:Slot name="SubmissionSetStatus">
+                    <rim:ValueList>
+                        <rim:Value>Original</rim:Value>
+                    </rim:ValueList>
+                  </rim:Slot>
+               </rim:Association>
+            </rim:RegistryObjectList>
+         </lcm:SubmitObjectsRequest>
+         <xdsb:Document id="urn:uuid:4d6e17b1-1b91-4836-8360-99dde776ef73">
+            <xop:Include href="cid:1.urn:uuid:4D6E17B11B914836836099DDE776EF73@ws.jboss.org"/>
+         </xdsb:Document>
+      </xdsb:ProvideAndRegisterDocumentSetRequest>
+   </s:Body>
+</s:Envelope>

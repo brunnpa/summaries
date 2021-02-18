@@ -1,0 +1,565 @@
+---
+openapi: 3.0.0
+info:
+  title: ASE1_Auktionsplatform
+  description: This is the first draft of the ASE1 Auktionsplatform API
+  contact:
+    email: ponbamar@students.zhaw.ch
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.0
+servers:
+- url: https://virtserver.swaggerhub.com/mpbauer/ASE1_Auktionsplatform/1.0.0
+  description: SwaggerHub API Auto Mocking
+tags:
+- name: users
+  description: Manage users
+- name: products
+  description: Manage products
+- name: auctions
+  description: Manage auctions
+- name: bids
+  description: Manage bids
+- name: payment
+  description: Manage payment details
+paths:
+  /users/{userId}/unlock:
+    put:
+      tags:
+      - users
+      summary: searches inventory
+      description: |
+        By passing in the appropriate options, you can search for
+        available inventory in the system
+      operationId: searchInventory
+      parameters:
+      - name: userId
+        in: path
+        description: Unique ID of the user to get.
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: the user was unlocked successfully
+        "400":
+          description: bad input parameter
+        "403":
+          description: user is not authorized
+        "404":
+          description: the specified user does not exist
+  /products:
+    get:
+      tags:
+      - products
+      summary: retrieves a list of products
+      operationId: getProducts
+      responses:
+        "200":
+          description: A list of products
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Product'
+        "403":
+          description: user is not authorized
+        "400":
+          description: bad input parameter
+  /products/{productId}:
+    delete:
+      tags:
+      - products
+      summary: deletes a product
+      operationId: deleteProduct
+      parameters:
+      - name: productId
+        in: path
+        description: Unique ID of the product
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: deletes a specific product by its ID
+        "400":
+          description: bad input parameter
+        "403":
+          description: user is not authorized
+        "404":
+          description: user does not exist
+  /auctions:
+    get:
+      tags:
+      - auctions
+      summary: retrieves a list of auctions the user is authorized to see
+      operationId: getAuctions
+      parameters:
+      - name: status
+        in: query
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: string
+          enum:
+          - ALL
+          - WON
+          - LOST
+          - NOT_STARTED
+          - IN_PROGRESS
+          - FINISHED
+      - name: ownAuctionsOnly
+        in: query
+        description: Only returns auctions created by the current user
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: boolean
+      responses:
+        "200":
+          description: A list of auctions
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Auction'
+        "403":
+          description: user is not authorized
+        "400":
+          description: bad input parameter
+    post:
+      tags:
+      - auctions
+      summary: creates a new auction
+      operationId: createAuction
+      requestBody:
+        description: Optional description in *Markdown*
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Auction'
+        required: true
+      responses:
+        "200":
+          description: Auction was created successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Auction'
+        "400":
+          description: bad input parameter
+        "403":
+          description: user is not authorized
+  /auctions/{auctionId}:
+    put:
+      tags:
+      - auctions
+      summary: gets a bid of an auction
+      operationId: updateAuction
+      parameters:
+      - name: auctionId
+        in: path
+        description: The id of the auction
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Get a bid
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Bid'
+        "400":
+          description: bad input parameter
+        "403":
+          description: user is not authorized
+    delete:
+      tags:
+      - auctions
+      summary: deletes an auction
+      operationId: deleteAuction
+      parameters:
+      - name: auctionId
+        in: path
+        description: Unique ID of the auction
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: deletes a specific auction by its ID
+        "400":
+          description: bad input parameter
+        "403":
+          description: user is not authorized
+        "404":
+          description: user does not exist
+  /auctions/{auctionId}/bids:
+    get:
+      tags:
+      - bids
+      summary: retrieve all bids of your user
+      operationId: getBids
+      parameters:
+      - name: auctionId
+        in: path
+        description: The id of the auction
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Get all bids of the current user
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Bid'
+        "400":
+          description: bad input parameter
+        "403":
+          description: user is not authorized
+    put:
+      tags:
+      - bids
+      summary: create a new bid to an auction
+      operationId: updateBid
+      parameters:
+      - name: auctionId
+        in: path
+        description: The id of the auction
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        description: Optional description in *Markdown*
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Bid'
+        required: true
+      responses:
+        "200":
+          description: Bid was created successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Bid'
+        "400":
+          description: bad input parameter
+        "403":
+          description: user is not authorized
+    post:
+      tags:
+      - bids
+      summary: create a new bid to an auction
+      operationId: createBid
+      parameters:
+      - name: auctionId
+        in: path
+        description: The id of the auction
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        description: Optional description in *Markdown*
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Bid'
+        required: true
+      responses:
+        "200":
+          description: Bid was created successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Bid'
+        "400":
+          description: bad input parameter
+        "403":
+          description: user is not authorized
+  /auctions/{auctionId}/bids/{bidId}:
+    get:
+      tags:
+      - bids
+      summary: gets a bid of an auction
+      operationId: getBid
+      parameters:
+      - name: auctionId
+        in: path
+        description: The id of the auction
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      - name: bidId
+        in: path
+        description: The id of the bid
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Get a bid
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Bid'
+        "400":
+          description: bad input parameter
+        "403":
+          description: user is not authorized
+    delete:
+      tags:
+      - bids
+      summary: deletes a bid
+      operationId: deleteBid
+      parameters:
+      - name: auctionId
+        in: path
+        description: Unique id of the auction
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      - name: bidId
+        in: path
+        description: Unique ID of the bid
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204":
+          description: deletes a specific bid by its ID
+        "400":
+          description: bad input parameter
+        "403":
+          description: user is not authorized
+        "404":
+          description: user does not exist
+  /paymentdetails:
+    get:
+      tags:
+      - payment
+      summary: Retrieve payment information
+      operationId: getPaymentDetails
+      responses:
+        "200":
+          description: Details of payment information
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PaymentDetails'
+        "400":
+          description: bad input parameter
+        "403":
+          description: user is not authorized
+    put:
+      tags:
+      - payment
+      summary: create a new bid to an auction
+      operationId: updatePaymentDetails
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Bid'
+        required: true
+      responses:
+        "200":
+          description: Bid was created successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Bid'
+        "400":
+          description: bad input parameter
+        "403":
+          description: user is not authorized
+components:
+  schemas:
+    PaymentDetails:
+      required:
+      - address
+      type: object
+      properties:
+        address:
+          $ref: '#/components/schemas/Address'
+        methodOfPayment:
+          type: string
+          example: CREDIT_CARD
+          enum:
+          - CREDIT_CARD
+          - BITCOIN
+    Product:
+      required:
+      - category
+      - id
+      - name
+      - price
+      - status
+      - stock
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          example: d290f1ee-6c54-4b01-90e6-d701748f0851
+        name:
+          type: string
+          example: Apple iPhone 11 Pro
+        category:
+          type: string
+          example: Smartphones
+        stock:
+          type: integer
+          example: 21
+        price:
+          type: number
+    Auction:
+      required:
+      - bids
+      - buyer
+      - id
+      - name
+      - seller
+      - status
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          example: d290f1ee-6c54-4b01-90e6-d701748f0851
+        name:
+          type: string
+          example: Apple iPhone 11 Pro
+        category:
+          type: string
+          example: Smartphones
+        stock:
+          type: integer
+          example: 21
+        price:
+          $ref: '#/components/schemas/Pricing'
+        bids:
+          type: array
+          items:
+            $ref: '#/components/schemas/Bid'
+        status:
+          type: string
+          example: CLOSED
+          enum:
+          - NOT_STARTED
+          - IN_PROGRESS
+          - FINISHED
+    Person:
+      required:
+      - address
+      - birthdate
+      - firstname
+      - id
+      - lastname
+      type: object
+      properties:
+        id:
+          type: string
+          example: 4bc5cba8-1be0-40b2-a005-9fa81d6842cf
+        firstname:
+          type: string
+          example: Max
+        lastname:
+          type: string
+          example: Mustermann
+        birthdate:
+          type: string
+          example: 1991-08-01
+        address:
+          $ref: '#/components/schemas/Address'
+    Address:
+      required:
+      - city
+      - street
+      - streetNumber
+      - zipCode
+      type: object
+      properties:
+        street:
+          type: string
+          example: Bahnhofstrasse
+        streetNumber:
+          type: string
+          example: 5c
+        zipCode:
+          type: number
+          example: 8001
+        city:
+          type: string
+          example: Zürich
+    Bid:
+      required:
+      - bid
+      - bidder
+      - id
+      type: object
+      properties:
+        id:
+          type: string
+          example: 24b9c75b-dc89-491f-bda9-e29e32a359f1
+        bidder:
+          $ref: '#/components/schemas/Person'
+        bid:
+          $ref: '#/components/schemas/Pricing'
+    Pricing:
+      required:
+      - currency
+      - price
+      type: object
+      properties:
+        price:
+          type: number
+          example: 1099.99
+        currency:
+          type: string
+          example: USD
+          enum:
+          - USD
+          - EUR
+          - CHF

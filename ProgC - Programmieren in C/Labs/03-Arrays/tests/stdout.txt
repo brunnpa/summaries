@@ -1,0 +1,27 @@
+Enter the score for each students, to complete your input type -1:
+Enter the score for the next student, to complete your input type -1:
+Enter the score for the next student, to complete your input type -1:
+Enter the score for the next student, to complete your input type -1:
+Enter the score for the next student, to complete your input type -1:
+Enter the score for the next student, to complete your input type -1:
+Enter the score for the next student, to complete your input type -1:
+Enter the score for the next student, to complete your input type -1:
+Enter the score for the next student, to complete your input type -1:
+Enter the score for the next student, to complete your input type -1:
+Enter the score for the next student, to complete your input type -1:
+Enter the minimum number of points for a 6
+-----------------------------------------------------------------
+Statistics (10 students, 7 points needed for mark 6)
+
+  Mark 6: 4
+  Mark 5: 2
+  Mark 4: 1
+  Mark 3: 2
+  Mark 2: 1
+  Mark 1: 0
+Best mark:        6
+Worst mark:       2
+Average mark:  4.60
+Mark >=4:          7 (students 70.00 %)
+
+Do you want to use another minimum number? (y/n): 

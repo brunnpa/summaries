@@ -1,0 +1,13 @@
+insgesamt 124
+drwxr-xr-x 2 pascalbrunner pascalbrunner  4096 Apr 18 11:31 .
+drwxr-xr-x 6 pascalbrunner pascalbrunner  4096 Mai 15  2019 ..
+-rw-r--r-- 1 pascalbrunner pascalbrunner  1515 Apr 18 11:15 getLine.c
+-rw-r--r-- 1 pascalbrunner pascalbrunner   450 Sep  5  2019 getLine.h
+-rw-r--r-- 1 pascalbrunner pascalbrunner  7160 Apr 18 11:16 getLine.o
+-rw-r--r-- 1 pascalbrunner pascalbrunner   433 Apr 18 11:09 makefile
+-rwxr-xr-x 1 pascalbrunner pascalbrunner 18680 Apr 18 11:03 MiShell.e
+-rwxr-xr-x 1 pascalbrunner pascalbrunner 24176 Apr 18 11:30 MiShellMaBelle.e
+-rw-r--r-- 1 pascalbrunner pascalbrunner  7087 Apr 18 11:30 siShell.c
+-rwxr-xr-x 1 pascalbrunner pascalbrunner 17680 Apr 12 19:20 SiShell.e
+-rw-r--r-- 1 pascalbrunner pascalbrunner 21216 Apr 18 11:30 siShell.o
+-rw-r--r-- 1 pascalbrunner pascalbrunner     0 Apr 18 11:31 testMaBell.txt

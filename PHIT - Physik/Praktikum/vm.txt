@@ -1,0 +1,56 @@
+windows nt (unknown)
+isWindows
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: 
+java.lang.IllegalArgumentException: null source
+	at java.util.EventObject.<init>(EventObject.java:34)
+	at java.awt.AWTEvent.<init>(AWTEvent.java:225)
+	at vm.ModelWindow$CustomEvent.<init>(ModelWindow.java:585)
+	at vm.ModelWindow$CloseEvent.<init>(ModelWindow.java:605)
+	at vm.ModelInfo.closeWindow(ModelInfo.java:1348)
+	at vm.ModelWindow.windowClosing(ModelWindow.java:688)
+	at java.awt.Window.processWindowEvent(Window.java:1121)
+	at javax.swing.JFrame.processWindowEvent(JFrame.java:266)
+	at java.awt.Window.processEvent(Window.java:1079)
+	at vm.ModelWindow.processEvent(ModelWindow.java:98)
+	at java.awt.Component.dispatchEventImpl(Component.java:3615)
+	at java.awt.Container.dispatchEventImpl(Container.java:1627)
+	at java.awt.Window.dispatchEventImpl(Window.java:1606)
+	at java.awt.Component.dispatchEvent(Component.java:3477)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:456)
+	at java.awt.EventDispatchThread.pumpOneEventForHierarchy(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:151)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:145)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:137)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:100)

@@ -1,0 +1,3 @@
+Enter any character string:
+number of characters: 37
+number of words: 7

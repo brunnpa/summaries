@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.target=Flaschenverwaltung
+comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Flaschenverwaltung.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment1.params=flasche
+comment1.target=void\ entferneFlaschenGleichenInhalts(Flasche)
+numComments=2

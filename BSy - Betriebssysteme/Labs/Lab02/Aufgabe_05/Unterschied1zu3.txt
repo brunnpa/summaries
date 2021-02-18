@@ -1,0 +1,61 @@
+1d0
+< 0 		Child
+2a2
+> 0 		Child
+5d4
+< 2 		Child
+7a7
+> 2 		Child
+9d8
+< 4 		Child
+10a10
+> 4 		Child
+15d14
+< 7 		Child
+17c16
+< 8 		Child
+---
+> 7 		Child
+19d17
+< 9 		Child
+21c19
+< 10 		Child
+---
+> 8 		Child
+23c21
+< 11 		Child
+---
+> 9 		Child
+25c23
+< 12 		Child
+---
+> 10 		Child
+27c25
+< 13 		Child
+---
+> 11 		Child
+29c27,28
+< 14 		Child
+---
+> 12 		Child
+> 13 		Child
+31c30
+< 15 		Child
+---
+> 14 		Child
+33d31
+< 16 		Child
+35c33
+< 17 		Child
+---
+> 15 		Child
+37c35
+< 18 		Child
+---
+> 16 		Child
+38a37,39
+> 17 		Child
+> 19 	Mother
+> 18 		Child
+41d41
+< 19 	Mother

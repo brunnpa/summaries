@@ -1,0 +1,13 @@
+--cpu Cortex-M0
+".\build\table.o"
+".\build\datainit_ctboard.o"
+".\build\startup_ctboard.o"
+".\build\system_ctboard.o"
+".\build\hal_fmc.o"
+".\build\hal_gpio.o"
+".\build\hal_pwr.o"
+".\build\hal_rcc.o"
+--strict --scatter ".\build\table.sct"
+--diag_suppress 6314 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\build\table.map" -o .\build\table.axf

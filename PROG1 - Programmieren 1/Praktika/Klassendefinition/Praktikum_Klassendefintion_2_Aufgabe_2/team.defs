@@ -1,0 +1,17 @@
+#Mon Sep 25 15:40:16 CEST 2017
+bluej.teamsettings.groupname=
+bluej.teamsettings.git.repositoryPrefix=/brunnpa7/02_Praktikum-2_Ausdruck.git
+bluej.teamsettings.git.protocol=https
+bluej.teamsettings.user=brunnpa7
+bluej.teamsettings.git.server=github.engineering.zhaw.ch
+bluej.teamsettings.yourEmail=brunnpa7@students.zhaw.ch
+bluej.teamsettings.vcs=git
+bluej.teamsettings.ignore8=\\.DS_Store
+bluej.teamsettings.yourName=Pascal Brunner
+bluej.teamsettings.ignore7=.*\\\#backup
+bluej.teamsettings.ignore6=.*\\\#
+bluej.teamsettings.ignore5=.*\\~
+bluej.teamsettings.ignore4=.*\\.ctxt
+bluej.teamsettings.ignore3=team\\.defs
+bluej.teamsettings.ignore2=bluej\\.pkh
+bluej.teamsettings.ignore1=.*\\.class

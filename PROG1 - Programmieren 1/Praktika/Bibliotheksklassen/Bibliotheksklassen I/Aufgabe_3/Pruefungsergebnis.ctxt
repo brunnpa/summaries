@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Pruefungsergebnis
+comment0.text=\r\n\ Diese\ Klasse\ verwaltet\ ein\ Pruefungsergebnis.\r\n
+comment1.params=student\ note
+comment1.target=Pruefungsergebnis(java.lang.String,\ double)
+comment1.text=\r\n\ Erzeugt\ ein\ Pruefungsergebnis.\r\n\ \r\n\ @param\ student\ Name\ des\ Studierenden.\r\n\ @param\ note\ Note\ des\ Studierenden.\r\n
+comment2.params=
+comment2.target=java.lang.String\ getStudent()
+comment2.text=\r\n\ Liefert\ den\ Namen\ des\ Studierenden.\r\n\ \r\n\ @return\ Name\ des\ Studierenden.\r\n
+comment3.params=
+comment3.target=double\ getNote()
+comment3.text=\r\n\ Liefert\ die\ Note.\r\n\ \r\n\ @return\ Die\ Note.\r\n
+numComments=4

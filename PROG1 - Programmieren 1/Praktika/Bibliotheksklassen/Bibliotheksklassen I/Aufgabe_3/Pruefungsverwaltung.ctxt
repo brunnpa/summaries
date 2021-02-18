@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=Pruefungsverwaltung
+comment0.text=\r\n\ Bietet\ Funktionalitaeten\ zum\ Speichern\ von\ Pruefungsergebnissen\ von\ einer\r\n\ Vielzahl\ von\ Studenten.\ Aus\ den\ gespeicherten\ Ergebnissen\ lassen\ sich\r\n\ personalisierte\ Antworttext\ generieren.\r\n
+comment1.params=
+comment1.target=Pruefungsverwaltung()
+comment2.params=ergebnis
+comment2.target=void\ speichereErgebnis(Pruefungsergebnis)
+comment2.text=\r\n\ Speichert\ ein\ Pruefungsergebnis.\r\n\ \r\n\ @param\ ergebnis\ Das\ Pruefungsergebnis.\r\n
+comment3.params=
+comment3.target=void\ druckeAntworttexte()
+comment3.text=\r\n\ Gibt\ pro\ gespeichert\ Ergebnis\ einen\ Text\ auf\ die\ Konsole\ aus.\r\n\ Je\ nachdem\ ob\ der\ Kandidate\ die\ Pruefung\ bestanden\ (>\=\ 4.0)\ oder\ nicht\r\n\ bestanden\ (<\ 4.0)\ hat,\ wird\ ein\ Text\ in\ folgendem\ Format\ ausgegeben\:\r\n\ \r\n\ Sie\ haben\ an\ der\ Pruefung\ eine\ 3.0\ erzielt\ und\ \r\n\ sind\ somit\ durchgefallen\!\r\n\ \r\n\ Herzliche\ Gratulation\ Max\ Muster\!\ Sie\ haben\ an\ der\ Pruefung\ eine\ 4.5\r\n\ erzielt\ und\ somit\ bestanden\!\r\n
+comment4.params=note
+comment4.target=double\ rundeAufHalbeNote(double)
+comment5.params=note
+comment5.target=boolean\ pruefungBestanden(double)
+comment5.text=\r\n\ Methode\ zur\ Ueberpruefung\ ob\ die\ Pruefung\ bestanden\ (>\=4.0)\ ist\ oder\ nicht(<4.0).\r\n\ \r\n\ @param\ note\ Die\ erzielte\ Note\r\n\ @return\ ob\ die\ Pruefung\ bestanden\ ist\r\n
+numComments=6

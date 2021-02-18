@@ -1,0 +1,22 @@
+## Task 3 Create (or adapt) a FHIR patient resource
+POST https://vonk.fire.ly/Patient/ HTTP/1.1
+content-type: application/json
+
+{
+    "resourceType" : "Patient",
+    "identifier" : [{
+         "use" : "usual",
+         "value" : "Abc123", 
+    }],
+    "name": [{
+        "use": "usual",
+        "text": "Franz Muster"
+    }],
+    "gender": "male",
+    "address": [{
+        "use": "home",
+        "type": "both",
+        "text": "Leidensweg 10, 9876 Specimendorf"
+    }],
+    "birthDate": "1967-10-02"
+}

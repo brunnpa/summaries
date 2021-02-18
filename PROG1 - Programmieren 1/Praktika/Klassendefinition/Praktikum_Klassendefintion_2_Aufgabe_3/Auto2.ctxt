@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=Auto2
+comment1.params=marke\ typ\ hubraum\ hatTurbo
+comment1.target=Auto2(java.lang.String,\ java.lang.String,\ double,\ boolean)
+comment10.params=
+comment10.target=java.lang.String\ hatTurboFuerString()
+comment2.params=zuUeberpruefenderWert
+comment2.target=java.lang.String\ zeichenUeberpruefung(java.lang.String)
+comment3.params=zuUeberpruefenderWert
+comment3.target=double\ wertUeberpruefung(double)
+comment4.params=typ
+comment4.target=void\ setTyp(java.lang.String)
+comment5.params=marke
+comment5.target=void\ setMarke(java.lang.String)
+comment6.params=hubraum
+comment6.target=void\ setHubraum(double)
+comment7.params=betragsAenderung
+comment7.target=void\ setLagerbestand(int)
+comment8.params=
+comment8.target=void\ getInformations()
+comment9.params=
+comment9.target=java.lang.String\ hatTurboFuerStringAbk()
+numComments=11

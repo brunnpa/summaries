@@ -1,0 +1,130 @@
+windows nt (unknown)
+isWindows
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: SQRT(((rxMond-rxErde)^2)+((ryMond-ryErde)^2)) SQRT(((rxMond-rxErde)^2)+((ryMond-ryErde)^2)) SQRT(((rxMond-rxErde)^2)+((ryMond-ryErde)^2)) SQRT(((rxMond-rxErde)^2)+((ryMond-ryErde)^2)) 
+checkRequiredInputs: vxMond0 
+checkRequiredInputs: (((-Gravitationskonstante)*mErde*mMond)*(rxMond/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(rxMond/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(rxMond/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(rxMond/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(rxMond/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(rxMond/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(rxMond/r12Betrag^(1+alpha)))/mMond 
+checkRequiredInputs: vyMond0 
+checkRequiredInputs: (((-Gravitationskonstante)*mErde*mMond)*(ryMond/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(ryMond/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(ryMond/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(ryMond/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(ryMond/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(ryMond/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(ryMond/r12Betrag^(1+alpha)))/mMond 
+checkRequiredInputs: 
+checkRequiredInputs: Netta*SQRT(wurzel) Netta*SQRT(wurzel) 
+checkRequiredInputs: rxMond0 
+checkRequiredInputs: ryMond0 
+checkRequiredInputs: vxMond 
+checkRequiredInputs: vyMond 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: (Gravitationskonstante*mErde)/r12Betrag (Gravitationskonstante*mErde)/r12Betrag (Gravitationskonstante*mErde)/r12Betrag 
+checkRequiredInputs: vxErde0 
+checkRequiredInputs: (((-Gravitationskonstante)*mErde*mMond)*(rxErde/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(rxErde/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(rxErde/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(rxErde/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(rxErde/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(rxErde/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(rxErde/r12Betrag^(1+alpha)))/mMond 
+checkRequiredInputs: 
+checkRequiredInputs: rxErde0 
+checkRequiredInputs: vxErde 
+checkRequiredInputs: 
+checkRequiredInputs: vyErde0 
+checkRequiredInputs: (((-Gravitationskonstante)*mErde*mMond)*(ryErde/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(ryErde/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(ryErde/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(ryErde/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(ryErde/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(ryErde/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(ryErde/r12Betrag^(1+alpha)))/mMond 
+checkRequiredInputs: (-((Netta*mMond)/(mErde)))*SQRT(wurzel) (-((Netta*mMond)/(mErde)))*SQRT(wurzel) (-((Netta*mMond)/(mErde)))*SQRT(wurzel) (-((Netta*mMond)/(mErde)))*SQRT(wurzel) 
+checkRequiredInputs: ryErde0 
+checkRequiredInputs: vyErde 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: (((-Gravitationskonstante)*mErde*mMond)*(rxErde/r12Betrag^(1+alpha)))/mErde (((-Gravitationskonstante)*mErde*mMond)*(rxErde/r12Betrag^(1+alpha)))/mErde (((-Gravitationskonstante)*mErde*mMond)*(rxErde/r12Betrag^(1+alpha)))/mErde (((-Gravitationskonstante)*mErde*mMond)*(rxErde/r12Betrag^(1+alpha)))/mErde (((-Gravitationskonstante)*mErde*mMond)*(rxErde/r12Betrag^(1+alpha)))/mErde (((-Gravitationskonstante)*mErde*mMond)*(rxErde/r12Betrag^(1+alpha)))/mErde (((-Gravitationskonstante)*mErde*mMond)*(rxErde/r12Betrag^(1+alpha)))/mErde 
+checkRequiredInputs: (((-Gravitationskonstante)*mErde*mMond)*(ryErde/r12Betrag^(1+alpha)))/mErde (((-Gravitationskonstante)*mErde*mMond)*(ryErde/r12Betrag^(1+alpha)))/mErde (((-Gravitationskonstante)*mErde*mMond)*(ryErde/r12Betrag^(1+alpha)))/mErde (((-Gravitationskonstante)*mErde*mMond)*(ryErde/r12Betrag^(1+alpha)))/mErde (((-Gravitationskonstante)*mErde*mMond)*(ryErde/r12Betrag^(1+alpha)))/mErde (((-Gravitationskonstante)*mErde*mMond)*(ryErde/r12Betrag^(1+alpha)))/mErde (((-Gravitationskonstante)*mErde*mMond)*(ryErde/r12Betrag^(1+alpha)))/mErde 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: SQRT((rxMond^2)+(ryMond^2)) SQRT((rxMond^2)+(ryMond^2)) 
+checkRequiredInputs: vxMond0 
+checkRequiredInputs: (-Gravitationskonstante)*((mErde*rxMond)/(r12Betrag^3)) (-Gravitationskonstante)*((mErde*rxMond)/(r12Betrag^3)) (-Gravitationskonstante)*((mErde*rxMond)/(r12Betrag^3)) (-Gravitationskonstante)*((mErde*rxMond)/(r12Betrag^3)) 
+checkRequiredInputs: vyMond0 
+checkRequiredInputs: (-Gravitationskonstante)*((mErde*ryMond)/(r12Betrag^3)) (-Gravitationskonstante)*((mErde*ryMond)/(r12Betrag^3)) (-Gravitationskonstante)*((mErde*ryMond)/(r12Betrag^3)) (-Gravitationskonstante)*((mErde*ryMond)/(r12Betrag^3)) 
+checkRequiredInputs: 
+checkRequiredInputs: Netta*SQRT(wurzel) Netta*SQRT(wurzel) 
+checkRequiredInputs: rxMond0 
+checkRequiredInputs: ryMond0 
+checkRequiredInputs: vxMond 
+checkRequiredInputs: vyMond 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: (Gravitationskonstante*mErde)/r12Betrag (Gravitationskonstante*mErde)/r12Betrag (Gravitationskonstante*mErde)/r12Betrag 
+checkRequiredInputs: xErde0 
+checkRequiredInputs: yErde0 
+checkRequiredInputs: xMond0 
+checkRequiredInputs: yMond0 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: IF(xErde>0) THEN vxErde ELSE 0 IF(xErde>0) THEN vxErde ELSE 0 
+checkRequiredInputs: IF(yErde>0) THEN vyErde ELSE 0 IF(yErde>0) THEN vyErde ELSE 0 
+checkRequiredInputs: IF(xMond>0) THEN vxMond ELSE 0 IF(xMond>0) THEN vxMond ELSE 0 
+checkRequiredInputs: IF(yMond>0) THEN vyMond ELSE 0 IF(yMond>0) THEN vyMond ELSE 0 
+checkRequiredInputs: vxErde0 
+checkRequiredInputs: vyErde0 
+checkRequiredInputs: vxMond0 
+checkRequiredInputs: vyMond0 
+checkRequiredInputs: xF12/mErde xF12/mErde 
+checkRequiredInputs: yF12/mErde yF12/mErde 
+checkRequiredInputs: xF21/mMond xF21/mMond 
+checkRequiredInputs: yF21/mMond yF21/mMond 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: (-Gravitationskonstante)*((mMond*mErde)/(r12Betrag*r12Betrag))*n12x (-Gravitationskonstante)*((mMond*mErde)/(r12Betrag*r12Betrag))*n12x (-Gravitationskonstante)*((mMond*mErde)/(r12Betrag*r12Betrag))*n12x (-Gravitationskonstante)*((mMond*mErde)/(r12Betrag*r12Betrag))*n12x (-Gravitationskonstante)*((mMond*mErde)/(r12Betrag*r12Betrag))*n12x (-Gravitationskonstante)*((mMond*mErde)/(r12Betrag*r12Betrag))*n12x 
+checkRequiredInputs: (-Gravitationskonstante)*((mErde*mMond)/(r12Betrag*r12Betrag))*n12y (-Gravitationskonstante)*((mErde*mMond)/(r12Betrag*r12Betrag))*n12y (-Gravitationskonstante)*((mErde*mMond)/(r12Betrag*r12Betrag))*n12y (-Gravitationskonstante)*((mErde*mMond)/(r12Betrag*r12Betrag))*n12y (-Gravitationskonstante)*((mErde*mMond)/(r12Betrag*r12Betrag))*n12y (-Gravitationskonstante)*((mErde*mMond)/(r12Betrag*r12Betrag))*n12y 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: xErde-xMond xErde-xMond 
+checkRequiredInputs: yErde-yMond yErde-yMond 
+checkRequiredInputs: SQRT(r12x*r12x+r12y*r12y) SQRT(r12x*r12x+r12y*r12y) SQRT(r12x*r12x+r12y*r12y) SQRT(r12x*r12x+r12y*r12y) 
+checkRequiredInputs: r12x/r12Betrag r12x/r12Betrag 
+checkRequiredInputs: r12y/r12Betrag r12y/r12Betrag 
+checkRequiredInputs: (-Gravitationskonstante)*((mErde*mMond)/(r21Betrag*r21Betrag))*n21x (-Gravitationskonstante)*((mErde*mMond)/(r21Betrag*r21Betrag))*n21x (-Gravitationskonstante)*((mErde*mMond)/(r21Betrag*r21Betrag))*n21x (-Gravitationskonstante)*((mErde*mMond)/(r21Betrag*r21Betrag))*n21x (-Gravitationskonstante)*((mErde*mMond)/(r21Betrag*r21Betrag))*n21x (-Gravitationskonstante)*((mErde*mMond)/(r21Betrag*r21Betrag))*n21x 
+checkRequiredInputs: (-Gravitationskonstante)*((mErde*mMond)/(r21Betrag*r21Betrag))*n21y (-Gravitationskonstante)*((mErde*mMond)/(r21Betrag*r21Betrag))*n21y (-Gravitationskonstante)*((mErde*mMond)/(r21Betrag*r21Betrag))*n21y (-Gravitationskonstante)*((mErde*mMond)/(r21Betrag*r21Betrag))*n21y (-Gravitationskonstante)*((mErde*mMond)/(r21Betrag*r21Betrag))*n21y (-Gravitationskonstante)*((mErde*mMond)/(r21Betrag*r21Betrag))*n21y 
+checkRequiredInputs: xMond-xErde xMond-xErde 
+checkRequiredInputs: yMond-yErde yMond-yErde 
+checkRequiredInputs: SQRT(r21x*r21x+r21y*r21y) SQRT(r21x*r21x+r21y*r21y) SQRT(r21x*r21x+r21y*r21y) SQRT(r21x*r21x+r21y*r21y) 
+checkRequiredInputs: r21x/r21Betrag r21x/r21Betrag 
+checkRequiredInputs: r21y/r21Betrag r21y/r21Betrag 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: SQRT(((rxMond-rxErde)^2)+((ryMond-ryErde)^2)) SQRT(((rxMond-rxErde)^2)+((ryMond-ryErde)^2)) SQRT(((rxMond-rxErde)^2)+((ryMond-ryErde)^2)) SQRT(((rxMond-rxErde)^2)+((ryMond-ryErde)^2)) 
+checkRequiredInputs: vxMond0 
+checkRequiredInputs: (((-Gravitationskonstante)*mErde*mMond)*(rxMond/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(rxMond/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(rxMond/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(rxMond/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(rxMond/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(rxMond/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(rxMond/r12Betrag^(1+alpha)))/mMond 
+checkRequiredInputs: vyMond0 
+checkRequiredInputs: (((-Gravitationskonstante)*mErde*mMond)*(ryMond/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(ryMond/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(ryMond/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(ryMond/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(ryMond/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(ryMond/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(ryMond/r12Betrag^(1+alpha)))/mMond 
+checkRequiredInputs: 
+checkRequiredInputs: Netta*SQRT(wurzel) Netta*SQRT(wurzel) 
+checkRequiredInputs: rxMond0 
+checkRequiredInputs: ryMond0 
+checkRequiredInputs: vxMond 
+checkRequiredInputs: vyMond 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: (Gravitationskonstante*mErde)/r12Betrag (Gravitationskonstante*mErde)/r12Betrag (Gravitationskonstante*mErde)/r12Betrag 
+checkRequiredInputs: vxErde0 
+checkRequiredInputs: (((-Gravitationskonstante)*mErde*mMond)*(rxErde/r12Betrag^(1+alpha)))/mErde (((-Gravitationskonstante)*mErde*mMond)*(rxErde/r12Betrag^(1+alpha)))/mErde (((-Gravitationskonstante)*mErde*mMond)*(rxErde/r12Betrag^(1+alpha)))/mErde (((-Gravitationskonstante)*mErde*mMond)*(rxErde/r12Betrag^(1+alpha)))/mErde (((-Gravitationskonstante)*mErde*mMond)*(rxErde/r12Betrag^(1+alpha)))/mErde (((-Gravitationskonstante)*mErde*mMond)*(rxErde/r12Betrag^(1+alpha)))/mErde (((-Gravitationskonstante)*mErde*mMond)*(rxErde/r12Betrag^(1+alpha)))/mErde 
+checkRequiredInputs: 
+checkRequiredInputs: rxErde0 
+checkRequiredInputs: vxErde 
+checkRequiredInputs: 
+checkRequiredInputs: vyErde0 
+checkRequiredInputs: (((-Gravitationskonstante)*mErde*mMond)*(ryErde/r12Betrag^(1+alpha)))/mErde (((-Gravitationskonstante)*mErde*mMond)*(ryErde/r12Betrag^(1+alpha)))/mErde (((-Gravitationskonstante)*mErde*mMond)*(ryErde/r12Betrag^(1+alpha)))/mErde (((-Gravitationskonstante)*mErde*mMond)*(ryErde/r12Betrag^(1+alpha)))/mErde (((-Gravitationskonstante)*mErde*mMond)*(ryErde/r12Betrag^(1+alpha)))/mErde (((-Gravitationskonstante)*mErde*mMond)*(ryErde/r12Betrag^(1+alpha)))/mErde (((-Gravitationskonstante)*mErde*mMond)*(ryErde/r12Betrag^(1+alpha)))/mErde 
+checkRequiredInputs: (-((Netta*mMond)/(mErde)))*SQRT(wurzel) (-((Netta*mMond)/(mErde)))*SQRT(wurzel) (-((Netta*mMond)/(mErde)))*SQRT(wurzel) (-((Netta*mMond)/(mErde)))*SQRT(wurzel) 
+checkRequiredInputs: ryErde0 
+checkRequiredInputs: vyErde 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: 
+checkRequiredInputs: (((-Gravitationskonstante)*mErde*mMond)*(rxErde/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(rxErde/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(rxErde/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(rxErde/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(rxErde/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(rxErde/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(rxErde/r12Betrag^(1+alpha)))/mMond 
+checkRequiredInputs: (((-Gravitationskonstante)*mErde*mMond)*(ryErde/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(ryErde/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(ryErde/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(ryErde/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(ryErde/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(ryErde/r12Betrag^(1+alpha)))/mMond (((-Gravitationskonstante)*mErde*mMond)*(ryErde/r12Betrag^(1+alpha)))/mMond 
+checkRequiredInputs: (-((Netta*mMond)/(mErde)))*SQRT(wurzel) (-((Netta*mMond)/(mErde)))*SQRT(wurzel) (-((Netta*mMond)/(mErde)))*SQRT(wurzel) (-((Netta*mMond)/(mErde)))*SQRT(wurzel) 
+checkRequiredInputs: 
+checkRequiredInputs: 

@@ -1,0 +1,9 @@
+#!/bin/bash
+# M. Thaler, InIT/ZHAW 11/2014
+# version v.fs20
+
+if [ -f $HOME/.toprc ]
+then
+	mv $HOME/.toprc $HOME/.toprc.orig.bsy
+fi
+cp -i toprc ~/.toprc

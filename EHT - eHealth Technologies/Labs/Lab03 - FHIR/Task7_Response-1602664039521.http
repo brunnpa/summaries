@@ -1,0 +1,1175 @@
+HTTP/1.1 200 OK
+Server: nginx/1.14.0 (Ubuntu)
+Date: Wed, 14 Oct 2020 08:25:52 GMT
+Content-Type: application/fhir+json;charset=utf-8
+Transfer-Encoding: chunked
+Connection: close
+X-Powered-By: HAPI FHIR 5.2.0-SNAPSHOT REST Server (FHIR Server; FHIR 4.0.1/R4)
+X-Request-ID: DM3XQTh5JdBpkew3
+Last-Modified: Wed, 14 Oct 2020 08:25:52 GMT
+Content-Encoding: gzip
+
+{
+  "resourceType": "Bundle",
+  "id": "df2df0bb-9d52-4bcb-9be0-6cf3a6502135",
+  "meta": {
+    "lastUpdated": "2020-10-14T08:25:52.294+00:00"
+  },
+  "type": "searchset",
+  "link": [ {
+    "relation": "self",
+    "url": "http://hapi.fhir.org/baseR4/Patient/_search?birthdate=ge1960-01-01&birthdate=le1980-12-31"
+  }, {
+    "relation": "next",
+    "url": "http://hapi.fhir.org/baseR4?_getpages=df2df0bb-9d52-4bcb-9be0-6cf3a6502135&_getpagesoffset=20&_count=20&_pretty=true&_bundletype=searchset"
+  } ],
+  "entry": [ {
+    "fullUrl": "http://hapi.fhir.org/baseR4/Patient/591744",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "591744",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2020-01-21T15:01:32.545+00:00",
+        "source": "#BqkHNOUzKcbA3cKF"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">John Robinson </div><table class=\"hapiPropertyTable\"><tbody><tr><td>Identifier</td><td>306144222</td></tr><tr><td>Date of birth</td><td><span>21 April 1969</span></td></tr></tbody></table></div>"
+      },
+      "identifier": [ {
+        "use": "official",
+        "_use": {
+          "fhir_comments": [ "    The identifier for the person as this patient (fictive)    " ]
+        },
+        "type": {
+          "text": "BSN"
+        },
+        "system": "urn:oid:2.16.840.1.113883.2.4.6.3",
+        "value": "306144222"
+      } ],
+      "name": [ {
+        "given": [ "John Robinson" ]
+      } ],
+      "gender": "male",
+      "birthDate": "1969-04-21"
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://hapi.fhir.org/baseR4/Patient/590184",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "590184",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2020-01-14T06:44:51.604+00:00",
+        "source": "#vW6oxfBZKOOmIrfV"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <table> \n        <tbody> \n          <tr> \n            <td> Name</td> \n            <td> SDRTYUFRT FFFGGGGG\n              <b> Chalmxxxxxxxxx </b>  (&quot;Jim&quot;)\n            </td> \n          </tr> \n          <tr> \n            <td> Address</td> \n            <td> 99999 Erewhon, Pleasantville, Vic, 99999991 </td> \n          </tr> \n          <tr> \n            <td> Contacts</td> \n            <td> Home: unknown. Work: (03) 5555 6473</td> \n          </tr> \n          <tr> \n            <td> Id</td> \n            <td>99999991000</td> \n          </tr> \n        </tbody> \n      </table> \n    </div>"
+      },
+      "identifier": [ {
+        "fhir_comments": [ "    MRN assigned by ACME healthcare on 6-May 2001    " ],
+        "use": "usual",
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR"
+          } ]
+        },
+        "system": "urn:oid:1.2.36.146.595.217.0.1",
+        "value": "12345",
+        "period": {
+          "start": "2001-05-06"
+        },
+        "assigner": {
+          "display": "Acme Healthcare"
+        }
+      } ],
+      "active": true,
+      "name": [ {
+        "fhir_comments": [ "    Peter James Chalmers, but called \"Jim\"    " ],
+        "use": "official",
+        "family": "Chalmers",
+        "given": [ "Peter", "James" ]
+      }, {
+        "use": "usual",
+        "given": [ "Jim" ]
+      }, {
+        "use": "maiden",
+        "_use": {
+          "fhir_comments": [ "   Maiden names apply for anyone whose name changes as a result of marriage - irrespective\n     of gender   " ]
+        },
+        "family": "Windsor",
+        "given": [ "Peter", "James" ],
+        "period": {
+          "end": "2002"
+        }
+      } ],
+      "telecom": [ {
+        "use": "home",
+        "_use": {
+          "fhir_comments": [ "    home communication details aren't known    " ]
+        }
+      }, {
+        "system": "phone",
+        "value": "(03) 5555 6473",
+        "use": "work",
+        "rank": 1
+      }, {
+        "system": "phone",
+        "value": "(03) 3410 5613",
+        "use": "mobile",
+        "rank": 2
+      }, {
+        "system": "phone",
+        "value": "(03) 5555 8834",
+        "use": "old",
+        "period": {
+          "end": "2014"
+        }
+      } ],
+      "gender": "male",
+      "_gender": {
+        "fhir_comments": [ "    use FHIR code system for male / female    " ]
+      },
+      "birthDate": "1974-12-25",
+      "_birthDate": {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/patient-birthTime",
+          "valueDateTime": "1974-12-25T14:35:45-05:00"
+        } ]
+      },
+      "deceasedBoolean": false,
+      "address": [ {
+        "use": "home",
+        "type": "both",
+        "text": "534 Erewhon St PeasantVille, Rainbow, Vic  3999",
+        "line": [ "534 Erewhon St" ],
+        "city": "PleasantVille",
+        "district": "Rainbow",
+        "state": "Vic",
+        "postalCode": "3999",
+        "period": {
+          "start": "1974-12-25"
+        }
+      } ],
+      "contact": [ {
+        "relationship": [ {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+            "code": "N"
+          } ]
+        } ],
+        "name": {
+          "family": "du MarchÃ©",
+          "_family": {
+            "extension": [ {
+              "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+              "valueString": "VV"
+            } ]
+          },
+          "given": [ "BÃ©nÃ©dicte" ]
+        },
+        "telecom": [ {
+          "system": "phone",
+          "value": "+33 (237) 998327"
+        } ],
+        "address": {
+          "use": "home",
+          "type": "both",
+          "line": [ "534 Erewhon St" ],
+          "city": "PleasantVille",
+          "district": "Rainbow",
+          "state": "Vic",
+          "postalCode": "3999",
+          "period": {
+            "start": "1974-12-25"
+          }
+        },
+        "gender": "female",
+        "period": {
+          "start": "2012",
+          "_start": {
+            "fhir_comments": [ "    The contact relationship started in 2012    " ]
+          }
+        }
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://hapi.fhir.org/baseR4/Patient/590680",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "590680",
+      "meta": {
+        "versionId": "22",
+        "lastUpdated": "2020-01-17T07:20:33.572+00:00",
+        "source": "#te1I2gZ43jT4F3gP"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t<table>\n\t\t\t\t<tbody>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td>Name</td>\n\t\t\t\t\t\t<td>Peter James \n              <b>Chalmers</b> (&quot;Jim&quot;)\n            </td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td>Address</td>\n\t\t\t\t\t\t<td>534 Erewhon, Pleasantville, Vic, 3999</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td>Contacts</td>\n\t\t\t\t\t\t<td>Home: unknown. Work: (03) 5555 6473</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td>Id</td>\n\t\t\t\t\t\t<td>MRN: 12345 (Acme Healthcare)</td>\n\t\t\t\t\t</tr>\n\t\t\t\t</tbody>\n\t\t\t</table>\n\t\t</div>"
+      },
+      "identifier": [ {
+        "use": "usual",
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR"
+          } ]
+        },
+        "system": "urn:oid:1.2.36.146.595.217.0.1",
+        "value": "12345",
+        "period": {
+          "start": "2001-05-06"
+        },
+        "assigner": {
+          "display": "Acme Healthcare"
+        }
+      } ],
+      "active": true,
+      "name": [ {
+        "use": "official",
+        "family": "Chalmers",
+        "given": [ "Peter", "James" ]
+      }, {
+        "use": "usual",
+        "given": [ "Jim" ]
+      }, {
+        "use": "maiden",
+        "family": "Windsor",
+        "given": [ "Peter", "James" ],
+        "period": {
+          "end": "2002"
+        }
+      } ],
+      "telecom": [ {
+        "use": "home"
+      }, {
+        "system": "phone",
+        "value": "(03) 5555 6473",
+        "use": "work",
+        "rank": 1
+      }, {
+        "system": "phone",
+        "value": "(03) 3410 5613",
+        "use": "mobile",
+        "rank": 2
+      }, {
+        "system": "phone",
+        "value": "(03) 5555 8834",
+        "use": "old",
+        "period": {
+          "end": "2015"
+        }
+      } ],
+      "gender": "female",
+      "birthDate": "1974-12-25",
+      "_birthDate": {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/patient-birthTime",
+          "valueDateTime": "1974-12-25T14:35:45-05:00"
+        } ]
+      },
+      "deceasedBoolean": false,
+      "address": [ {
+        "city": "Kurukshetra",
+        "state": "Haryana",
+        "country": "India"
+      }, {
+        "city": "Chandigarh",
+        "state": "Punjab",
+        "country": "India"
+      } ],
+      "contact": [ {
+        "relationship": [ {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+            "code": "N"
+          } ]
+        } ],
+        "name": {
+          "family": "du Marché",
+          "_family": {
+            "extension": [ {
+              "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+              "valueString": "VV"
+            } ]
+          },
+          "given": [ "Bénédicte" ]
+        },
+        "telecom": [ {
+          "system": "phone",
+          "value": "+33 (237) 998327"
+        } ],
+        "period": {
+          "start": "2012"
+        }
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://hapi.fhir.org/baseR4/Patient/592334",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "592334",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2020-01-24T05:39:54.155+00:00",
+        "source": "#EczytQAuOdvI1WW9"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">  \n            <table> \n                <tbody> \n                    <tr> \n                        <td>Name</td>  \n                        <td>Peter James \n                            <b>Chalmers</b> (&quot;Jim&quot;)\n                        </td> \n                    </tr>  \n                    <tr> \n                        <td>Address</td>  \n                        <td>534 Erewhon, Pleasantville, Vic, 3999</td> \n                    </tr>  \n                    <tr> \n                        <td>Contacts</td>  \n                        <td>Home: unknown. Work: (03) 5555 6473</td> \n                    </tr>  \n                    <tr> \n                        <td>Id</td>  \n                        <td>MR: 12345 (Acme Healthcare)</td> \n                    </tr> \n                </tbody> \n            </table> \n        </div>"
+      },
+      "identifier": [ {
+        "fhir_comments": [ "\tMR assigned by ACME healthcare on 6-May 2001\t" ],
+        "use": "usual",
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR"
+          } ]
+        },
+        "system": "urn:oid:1.2.36.146.595.217.0.1",
+        "value": "yiQsHHFx8RedEcnb",
+        "period": {
+          "start": "2001-05-06"
+        },
+        "assigner": {
+          "display": "Acme Healthcare"
+        }
+      } ],
+      "active": true,
+      "name": [ {
+        "fhir_comments": [ "\tPeter James Chalmers, but called \"Jim\"\t" ],
+        "use": "official",
+        "family": "ChalmersLnRlwxhG",
+        "given": [ "PeterLnRlwxhG", "JamesLnRlwxhG" ]
+      }, {
+        "use": "usual",
+        "given": [ "Jim" ]
+      } ],
+      "telecom": [ {
+        "use": "home",
+        "_use": {
+          "fhir_comments": [ "\thome communication details aren't known\t" ]
+        }
+      }, {
+        "system": "phone",
+        "value": "(03) 5555 6473",
+        "use": "work"
+      } ],
+      "gender": "male",
+      "_gender": {
+        "fhir_comments": [ "\tuse FHIR code system for male / female\t" ]
+      },
+      "birthDate": "1974-12-25",
+      "deceasedBoolean": false,
+      "address": [ {
+        "use": "home",
+        "line": [ "534 ErewhonXnnXJSEjx St" ],
+        "city": "PleasantVille",
+        "state": "Vic",
+        "postalCode": "5714"
+      } ],
+      "contact": [ {
+        "relationship": [ {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+            "code": "C"
+          } ]
+        } ],
+        "name": {
+          "family": "du Marché",
+          "given": [ "Bénédicte" ]
+        },
+        "telecom": [ {
+          "system": "phone",
+          "value": "+33 (237) 998327"
+        } ]
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://hapi.fhir.org/baseR4/Patient/592497",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "592497",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2020-01-25T20:22:48.128+00:00",
+        "source": "#NkhsOSaMdklOIsls"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> Franz Muster, 10.2.1967 </div>"
+      },
+      "name": [ {
+        "family": "Musterssohn",
+        "given": [ "Franz" ]
+      } ],
+      "gender": "male",
+      "birthDate": "1967-02-10",
+      "address": [ {
+        "line": [ "Leidensweg 10" ],
+        "city": "Specimendorf",
+        "postalCode": "9876"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://hapi.fhir.org/baseR4/Patient/592496",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "592496",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2020-01-25T19:59:57.597+00:00",
+        "source": "#RLqCBbWXuVXnLjX8"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> Franz Muster, 10.2.1967 </div>"
+      },
+      "name": [ {
+        "family": "Muster",
+        "given": [ "Franz" ]
+      } ],
+      "gender": "male",
+      "birthDate": "1967-02-10",
+      "address": [ {
+        "line": [ "Leidensweg 10" ],
+        "city": "Specimendorf",
+        "postalCode": "9876"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://hapi.fhir.org/baseR4/Patient/592498",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "592498",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2020-01-25T20:24:59.819+00:00",
+        "source": "#PeOdt3ujuZpjKNQz"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> Franz Muster, 10.2.1967 </div>"
+      },
+      "name": [ {
+        "family": "Musterssohn",
+        "given": [ "Franz" ]
+      } ],
+      "gender": "male",
+      "birthDate": "1967-02-10",
+      "address": [ {
+        "line": [ "Leidensweg 10" ],
+        "city": "Specimendorf",
+        "postalCode": "9876"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://hapi.fhir.org/baseR4/Patient/592569",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "592569",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2020-01-27T02:43:07.211+00:00",
+        "source": "#SmpPYx5QWCZguAGG"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">  \n            <table> \n                <tbody> \n                    <tr> \n                        <td>Name</td>  \n                        <td>Peter James \n                            <b>Chalmers</b> (&quot;Jim&quot;)\n                        </td> \n                    </tr>  \n                    <tr> \n                        <td>Address</td>  \n                        <td>534 Erewhon, Pleasantville, Vic, 3999</td> \n                    </tr>  \n                    <tr> \n                        <td>Contacts</td>  \n                        <td>Home: unknown. Work: (03) 5555 6473</td> \n                    </tr>  \n                    <tr> \n                        <td>Id</td>  \n                        <td>MR: 12345 (Acme Healthcare)</td> \n                    </tr> \n                </tbody> \n            </table> \n        </div>"
+      },
+      "identifier": [ {
+        "fhir_comments": [ "\tMR assigned by ACME healthcare on 6-May 2001\t" ],
+        "use": "usual",
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR"
+          } ]
+        },
+        "system": "urn:oid:1.2.36.146.595.217.0.1",
+        "value": "jiQsHHFx8RedEcnb",
+        "period": {
+          "start": "2001-05-06"
+        },
+        "assigner": {
+          "display": "Acme Healthcare"
+        }
+      } ],
+      "active": true,
+      "name": [ {
+        "fhir_comments": [ "\tPeter James Chalmers, but called \"Jim\"\t" ],
+        "use": "official",
+        "family": "ChalmersLnRlwxhG",
+        "given": [ "PeterLnRlwxhG", "JamesLnRlwxhG" ]
+      }, {
+        "use": "usual",
+        "family": "Family1",
+        "given": [ "Jim" ]
+      } ],
+      "telecom": [ {
+        "use": "home",
+        "_use": {
+          "fhir_comments": [ "\thome communication details aren't known\t" ]
+        }
+      }, {
+        "system": "phone",
+        "value": "(03) 5555 6473",
+        "use": "work"
+      } ],
+      "gender": "male",
+      "_gender": {
+        "fhir_comments": [ "\tuse FHIR code system for male / female\t" ]
+      },
+      "birthDate": "1974-12-25",
+      "deceasedBoolean": false,
+      "address": [ {
+        "use": "home",
+        "line": [ "534 ErewhonXnnXJSEjx St" ],
+        "city": "PleasantVille",
+        "state": "Vic",
+        "postalCode": "5714"
+      } ],
+      "contact": [ {
+        "relationship": [ {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+            "code": "C"
+          } ]
+        } ],
+        "name": {
+          "family": "du Marché",
+          "given": [ "Bénédicte" ]
+        },
+        "telecom": [ {
+          "system": "phone",
+          "value": "+33 (237) 998327"
+        } ]
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://hapi.fhir.org/baseR4/Patient/592718",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "592718",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2020-01-27T13:07:11.653+00:00",
+        "source": "#PaS4Tzbk15NTkDUL"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">value for prefix Peter cxzmmnxczn <b>CHALMERS </b> value for suffix </div><table class=\"hapiPropertyTable\"><tbody><tr><td>Identifier</td><td>959503330</td></tr><tr><td>Address</td><td><span>534 Erewhon St </span><br/><span>assdnm </span><span>Vic </span><span>TANZANIA </span></td></tr><tr><td>Date of birth</td><td><span>25 December 1974</span></td></tr></tbody></table></div>"
+      },
+      "identifier": [ {
+        "value": "959503330"
+      } ],
+      "active": true,
+      "name": [ {
+        "use": "official",
+        "text": "value for text",
+        "family": "Chalmers",
+        "given": [ "Peter", "cxzmmnxczn" ],
+        "prefix": [ "value for prefix" ],
+        "suffix": [ "value for suffix" ]
+      }, {
+        "use": "usual",
+        "given": [ "Jim" ]
+      }, {
+        "use": "maiden",
+        "family": "Cnmcxnmnmx",
+        "given": [ "PeZXnmter", "JaXZmnCXNmzmes" ],
+        "period": {
+          "end": "2002"
+        }
+      } ],
+      "telecom": [ {
+        "use": "home"
+      }, {
+        "system": "phone",
+        "value": "(03) 7875 6473",
+        "use": "work",
+        "rank": 1
+      }, {
+        "system": "email",
+        "value": "xyzXZNmXZnm@gmail.com",
+        "use": "mobile",
+        "rank": 2
+      }, {
+        "system": "phone",
+        "value": "(03) 43984585 8834",
+        "use": "old",
+        "period": {
+          "end": "2014"
+        }
+      } ],
+      "gender": "male",
+      "birthDate": "1974-12-25",
+      "deceasedBoolean": true,
+      "address": [ {
+        "use": "home",
+        "type": "both",
+        "text": "534 Erewhon St PeasantVille, Rainbow, Vic 3999",
+        "line": [ "534 Erewhon St" ],
+        "city": "assdnm",
+        "district": "Rainbow",
+        "state": "Vic",
+        "postalCode": "3999",
+        "country": "TANZANIA",
+        "period": {
+          "start": "1974-12-25"
+        }
+      } ],
+      "contact": [ {
+        "relationship": [ {
+          "coding": [ {
+            "system": "http://hl7.org/fhir/v2/0131",
+            "code": "N"
+          } ]
+        } ],
+        "name": {
+          "family": "du Marche",
+          "given": [ "Benedicte" ]
+        },
+        "telecom": [ {
+          "system": "phone",
+          "value": "+33 (23387347) 998327"
+        } ],
+        "address": {
+          "use": "home",
+          "type": "both",
+          "line": [ "534 Erewhon St" ],
+          "city": "PleasantVille",
+          "district": "Rainbow",
+          "state": "Vic",
+          "postalCode": "39978239",
+          "country": "TANZANIA",
+          "period": {
+            "start": "1974-12-25"
+          }
+        },
+        "gender": "female",
+        "period": {
+          "start": "2012"
+        }
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://hapi.fhir.org/baseR4/Patient/593148",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "593148",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2020-01-29T16:04:05.629+00:00",
+        "source": "#01vlu8bAEkgmjkCV"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t<table>\n\t\t\t\t<tbody>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td>Name</td>\n\t\t\t\t\t\t<td>Peter James \n              <b>Chalmers</b> (&quot;Jim&quot;)\n            </td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td>Address</td>\n\t\t\t\t\t\t<td>534 Erewhon, Pleasantville, Vic, 3999</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td>Contacts</td>\n\t\t\t\t\t\t<td>Home: unknown. Work: (03) 5555 6473</td>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr>\n\t\t\t\t\t\t<td>Id</td>\n\t\t\t\t\t\t<td>MRN: 12345 (Acme Healthcare)</td>\n\t\t\t\t\t</tr>\n\t\t\t\t</tbody>\n\t\t\t</table>\n\t\t</div>"
+      },
+      "identifier": [ {
+        "use": "usual",
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR"
+          } ]
+        },
+        "system": "urn:oid:1.2.36.146.595.217.0.1",
+        "value": "12345",
+        "period": {
+          "start": "2001-05-06"
+        },
+        "assigner": {
+          "display": "Acme Healthcare"
+        }
+      } ],
+      "active": true,
+      "name": [ {
+        "use": "official",
+        "family": "Chalmers",
+        "given": [ "Peter", "James" ]
+      }, {
+        "use": "usual",
+        "given": [ "Jim" ]
+      }, {
+        "use": "maiden",
+        "family": "Windsor",
+        "given": [ "Peter", "James" ],
+        "period": {
+          "end": "2002"
+        }
+      } ],
+      "telecom": [ {
+        "use": "home"
+      }, {
+        "system": "phone",
+        "value": "(03) 5555 6473",
+        "use": "work",
+        "rank": 1
+      }, {
+        "system": "phone",
+        "value": "(03) 3410 5613",
+        "use": "mobile",
+        "rank": 2
+      }, {
+        "system": "phone",
+        "value": "(03) 5555 8834",
+        "use": "old",
+        "period": {
+          "end": "2014"
+        }
+      } ],
+      "gender": "male",
+      "birthDate": "1974-12-25",
+      "_birthDate": {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/patient-birthTime",
+          "valueDateTime": "1974-12-25T14:35:45-05:00"
+        } ]
+      },
+      "deceasedBoolean": false,
+      "address": [ {
+        "use": "home",
+        "type": "both",
+        "text": "534 Erewhon St PeasantVille, Rainbow, Vic  3999",
+        "line": [ "534 Erewhon St" ],
+        "city": "PleasantVille",
+        "district": "Rainbow",
+        "state": "Vic",
+        "postalCode": "3999",
+        "period": {
+          "start": "1974-12-25"
+        }
+      } ],
+      "contact": [ {
+        "relationship": [ {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+            "code": "N"
+          } ]
+        } ],
+        "name": {
+          "family": "du Marché",
+          "_family": {
+            "extension": [ {
+              "url": "http://hl7.org/fhir/StructureDefinition/humanname-own-prefix",
+              "valueString": "VV"
+            } ]
+          },
+          "given": [ "Bénédicte" ]
+        },
+        "telecom": [ {
+          "system": "phone",
+          "value": "+33 (237) 998327"
+        } ],
+        "address": {
+          "use": "home",
+          "type": "both",
+          "line": [ "534 Erewhon St" ],
+          "city": "PleasantVille",
+          "district": "Rainbow",
+          "state": "Vic",
+          "postalCode": "3999",
+          "period": {
+            "start": "1974-12-25"
+          }
+        },
+        "gender": "female",
+        "period": {
+          "start": "2012"
+        }
+      } ],
+      "managingOrganization": {
+        "reference": "Organization/593093"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://hapi.fhir.org/baseR4/Patient/592134",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "592134",
+      "meta": {
+        "versionId": "4",
+        "lastUpdated": "2020-01-23T12:52:33.416+00:00",
+        "source": "#95dTlMHFJCj2E6gt"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">Simone <b>HECKMANN </b></div><table class=\"hapiPropertyTable\"><tbody><tr><td>Identifier</td><td>9973264355</td></tr><tr><td>Address</td><td><span>Milchstr. 42 </span><br/><span>Spöck </span><span>Deutschland </span></td></tr><tr><td>Date of birth</td><td><span>26 October 1980</span></td></tr></tbody></table></div>"
+      },
+      "identifier": [ {
+        "system": "http://fhir.de/NamingSystem/gkv/kvid-10",
+        "value": "9973264355"
+      }, {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR"
+          } ]
+        },
+        "system": "http://starfleet-hospital.ufp/NamingSystem/patient-identifier",
+        "value": "NCC-1032"
+      } ],
+      "name": [ {
+        "family": "Heckmann",
+        "given": [ "Simone" ]
+      } ],
+      "gender": "female",
+      "birthDate": "1980-10-26",
+      "address": [ {
+        "extension": [ {
+          "url": "http://fhir.ufp/StructureDefinition/planet",
+          "valueString": "Erde"
+        } ],
+        "line": [ "Milchstr. 42" ],
+        "city": "Spöck",
+        "postalCode": "69999",
+        "country": "Deutschland"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://hapi.fhir.org/baseR4/Patient/593210",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "593210",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2020-01-29T18:23:24.788+00:00",
+        "source": "#Olam7BIUZrK7chjc"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">Jack <b>O'NEIL </b></div><table class=\"hapiPropertyTable\"><tbody/></table></div>"
+      },
+      "name": [ {
+        "family": "O'Neil",
+        "given": [ "Jack" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "1(324)125-2321",
+        "use": "home"
+      } ],
+      "gender": "male",
+      "birthDate": "1967-10-31"
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://hapi.fhir.org/baseR4/Patient/593218",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "593218",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2020-01-29T18:40:21.031+00:00",
+        "source": "#AHrVcH9jLJPSJ2FZ"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">Jack <b>O'NEIL </b></div><table class=\"hapiPropertyTable\"><tbody/></table></div>"
+      },
+      "identifier": [ {
+        "value": "ywang967"
+      } ],
+      "name": [ {
+        "family": "O'Neil",
+        "given": [ "Jack" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "1(324)125-2321",
+        "use": "home"
+      } ],
+      "gender": "male",
+      "birthDate": "1967-10-31"
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://hapi.fhir.org/baseR4/Patient/593252",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "593252",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2020-01-29T22:10:06.216+00:00",
+        "source": "#ZxsjLJkAtCK49OjR"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">Bruce <b>WAYNE </b></div><table class=\"hapiPropertyTable\"><tbody><tr><td>Address</td><td><span>777 5th Avenue </span><br/><span>New York City </span><span>New York </span><span>United States </span></td></tr><tr><td>Date of birth</td><td><span>01 January 1960</span></td></tr></tbody></table></div>"
+      },
+      "name": [ {
+        "family": "Wayne",
+        "given": [ "Bruce" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "111-222-3333",
+        "use": "mobile"
+      } ],
+      "gender": "male",
+      "birthDate": "1960-01-01",
+      "address": [ {
+        "line": [ "777 5th Avenue" ],
+        "city": "New York City",
+        "state": "New York",
+        "postalCode": "123456",
+        "country": "United States"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://hapi.fhir.org/baseR4/Patient/593254",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "593254",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2020-01-29T22:27:25.910+00:00",
+        "source": "#3hrtv6liLhdQ5kJk"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">Bruce <b>WAYNE </b></div><table class=\"hapiPropertyTable\"><tbody><tr><td>Address</td><td><span>777 5th Avenue </span><br/><span>New York City </span><span>New York </span><span>United States </span></td></tr><tr><td>Date of birth</td><td><span>01 January 1960</span></td></tr></tbody></table></div>"
+      },
+      "name": [ {
+        "family": "Wayne",
+        "given": [ "Bruce" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "111-222-3333",
+        "use": "mobile"
+      } ],
+      "gender": "male",
+      "birthDate": "1960-01-01",
+      "address": [ {
+        "line": [ "777 5th Avenue" ],
+        "city": "New York City",
+        "state": "New York",
+        "postalCode": "123456",
+        "country": "United States"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://hapi.fhir.org/baseR4/Patient/593256",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "593256",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2020-01-29T22:28:37.823+00:00",
+        "source": "#YZuwVE0wYXSoq9Hj"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">Bruce <b>WAYNE </b></div><table class=\"hapiPropertyTable\"><tbody><tr><td>Address</td><td><span>777 5th Avenue </span><br/><span>New York City </span><span>New York </span><span>United States </span></td></tr><tr><td>Date of birth</td><td><span>01 January 1960</span></td></tr></tbody></table></div>"
+      },
+      "name": [ {
+        "family": "Wayne",
+        "given": [ "Bruce" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "111-222-3333",
+        "use": "mobile"
+      } ],
+      "gender": "male",
+      "birthDate": "1960-01-01",
+      "address": [ {
+        "line": [ "777 5th Avenue" ],
+        "city": "New York City",
+        "state": "New York",
+        "postalCode": "123456",
+        "country": "United States"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://hapi.fhir.org/baseR4/Patient/593258",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "593258",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2020-01-29T22:34:40.993+00:00",
+        "source": "#kdIvIr19WB8BKBtl"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">Bruce <b>WAYNE </b></div><table class=\"hapiPropertyTable\"><tbody><tr><td>Identifier</td><td>rgobao3</td></tr><tr><td>Address</td><td><span>777 5th Avenue </span><br/><span>New York City </span><span>New York </span><span>United States </span></td></tr><tr><td>Date of birth</td><td><span>01 January 1960</span></td></tr></tbody></table></div>"
+      },
+      "identifier": [ {
+        "value": "rgobao3"
+      } ],
+      "name": [ {
+        "family": "Wayne",
+        "given": [ "Bruce" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "111-222-3333",
+        "use": "mobile"
+      } ],
+      "gender": "male",
+      "birthDate": "1960-01-01",
+      "address": [ {
+        "line": [ "777 5th Avenue" ],
+        "city": "New York City",
+        "state": "New York",
+        "postalCode": "123456",
+        "country": "United States"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://hapi.fhir.org/baseR4/Patient/593297",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "593297",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2020-01-30T03:06:03.901+00:00",
+        "source": "#ryWo819qjRyKLewA"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">Marko <b>POLO </b></div><table class=\"hapiPropertyTable\"><tbody><tr><td>Date of birth</td><td><span>09 January 1969</span></td></tr></tbody></table></div>"
+      },
+      "name": [ {
+        "family": "Polo",
+        "given": [ "Marko" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "1(404)896-4477",
+        "use": "home"
+      } ],
+      "gender": "male",
+      "birthDate": "1969-01-09"
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://hapi.fhir.org/baseR4/Patient/593299",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "593299",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2020-01-30T03:10:19.479+00:00",
+        "source": "#G2tWWlQQeNqPn9rj"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">Marko <b>POLO </b></div><table class=\"hapiPropertyTable\"><tbody><tr><td>Address</td><td><span>Atlanta </span><span>GA </span><span>USA </span></td></tr><tr><td>Date of birth</td><td><span>09 January 1969</span></td></tr></tbody></table></div>"
+      },
+      "name": [ {
+        "family": "Polo",
+        "given": [ "Marko" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "1(404)896-4477",
+        "use": "home"
+      } ],
+      "gender": "male",
+      "birthDate": "1969-01-09",
+      "address": [ {
+        "use": "home",
+        "text": "1234 Sesame St",
+        "city": "Atlanta",
+        "state": "GA",
+        "country": "USA"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://hapi.fhir.org/baseR4/Patient/593301",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "593301",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2020-01-30T03:16:18.100+00:00",
+        "source": "#WCXRHZFVlk5S0vJf"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div class=\"hapiHeaderText\">Marko <b>POLO </b></div><table class=\"hapiPropertyTable\"><tbody><tr><td>Address</td><td><span>Atlanta </span><span>GA </span><span>USA </span></td></tr><tr><td>Date of birth</td><td><span>09 January 1969</span></td></tr></tbody></table></div>"
+      },
+      "name": [ {
+        "family": "Polo",
+        "given": [ "Marko" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "1(404)896-4477"
+      } ],
+      "gender": "male",
+      "birthDate": "1969-01-09",
+      "address": [ {
+        "city": "Atlanta",
+        "state": "GA",
+        "country": "USA"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

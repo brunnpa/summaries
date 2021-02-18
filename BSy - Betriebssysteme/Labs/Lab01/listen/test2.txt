@@ -1,0 +1,24 @@
+
+*************************************************************
+check: creating empyt queues
+
+--> printing queue1 -> empty, total 0 elements
+
+--> printing queue2 -> empty, total 0 elements
+
+--> printing queue3 -> empty, total 0 elements
+
+
+*************************************************************
+check: make fifo queue and sort queue
+
+--> printing queue3 -> fifo queue, total 8 elements
+  > node tid = 20653024, ready time =  0
+  > node tid = 20653504, ready time =  0
+  > node tid = 20653712, ready time =  0
+  > node tid = 20653920, ready time =  0
+  > node tid = 20654128, ready time =  0
+  > node tid = 20654336, ready time =  0
+  > node tid = 20654560, ready time =  0
+  > node tid = 20652944, ready time =  0
+

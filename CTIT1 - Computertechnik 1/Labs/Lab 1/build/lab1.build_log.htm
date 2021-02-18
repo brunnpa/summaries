@@ -1,0 +1,93 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.26.2.0
+Copyright (C) 2018 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Stephan Feurer, InES, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.26.2.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.26.2.0
+Dialog DLL:      DARMCM1.DLL V1.19.1.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.5.0
+Dialog DLL:      TARMCM1.DLL V1.14.0.0
+ 
+<h2>Project:</h2>
+\\user.zhaw.ch\edu\luescdav\lab1\lab1.uvprojx
+Project File Date:  02/27/2019
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'Target 1'
+compiling main.c...
+app\main.c(31): warning:  #1-D: last line of file ends without a newline
+  }
+app\main.c: 1 warning, 0 errors
+linking...
+Program Size: Code=2836 RO-data=428 RW-data=8 ZI-data=8192  
+".\build\lab1.axf" - 0 Error(s), 1 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: InES
+                https://ennis.zhaw.ch/pack/InES.CTBoard14_DFP.4.0.2.pack
+                InES.CTBoard14_DFP.4.0.2
+                CT Board 14 (STM32F429ZI) Device Support
+   * Component: Startup Version: 4.0.1
+   * Component: FMC Version: 3.0.1
+   * Component: GPIO Version: 4.0.1
+   * Component: PWR Version: 2.2.0
+   * Component: RCC Version: 4.0.1
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Target_1
+  C:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\Device\Include
+  C:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\Device\Include\m0
+  C:\Keil_v5\ARM\PACK\InES\CTBoard14_DFP\4.0.2\HAL\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: InES::Device:Startup:4.0.1
+      Source file:   Device\Source\system_ctboard.c
+      Include file:  Device\Include\m0\platform_ctboard.h
+      Source file:   Device\Source\datainit_ctboard.s
+      Include file:  Device\Include\system_ctboard.h
+      Source file:   Device\Source\startup_ctboard.s
+      Include file:  Device\Include\reg_stm32f4xx.h
+      Include file:  Device\Include\reg_ctboard.h
+
+   * Component: InES::HAL:FMC:3.0.1
+      Source file:   HAL\Source\hal_fmc.c
+      Include file:  Device\Include\reg_stm32f4xx.h
+      Include file:  HAL\Include\hal_common.h
+      Include file:  HAL\Include\hal_fmc.h
+
+   * Component: InES::HAL:GPIO:4.0.1
+      Source file:   HAL\Source\hal_gpio.c
+      Include file:  Device\Include\reg_stm32f4xx.h
+      Include file:  HAL\Include\hal_common.h
+      Include file:  HAL\Include\hal_gpio.h
+
+   * Component: InES::HAL:PWR:2.2.0
+      Include file:  HAL\Include\hal_common.h
+      Include file:  Device\Include\reg_stm32f4xx.h
+      Source file:   HAL\Source\hal_pwr.c
+      Include file:  HAL\Include\hal_pwr.h
+
+   * Component: InES::HAL:RCC:4.0.1
+      Include file:  Device\Include\reg_stm32f4xx.h
+      Include file:  HAL\Include\hal_common.h
+      Include file:  HAL\Include\hal_rcc.h
+      Source file:   HAL\Source\hal_rcc.c
+Build Time Elapsed:  00:00:04
+</pre>
+</body>
+</html>

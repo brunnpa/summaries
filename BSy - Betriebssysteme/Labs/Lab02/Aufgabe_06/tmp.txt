@@ -1,0 +1,102 @@
+[?1h=[?25l[H[2J(B[mtop - 08:37:26 up 19 min,  1 user,  load average: 0.00, 0.01, 0.00(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m(B[m 136 (B[m[39;49mtotal,(B[m[39;49m(B[m   1 (B[m[39;49mrunning,(B[m[39;49m(B[m 135 (B[m[39;49msleeping,(B[m[39;49m(B[m   0 (B[m[39;49mstopped,(B[m[39;49m(B[m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m(B[m  1.4 (B[m[39;49mus,(B[m[39;49m(B[m  0.3 (B[m[39;49msy,(B[m[39;49m(B[m  0.0 (B[m[39;49mni,(B[m[39;49m(B[m 98.3 (B[m[39;49mid,(B[m[39;49m(B[m  0.1 (B[m[39;49mwa,(B[m[39;49m(B[m  0.0 (B[m[39;49mhi,(B[m[39;49m(B[m  0.0 (B[m[39;49msi,(B[m[39;49m(B[m  0.0 (B[m[39;49mst(B[m[39;49m(B[m[39;49m[K
+KiB Mem :(B[m[39;49m(B[m 12013760 (B[m[39;49mtotal,(B[m[39;49m(B[m 11404884 (B[m[39;49mfree,(B[m[39;49m(B[m   212620 (B[m[39;49mused,(B[m[39;49m(B[m   396256 (B[m[39;49mbuff/cache(B[m[39;49m(B[m[39;49m[K
+KiB Swap:(B[m[39;49m(B[m        0 (B[m[39;49mtotal,(B[m[39;49m(B[m        0 (B[m[39;49mfree,(B[m[39;49m(B[m        0 (B[m[39;49mused.(B[m[39;49m(B[m 11468704 (B[m[39;49mavail Mem (B[m[39;49m(B[m[39;49m[K
+[K
+[7m  PID  PPID USER     S  %CPU P COMMAND                      PR  NI %MEM     TIME+ (B[m[39;49m[K
+(B[m(B[m 1545  1020 tha      R   6.2 1 top                          20   0  0.0   0:00.02 (B[m[39;49m[K
+(B[m 1544     2 root     S   0.0 3 kworker/u16:2                20   0  0.0   0:00.00 (B[m[39;49m[K
+(B[m 1542     2 root     S   0.0 2 kworker/2:0                  20   0  0.0   0:00.06 (B[m[39;49m[K
+(B[m 1541     2 root     S   0.0 0 kworker/0:0                  20   0  0.0   0:00.00 (B[m[39;49m[K
+(B[m 1458     2 root     S   0.0 0 kworker/u16:0                20   0  0.0   0:00.03 (B[m[39;49m[K
+(B[m 1379     1 tha      S   0.0 0 gedit                        20   0  0.3   0:28.70 (B[m[39;49m[K
+(B[m 1326     1 root     S   0.0 1 cupsd                        20   0  0.1   0:00.01 (B[m[39;49m[K
+(B[m 1020   955 tha      S   0.0 0 bash                         20   0  0.0   0:00.25 (B[m[39;49m[K
+(B[m 1003     1 tha      S   0.0 2 dconf-service                20   0  0.0   0:00.01 (B[m[39;49m[K
+(B[m  997   917 tha      S   0.0 3 nm-applet                    20   0  0.2   0:00.10 (B[m[39;49m[K
+(B[m  991   917 tha      S   0.0 0 polkit-gnome-au              20   0  0.1   0:00.03 (B[m[39;49m[K
+(B[m  989   917 tha      S   0.0 3 xscreensaver                 20   0  0.0   0:00.52 (B[m[39;49m[K
+(B[m  988   917 tha      S   0.0 0 light-locker                 20   0  0.2   0:00.08 (B[m[39;49m[K
+(B[m  975     1 tha      S   0.0 3 at-spi2-registr              20   0  0.1   0:00.10 (B[m[39;49m[K
+(B[m  970   964 tha      S   0.0 3 dbus-daemon                  20   0  0.0   0:00.03 (B[m[39;49m[K
+(B[m  965   930 tha      S   0.0 1 panel-8-datetim              20   0  0.2   0:00.10 (B[m[39;49m[K
+(B[m  964     1 tha      S   0.0 2 at-spi-bus-laun              20   0  0.1   0:00.00 (B[m[39;49m[K
+(B[m  959     1 tha      S   0.0 0 xfce4-power-man              20   0  0.1   0:00.03 (B[m[39;49m[K
+(B[m  955   917 tha      S   0.0 2 xfce4-terminal               20   0  0.3   0:03.07 (B[m[39;49m[K
+(B[m  937     1 root     S   0.0 1 upowerd                      20   0  0.1   0:00.08 (B[m[39;49m[K
+(B[m  933   917 tha      S   0.0 3 xfdesktop                    20   0  0.2   0:00.57 (B[m[39;49m[K
+(B[m  931     1 tha      S   0.0 0 xfsettingsd                  20   0  0.1   0:00.12 (B[m[39;49m[K
+(B[m  930   917 tha      S   0.0 2 xfce4-panel                  20   0  0.2   0:00.84 (B[m[39;49m[K
+(B[m  928   917 tha      S   0.0 2 Thunar                       20   0  0.1   0:00.01 (B[m[39;49m[K
+(B[m  927   917 tha      S   0.0 2 xfwm4                        20   0  0.2   0:02.42 (B[m[39;49m[K
+(B[m  925   584 tha      S   0.0 2 gpg-agent                    20   0  0.0   0:00.00 (B[m[39;49m[K
+(B[m  921     1 tha      S   0.0 0 xfconfd                      20   0  0.0   0:00.01 (B[m[39;49m[K
+(B[m  917   593 tha      S   0.0 1 xfce4-session                20   0  0.1   0:00.29 (B[m[39;49m[K
+(B[m  907   593 tha      S   0.0 0 ssh-agent                    20   0  0.0   0:00.00 (B[m[39;49m[K
+(B[m  892     1 tha      S   0.0 3 dbus-daemon                  20   0  0.0   0:00.07 (B[m[39;49m[K
+(B[m  891     1 tha      S   0.0 3 dbus-launch                  20   0  0.0   0:00.00 (B[m[39;49m[K
+(B[m  602     1 root     S   0.0 3 agetty                       20   0  0.0   0:00.00 (B[m[39;49m[K
+(B[m  593   578 tha      S   0.0 2 sh                           20   0  0.0   0:00.00 (B[m[39;49m[K
+(B[m  585   584 tha      S   0.0 3 (sd-pam)                     20   0  0.0   0:00.00 (B[m[39;49m[K
+(B[m  584     1 tha      S   0.0 3 systemd                      20   0  0.0   0:00.01 (B[m[39;49m[K
+(B[m  578   462 root     S   0.0 2 lightdm                      20   0  0.1   0:00.02 (B[m[39;49m[K
+(B[m  570     1 lightdm  S   0.0 1 at-spi2-registr              20   0  0.1   0:00.09 (B[m[39;49m[K
+(B[m  565     1 lightdm  S   0.0 1 dbus-daemon                  20   0  0.0   0:00.00 (B[m[39;49m[K
+(B[m  564     1 lightdm  S   0.0 2 dbus-launch                  20   0  0.0   0:00.00 (B[m[39;49m[K
+(B[m  553   552 lightdm  S   0.0 1 (sd-pam)                     20   0  0.0   0:00.00 (B[m[39;49m[K
+(B[m  552     1 lightdm  S   0.0 2 systemd                      20   0  0.0   0:00.00 (B[m[39;49m[K
+(B[m  474   462 root     S   0.0 0 Xorg                         20   0  0.5   0:22.00 (B[m[39;49m[K
+(B[m  462     1 root     S   0.0 2 lightdm                      20   0  0.1   0:00.01 (B[m[39;49m[K
+(B[m  407     1 root     S   0.0 2 polkitd                      20   0  0.1   0:00.04 (B[m[39;49m[K[H(B[mtop - 08:37:27 up 19 min,  1 user,  load average: 0.00, 0.01, 0.00(B[m[39;49m(B[m[39;49m[K
+Tasks:(B[m[39;49m(B[m 136 (B[m[39;49mtotal,(B[m[39;49m(B[m   1 (B[m[39;49mrunning,(B[m[39;49m(B[m 135 (B[m[39;49msleeping,(B[m[39;49m(B[m   0 (B[m[39;49mstopped,(B[m[39;49m(B[m   0 (B[m[39;49mzombie(B[m[39;49m(B[m[39;49m[K
+%Cpu(s):(B[m[39;49m(B[m  0.5 (B[m[39;49mus,(B[m[39;49m(B[m  0.0 (B[m[39;49msy,(B[m[39;49m(B[m  0.0 (B[m[39;49mni,(B[m[39;49m(B[m 99.5 (B[m[39;49mid,(B[m[39;49m(B[m  0.0 (B[m[39;49mwa,(B[m[39;49m(B[m  0.0 (B[m[39;49mhi,(B[m[39;49m(B[m  0.0 (B[m[39;49msi,(B[m[39;49m(B[m  0.0 (B[m[39;49mst(B[m[39;49m(B[m[39;49m[K
+
+
+[K
+
+(B[m(B[m 1545  1020 tha      R   0.0 1 top                          20   0  0.0   0:00.02 (B[m[39;49m[K
+
+
+
+
+(B[m 1379     1 tha      S   0.0 1 gedit                        20   0  0.3   0:28.70 (B[m[39;49m[K
+
+
+
+
+(B[m  991   917 tha      S   0.0 1 polkit-gnome-au              20   0  0.1   0:00.03 (B[m[39;49m[K
+
+
+(B[m  975     1 tha      S   0.0 2 at-spi2-registr              20   0  0.1   0:00.10 (B[m[39;49m[K
+
+(B[m  965   930 tha      S   0.0 0 panel-8-datetim              20   0  0.2   0:00.10 (B[m[39;49m[K
+
+
+
+
+
+(B[m  931     1 tha      S   0.0 1 xfsettingsd                  20   0  0.1   0:00.12 (B[m[39;49m[K
+
+
+(B[m  927   917 tha      S   0.0 1 xfwm4                        20   0  0.2   0:02.42 (B[m[39;49m[K
+
+
+
+
+
+
+
+
+
+
+
+(B[m  570     1 lightdm  S   0.0 2 at-spi2-registr              20   0  0.1   0:00.09 (B[m[39;49m[K
+
+
+
+
+(B[m  474   462 root     S   1.0 0 Xorg                         20   0  0.5   0:22.01 (B[m[39;49m[K
+
+[?1l>[52;1H
+[?12l[?25h[K

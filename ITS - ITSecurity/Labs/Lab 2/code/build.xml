@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<!-- Configuration of the Ant build system to generate a Jar file -->
+<project name="XorCryptoCracker" default="JarFiles">
+	<path id="class.path">
+		<fileset dir="lib">
+			<include name="**.jar" />
+		</fileset>
+	</path>
+	<manifestclasspath property="jar.classpath"
+                       jarfile=".">
+		<classpath refid="class.path" />
+	</manifestclasspath>
+	
+	<target name="clean">
+		  <delete includeemptydirs="true">
+		    <fileset dir="bin" includes="**/*"/>
+		  </delete>
+	</target>
+
+	<target name="compile" depends="clean">
+		<javac debug="true" srcdir="src" destdir="bin"  includeantruntime="false" classpathref="class.path"/>
+	</target>
+			
+	<target name="JarFiles" description="Create Jar file" depends="clean, compile">
+		<jar destfile="jar/HistogramApp.jar">
+			<fileset dir="bin">
+				<include name="**/*.class"/>
+			</fileset>			
+			<zipgroupfileset dir="lib" includes="**.jar" />
+			<manifest>
+				<attribute name="Main-Class" value="HistogramApp"/>
+			</manifest>
+		</jar>
+		<jar destfile="jar/XorWithKeyApp.jar">
+			<fileset dir="bin">
+				<include name="**/*.class"/>
+			</fileset>
+			<manifest>
+				<attribute name="Main-Class" value="XorWithKeyApp"/>
+			</manifest>
+		</jar>
+		<jar destfile="jar/XorCrackerApp.jar">
+			<fileset dir="bin">
+				<include name="**/*.class"/>
+			</fileset>
+			<manifest>
+				<attribute name="Main-Class" value="XorCrackerApp"/>
+			</manifest>
+		</jar>		
+		<jar destfile="jar/XorAndCompressCrackerApp.jar">
+			<fileset dir="bin">
+				<include name="**/*.class"/>
+			</fileset>
+			<manifest>
+				<attribute name="Main-Class" value="XorAndCompressCrackerApp"/>
+			</manifest>
+		</jar>		
+	</target>
+</project>

@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Stockwerk
+comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Stockwerk.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment1.params=stockwerkname\ anzahlParkplaetze
+comment1.target=Stockwerk(java.lang.String,\ int)
+comment1.text=\r\n\ Konstruktor\ f\u00FCr\ Objekte\ der\ Klasse\ Stockwerk\r\n
+comment2.params=
+comment2.target=int\ parkplatzBesetzen()
+comment3.params=
+comment3.target=int\ parkplatzFreigeben()
+comment4.params=
+comment4.target=void\ ausgeben()
+comment4.text=\r\n\ Ein\ Beispiel\ einer\ Methode\ -\ ersetzen\ Sie\ diesen\ Kommentar\ mit\ Ihrem\ eigenen\r\n\ \r\n\ @param\ \ y\ \ \ \ ein\ Beispielparameter\ f\u00FCr\ eine\ Methode\r\n\ @return\ \ \ \ \ \ \ \ die\ Summe\ aus\ x\ und\ y\r\n
+numComments=5

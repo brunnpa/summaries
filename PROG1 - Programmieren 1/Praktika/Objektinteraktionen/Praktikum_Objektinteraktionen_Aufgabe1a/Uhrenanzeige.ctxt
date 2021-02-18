@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Uhrenanzeige
+comment0.text=\r\n\ Die\ Klassen\ Uhrenanzeige\ implementiert\ die\ Anzeige\ einer\ Digitaluhr.\r\n\ Die\ Anzeige\ zeigt\ Stunden\ und\ Minuten.\ Der\ Anzeigebereich\ reicht\ von\r\n\ 00\:00\ (Mitternacht)\ bis\ 23\:59\ (eine\ Minute\ vor\ Mitternacht).\r\n\r\n\ Eine\ Uhrenanzeige\ sollte\ min\u00FCtlich\ "Taktsignale"\ (\u00FCber\ die\ Operation\r\n\ "taktsignalGeben")\ erhalten,\ damit\ sie\ die\ Anzeige\ aktualisieren\ \r\n\ kann.\ Dies\ geschieht,\ wie\ man\ es\ bei\ einer\ Uhr\ erwartet\:\ Die\ \r\n\ Stunden\ erh\u00F6hen\ sich,\ wenn\ das\ Minutenlimit\ einer\ Stunde\ erreicht\r\n\ ist.\r\n\ \r\n\ @author\ Michael\ K\u00F6lling\ und\ David\ J.\ Barnes\r\n\ @version\ 31.07.2011\r\n
+comment1.params=
+comment1.target=Uhrenanzeige()
+comment1.text=\r\n\ Konstruktor\ fuer\ ein\ Exemplar\ von\ Uhrenanzeige.\r\n\ Mit\ diesem\ Konstruktor\ wird\ die\ Anzeige\ auf\ 00\:00\ initialisiert.\r\n
+comment2.params=stunde\ minute\ sekunde
+comment2.target=Uhrenanzeige(int,\ int,\ int)
+comment2.text=\r\n\ Konstruktor\ fuer\ ein\ Exemplar\ von\ Uhrenanzeige.\r\n\ Mit\ diesem\ Konstruktor\ wird\ die\ Anzeige\ auf\ den\ Wert\r\n\ initialisiert,\ der\ durch\ 'stunde'\ und\ 'minute'\ \r\n\ definiert\ ist.\r\n
+comment3.params=
+comment3.target=void\ taktsignalGeben()
+comment3.text=\r\n\ Diese\ Operation\ sollte\ einmal\ pro\ Minute\ aufgerufen\ werden\ -\r\n\ sie\ sorgt\ dafuer,\ dass\ diese\ Uhrenanzeige\ um\ eine\ Minute\r\n\ weiter\ gestellt\ wird.\r\n
+comment4.params=stunde\ minute\ sekunde
+comment4.target=void\ setzeUhrzeit(int,\ int,\ int)
+comment4.text=\r\n\ Setze\ die\ Uhrzeit\ dieser\ Anzeige\ auf\ die\ gegebene\ 'stunde'\ und\r\n\ 'minute'.\r\n
+comment5.params=
+comment5.target=java.lang.String\ gibUhrzeit()
+comment5.text=\r\n\ Liefere\ die\ aktuelle\ Uhrzeit\ dieser\ Uhrenanzeige\ im\ Format\ SS\:MM.\r\n
+comment6.params=
+comment6.target=void\ anzeigeAktualisieren()
+comment6.text=\r\n\ Aktualisiere\ die\ interne\ Zeichenkette,\ die\ die\ Zeitanzeige\ haelt.\r\n
+numComments=7

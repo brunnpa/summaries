@@ -1,0 +1,4 @@
+***Erkenntnis Annreicherung Queries durch Synonyme:***
+- Scorewerte sind wesentlich tiefer
+    - Platz 0 in der angereicherten Anfrage hätte in dem initialResult.txt nur Platz 9 geschlagen
+- durch zusätzliches hinzufügen von synonyme, steigert es die nicht relevanten wörter, was einen direkt einfluss auf die Scores hat
