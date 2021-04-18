@@ -690,4 +690,270 @@ Wobei sich der Fokus und die Ziele je nach Stufe variieren. Dementsprechend komm
    \item Regressionstest umfassen funktionale, nicht-funktionale wie auch strukturelle Tests (auf allen Teststufen) 
 \end{itemize}
 
+
+\chapter{Statischer Test}
+Testen von Software-Entwicklungsartefakten, ohne diese auszuführen, bspw. durch Reviews oder statische Analyse
+
+\textbf{Reviews}
+\begin{itemize}
+   \item Manuelle Prüfungen durch eine oder mehr. Personen
+   \item Menschliche Analyse- und Denkfähigkeit wird genutzt, um komplexe Sachverhalte zu prüfen und zu bewerten
+   \item Kann bei allen Dokumenten durchgeführt werden, die während des Prozesses erstellt oder verwendet werden
+\end{itemize}
+
+\textbf{Statische (Code-) Analyse}
+\begin{itemize}
+   \item automatisierte Prüfung durch entsprschende Werkzeuge
+   \item Nur bei Dokumenten mit formaler Struktur (bspw. Programmtext, UML-Diagramme etc.)
+\end{itemize}
+
+\section{Was kann analysiert und geprüft werden?}
+\begin{itemize}
+   \item Analyse des Testobjekts (Dokumente, Code etc.) durch intensive Betrachtung
+   \item \textbf{Ziel:} Ermittlung von Fehlerzuständen (Defekten) im Dokument bzw. Code
+   \subitem Verstösse gegen Spezifikationen, oder einzuhaltende Standards, Fehler in Anforderungen / im Design, falsche Schnittstellenspezifikation
+   \subitem Nachweis der Verletzung von Projektplänen
+   \subitem Ergebnisse der Untersuchungen werden darüber hinaus dazu benutzt, den Entwicklungsprozess zu optimieren
+   \item \textbf{Grundidee:} Prävention
+   \subitem Fehler(zustände) und Abweichungen sollen so früh wie möglich erkannt werden 
+\end{itemize}
+
+\section{Vorgehen}
+Bei nicht-Werkzeuggestützten Verfahren $\rightarrow$ menschliche Analyse- und Denkfähigkeit verwenden. Dies erfolgt durch intensives Lesen und nachvollziehen, wobei Untersch. Verfahren, u.a. Review (von informell bis sehr formal) 
+Entscheidung wann welches zum Tragen kommt, hat unterschiedliche Faktoren. 
+\begin{itemize}
+   \item Softwareentwicklungslebenszyklus-Modell
+   \item Reife des Entwicklungsprozess
+   \item Komplexität des zu überprüfenden Dokuments
+   \item Gesetzliche oder regulatorische Anforderungen und / oder die Notwendigkeit eines Prüfnachweises (Audit-Trail)
+\end{itemize}
+
+\section{Reviewprozess}
+Folgende Hauptaktvitäten gibt es bei einem Review
+\begin{enumerate}
+   \item Planung
+   \item Initiierung, Kick-Off
+   \item Indiv. Review
+   \item Diskussion der Befunde
+   \item Bericht und Fehlerbehebung
+\end{enumerate}
+
+\subsection{Planung}
+\begin{itemize}
+   \item Mgmt entscheidet welche Dokumente nach welcher Art einem Review unterzogen werden sollen
+   \item entsprechender Aufwand ist einzuplanen
+   \item Eingangs- und Austrittskriterien sind festzulegen
+   \item Manager wählt Person für den Review aus und stellt ein Review-Team zusammen
+\end{itemize}
+
+\subsection{Initiierung (Kick-Off)}
+\begin{itemize}
+   \item Versorgung aller benötigten Informationen
+   \item Überprüfung ob Eingangsbedingung erfüllt sind
+   \item Schriftliche Einladung oder sofortiges erstes Treffen des Reviewteams
+   \item Neben dem Arbeitsergebnis, müssen den beteiligten Personen weitere UNterlagen zur Verfügung gestellt werden:
+   \subitem Dokumente, die herangezogen werden müssen um Review durchzuführen $\rightarrow$ Auch Basisdokumente (Baseline) bezeichnet
+   \subitem Prüfkriterien (bspw. mit Checkliste) festlegen
+   \subitem Sofern Vorlagen zur Protokollierung vorhanden, vorlegen
+\end{itemize}
+
+\subsection{Individuelles Review (indiv. Vorbereitung)}
+\begin{itemize}
+   \item beteiligte Personen müssen sich indiv. auf die Sitzung vorbereiten
+   \item Reviewer setzen sich intensiv mit dem zu prüfenden Dokument auseinander
+   \item Erkannte potentielle Fehler(zustände), Empfehlungen, Fragen oder Kommentare werden notiert
+\end{itemize}
+
+Beispiele für versch. indiv. Vorgehensweise:
+\begin{itemize}
+   \item Keine Vorgaben: ad-hoc-Vorgehen
+   \item Strukturiertes Lesen: Vorgehen basiert auf Checklisten
+   \item Strukturierte Richtlinie: Vorgehen unter Nutzung von Szenarien und Probeläufen $\rightarrow$ Dry Runs
+   \item Prüfung aus einer Perspektive: Rollenbasiertes und perspektivisches Vorgehen
+\end{itemize}
+
+\subsection{Diskussion der Befunde (Reviewsitzung)}
+\begin{itemize}
+   \item Nach der indiv. Vorbereitung werden die Ergebnisse zusammengetragen und diskutiert
+   \item Form: Reviewsitzung oder firmeninternen Onlineforum
+   \item (potentielle) Abweichungen und Fehler(zustände) werden besprochen und näher analysiert
+   \item Jedes Merkmale und das dazugehörige Ergebnis werden im Rahmen der Befundanalyse dokumentiert
+   \item Reviewteam gibt eine Empfehlung über die Annahme (akzeptiert, Überarbeitung erforderlich, nicht akzeptieren) des Arbeitsergebnis ab
+   \item Best-Practices
+   \subitem max 2h Sitzung
+   \subitem Moder hat das Recht, abzusagen oder abzubrechen
+   \subitem Resultat und nicht Autor im Mittelpunkt
+   \subitem Moderator darf nicht als Reviewer tätig sein
+   \subitem Allg. Stilfragen dürfen nicht diskutiert werden
+   \subitem Diskussion zur Lösung ist nicht Aufgabe des Reviewteams
+   \subitem Jeder Reviewer muss die Gelegenheit haben, seine Befunde angemessen präsentieren zu können
+   \subitem Ein Konses der Reviewer ist anzustreben und zu protokollieren
+   \subitem Befunde nicht in Form von Korrekturanweisungen formulieren
+   \subitem Befunde sind zu gewichten
+\end{itemize}
+
+\subsection{Bericht und Fehlerbehebung}
+Ist die abschliessende Aktivität
+\begin{itemize}
+   \item Oftmals beinhaltet das Protokoll der Reviewsitzung alle erforderlichen Informationen
+   \item Normalerweis behebt der Autor die Fehler(zustände)
+   \item Die Reviewergebnisse können in Abhängigkeit von der Reviewart und dem Grad der Formalität stark variieren
+\end{itemize}
+
+\section{Rollen und Verantwortlichkeiten}
+
+\subsection{Management}
+\begin{itemize}
+   \item Entscheidet über Durchführung von Reviews und deren Art
+   \item Wählt die Prüfobjekte und die zu verwendenden Dokumente aus
+   \item Verantwortlich für Planung und stellt die notwendigen Ressourcen (Personen, Budget, Zeit) zur Verfügung und das Review-Team zusammen
+   \item Überwachung der Kosteneffizenz und das Treffen von steuernden Entscheidungen im Fall von unzureichenden Ergebnissen des Reviewprozesses
+\end{itemize}
+
+\subsection{Reviewleiter}
+\begin{itemize}
+   \item Reviewleiter trägt die Gesamtverantwortung für den Review (Planung, Vorbereitung, Durchführung und Über-/Nachbearbeitung)
+   \item Entscheidet, welche Personen am Review beteiligt sind und organisiert Zeitpunkt und Räumlichkeit für Sitzung
+\end{itemize}
+
+\subsection{Reviewmoderator}
+\begin{itemize}
+   \item Leitet die Sitzung
+   \item entscheidende Person für Erfolg
+   \item Muss sehr guter Sitzungsleiter sein
+   \item Muss bei gegensätzlichen Standpunkten vermitteln können und auch auf Untertöne achten
+   \item Darf nicht voreingenommen sein und keine eigene Meinung zum Prüfobjekt äussern
+\end{itemize}
+
+\subsection{Autor}
+\begin{itemize}
+   \item Ersteller des Dokuments bzw. des Arbeitsergebnisses, das einem Review unterzogen wird
+   \item Bei mehreren Erstellern sollte ein Hauptverantwortlicher benannt werden, der die Rolle des Autors übernimmt
+   \item Wichtig ist, dass der Autor die geäusserte Kritik nicht als Kritik an seiner Person auffasst, sondern dass es ausschl. um die Verbesserung der Qualität geht
+\end{itemize}
+
+\subsection{Reviewer (Gutachter, Inspektor)}
+\begin{itemize}
+   \item Mehrere (max. 5) Fachexperten
+   \item Verantwortung, gute Abschnitte entsprechend zu kennzeichnen
+   \item Mangelhafte Teil zu dokumentieren und nachvollziehbar zu beschreiben
+   \item Reviewer sollten gewählt werden, dass versch. Sichten im Reviewprozess vertreten sind
+\end{itemize}
+
+\subsection{Protokollant}
+\begin{itemize}
+   \item Dokumentiert alle Ergebnisse, Probleme und offene Punkte während Sitzung
+   \item Kurz und präzise formulieren
+   \item Schreibt Diskussionsbeiträge verfälschungsfrei auf
+   \item Protokollant und Reviewmoderator sollte nicht dieselbe Person sein
+   \item Manchmal sinnvoll, wenn der Autor auch der Protokollant ist
+\end{itemize}
+
+\section{Reviewarten}
+
+\subsection{Informelles Review}
+\begin{itemize}
+   \item Abgeschwächte Form des Reviews
+   \item Autor-Leser-Feedbackzyklus
+\end{itemize}
+
+\subsection{Walkthrough}
+\begin{itemize}
+   \item Mittelpunkt eine Sitzung
+   \item kein formaler Ablauf
+\end{itemize}
+
+\subsection{technische Review (auch fachliches Review)}
+\begin{itemize}
+   \item Übereinstimmung des Prüflings mit einer Spezifikation, Eignung für den Einsatz, Einhaltung von Standards
+   \item Hinzuziehen von Fachexperten
+\end{itemize}
+
+\subsection{Inspektion}
+\begin{itemize}
+   \item Formalste Art
+   \item definierter Ablauf mit genauen Prüfkriterien
+   \item Aufdeckung von Unklarheiten, mögliche Fehler(zustände), Bestimmung der Qualität, Vertrauen in das Arbeitsergebnis schaffen
+\end{itemize}
+
+
+\section{Erfolgsfaktoren, Vorteile und Grenzen}
+\begin{itemize}
+   \item Reviews sind effiziente Mittel zur Sicherung der Qualität
+   \item Idealerweise direkt nach Fertigstellung der Arbeitsergebnisse durchzuführen
+   \item Frühe Finden von Fehler(zustände)n durch Reviews meist kostengünstiger als das spätere Erkennen
+   \item Wissensaustausch unter den beteiligten Personen
+   \item Organisatorische Erfolgsfaktoren
+   \subitem Mgmt und PL unterstützen Reviews
+   \subitem angemessene Frist geplant
+   \subitem genügend Zeit für Vorbereitung
+   \subitem Checklisten sind aktuell
+   \subitem Umfangreiche Dokumente werden nicht als ganzes geprüft
+   \item Personenbezogene Erfolgsfaktoren
+   \subitem passende Personen auswählen
+   \subitem dienen zur Qualitätssicherung
+   \subitem ausreichend Zeitnehmen und Aufmerksamkeit für Details
+   \subitem Kultur des 'ständigen Lernens'
+\end{itemize}
+
+\section{Unterschied statische vs. dynamische Tests}
+\begin{itemize}
+   \item Statische und dynamische Tests können das gleiche Ziel verfolgen $\rightarrow$ Fehler finden
+   \item statische Tests entdecken Fehler direkt in Dokumente
+   \item dynamische Tests weisen Fehlerwirkungen nach - vor allem im Programmcode und nicht in anderen Dokumenten
+\end{itemize}
+
+\section{Statische (werkzeugbasierte) Analyse}
+Oftmals Oberbegriffe für alle Prüfverfahren, bei denen keine Ausführung des Testobjekts erfolgt
+\begin{itemize}
+   \item Überprüfung, Vermessung und Darstellung eines Dokuments bzw. eines Programms oder einer Kopmonente
+   \item müssen formale Struktur haben
+   \item typischerweise wird Quelltext analyisert
+   \item Prüfung auf Einhaltung von Konventionen und Standards
+   \item Datenflussanalyse
+   \item Kontrollflussanalyse
+   \item Erhebung von Metriken
+\end{itemize}
+Als Beispiel ist der Compiler zu nennen
+
+\subsection{Prüfung der Einhaltung von Konventionen und Standards}
+\begin{itemize}
+   \item Einhaltung der Programmierkonventionen durch Analysatoren
+   \item Möglichst automatisch überprüfen lassen
+\end{itemize}
+
+\subsection{Datenflussanalyse}
+\begin{itemize}
+   \item ur-Anomalie: Ein undefinierter Wert (u) einer Variablen wird auf einem Programmpfad gelesen (r)
+   \item du-Anomalie: Die Variable erhält einen Wert (d), der allerdings ungültig (u) wird, ohne dass er zwischenzeitlich verwendet wurde
+   \item dd-Anomalie: Die Variable erhält auf einem Programmpfad ein zweites Mal einen Wert (d), ohne dass der erste Wert (d) verwendet wurde
+\end{itemize}
+Bspw. mit SonarLint oder SpotBugs
+
+\subsection{Kontrollflussanalyse}
+\begin{itemize}
+   \item Programmstück kann als Kontrollflussgraph dargestellt werden
+   \item Anweisung + Sequenz von Anweisung ist ein Knoten
+   \item Änderungen werden durch Verzweigungen und Schleifen erreicht
+   \item Durch die Visualisierung der Kontrollflussgraphen lassen sich Anomalien leicht erfassen
+   \subitem Sprünge aus Schleifen
+   \subitem Mehrere Ausgänge
+\end{itemize}
+
+\subsection{Ermittlung von Metriken}
+\begin{itemize}
+   \item Werkzeuge der statischen Analyse liefern auch Messwerte (Siehe ISO DIN 25010)
+   \item Werkzeuge: SonarQube, Eclipse Metrics
+\end{itemize}
+
+\subsection{Zyklomatische Zahl}
+\begin{itemize}
+   \item die Zyklomatische Zahl oder Komplexität misst die sturkturelle Komplexität des Quellcodes
+   \item Grundlage für die Berechnung ist der Kontrollflussgraph
+   \item Die zyklomatische Zahl kann genutzt werden, um Abschätzungen in Bezug auf die Testbarkeit und die Wartbarkeit des Programmteils vorzunehmen
+   \item Zahl höher als 10 ist nicht tolerabel $\rightarrow$ 3-6 ist akzeptabel
+   \item Zahl gibt Auskunft über den Testaufwands
+   \item Zyklomatische Zahl = Anzahl linear unabhängigen PFade im Programmstück $\rightarrow$ obere Grenze für die benötigten Testfälle zur Erreichung dieses Kriteriums
+\end{itemize}
+
 \end{document}
