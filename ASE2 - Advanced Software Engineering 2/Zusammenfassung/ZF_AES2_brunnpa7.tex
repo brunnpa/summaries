@@ -956,4 +956,416 @@ Bspw. mit SonarLint oder SpotBugs
    \item Zyklomatische Zahl = Anzahl linear unabhängigen PFade im Programmstück $\rightarrow$ obere Grenze für die benötigten Testfälle zur Erreichung dieses Kriteriums
 \end{itemize}
 
+
+\chapter{Dynamische Test}
+ \begin{itemize}
+    \item Programme sind statische Beschreibungen von dynamischen Prozessen (Berechnungen)
+    \item Statistische Tests = Prüfen des Testobjekts
+    \item Dynamische Tests = prüfen durch Interpretation einer Beschreibung die resultierenden Prozesse
+    \item Das Testobjekt wird im dynamischen Test als auf einem Prozessor ausgeführt
+ \end{itemize}
+
+ \section{Der Testrahmen}
+ \begin{itemize}
+    \item Testobjekt ruft meist weitere Programmteile über definierte Schnittstellen auf
+    \item Diese Programmteile werden durch Platzhalter (Mock, Stubs) realisiert
+    \item Platzerhalter simulieren das Ein- und Ausgabeverhalten
+ \end{itemize}
+
+\begin{Figure}
+   \centering
+    \includegraphics[width=150px]{img/Testobjekt.png}
+        \captionof{figure}{Abbildung des Zusammenspiels zwischen Testobjekte}
+        \label{fig:Testobjekt}
+    \end{Figure}
+
+\section{Die Verfahren}
+Grundsätzlich wird zwischen Blackbox und Whitebox Verfahren unterschieden.
+
+\begin{Figure}
+   \centering
+    \includegraphics[width=150px]{img/Testverfahren.png}
+        \captionof{figure}{Abbildung der beiden Testverfahren}
+        \label{fig:Testverfahren}
+    \end{Figure}
+
+\subsection{Das wichtigste zu Blackbox-Verfahren}
+\begin{itemize}
+   \item Undurchsichtig
+   \item Keine Informationen über den Programmtext und inneren Aufbau
+   \item Beobachtung von aussen
+   \item Steuerung des Ablaufs nur durch Wahl der Eingabedaten
+   \item Sowohl funktionale, als auch nicht-funktionale Tests
+   \item Spezifikationsorientierte Verfahren (funktionale Testverfahren)
+   \subitem Modelle bzw. Anforderungen an das Testobjekt, werden zur Spezifikation des zu lösenden Problems herangezogen
+   \subitem von diesem Modell können systematisch Testfälle abgeleitet werden 
+\end{itemize}
+
+\subsection{Das wichtigste zu Whitebox-Verfahren}
+\begin{itemize}
+   \item durchsichtig
+   \item Testfälle können aufgrund der Programmstruktur des Testobjektes gewonnen werden
+   \item Informationen zum Aufbau werden für die Ableitung der Testfälle verwendet (bspw. Code und Algorithmus)
+   \item Überdeckungsgrad des Codes kann gemessen werden
+   \item Weitere Testfällen können zur Erhöhung des Überdeckungsgrad systematisch abgeleitet werden
+   \item der innere Ablauf wird analysiert
+   \item Eingriff in den Ablauf im Testobjekt möglich (bspw. für Negativtests)
+   \item für untere Teststufen und Komponenten- und Integrationstest
+\end{itemize}
+
+\subsection{Erfahrungsbasierte Testfallermittlung}
+\begin{itemize}
+   \item Nutzen Wissen und die Erfahrung von Menschen zur Ableitung der Testfälle
+   \item Wissen über die Software, ihre Verwendung und ihre Umgebung
+   \item Wissen über wahrs. Fehler und ihre Verteilung
+\end{itemize}
+
+\section{Blackbox-Verfahren}
+Dies kann mittels versch. Verfahren geprüft werden
+\begin{itemize}
+   \item Äquivalenzklassenbildung
+   \item Grenzwertanalyse
+   \item Zustandsbezogener Test
+   \item Anwendungsfallbasierter Test
+   \item Entscheidungstabellentest
+\end{itemize}
+
+\subsection{Äquivalenzklassenbildung}
+\begin{itemize}
+   \item möglichst wenig Testfälle für möglichst wirkungsvolle Tests
+   \item Spezifikation wird nach Eingabegrössen und deren Gültigkeitsbereich durchsucht
+   \subitem Je Gültigkeitsbereich wird eine eine Klasse definiert
+   \item ist vollständig, wenn alle Repräsentanten getestet sind
+\end{itemize}
+
+\textit{Beispiel:}
+Ein Sensor meldet an ein Programm die Motoröltemperatur. Ist die Öltemperatur (T) unter 50 C soll eine blaue Kontrolllampe
+leuchten, bei T über 150 C soll eine rote Kontrolllampe leuchten. Sonst soll keine der Lampen leuchten.\\
+$\Rightarrow$ Es ergibt folgende Äquivalenzklassen:
+\begin{enumerate}
+   \item T $\le$ 50 C $\rightarrow$ Repräsentat: 17 C
+   \item 50 C $\leq$ T $\leq$ 150 C $\rightarrow$ Repräsentat: 97 C
+   \item T $\ge$ 150 C $\rightarrow$ Repräsentat: 159 C
+\end{enumerate}
+
+\subsubsection{Testfälle mit mehreren Parametern}
+\begin{itemize}
+   \item Eindeutige Kennzeichnung jeder Äquivalenzklasse
+   \item gÄKn = gültige Äquivalenzklasse n
+   \item uÄKn = ungültige Äquivalenzklasse n
+   \item Pro Parameter mind zwei Äquivalenzklasse
+   \subitem eine mit gültigen Werten
+   \subitem eine mit ungültigen Werten
+   \item Bei n Paramter mit $m_i$ Äquivalenzklassen (i = 1 .. n) gibt es $\prod_{i=1..n} m_i$ unterschd. Kombinationen (testfälle) 
+\end{itemize}
+
+\subsubsection{Testfälle minimieren}
+\begin{itemize}
+   \item Testfälle aus allen Repräsentanten kombinieren und anschliessend nach Häufigkeit sortieren
+   \item Sicherstellen, dass jeder Repräsentant einer Äquivalenzklasse mit jedem Repräsentant jeder anderen Äquivalenzklasse in einem testfall zur Ausführung kommt (d.h. paarweise Kombination statt vollständige Kombination)
+   \item Minimalkriterium: Mindestens ein Repräsentant jeder Äquivalenzklasse in mind. einem Testfall
+   \item Repräsentanten ungültiger Äquivalenzklasse nicht mit Repräsentanten anderer ungültiger Äquivalenzklassen kombinieren.
+\end{itemize}
+
+\subsubsection{Testendkriterium}
+Äquivalenzklassen-Überdeckung = (Anzahl getestete ÄK / Gesamtzahl ÄK) * 100\% \\
+\textit{Beispiel:}\\
+19 AK aus Anforderungen, 15 wurden abgedeckt mit Testfällen, so gibt es eine AK-Überdeckung von 83.33\% $Rightarrow$ (15/18)*100=83.33
+
+\subsubsection{Pro/Cons}
+Vorteile
+\begin{itemize}
+   \item Anzahl der testfälle kleiner als bei unsystematischer Fehlersuche
+   \item Geeignet für Programme mit vielen versch. Ein- und Ausgabebedingungen
+\end{itemize}
+
+Nachteile:
+\begin{itemize}
+   \item Betrachtet Bedingungen für einzelne Ein- / Ausgabeparameter
+   \item Beachtung von Wechselwirkungen und Abhängigkeiten von Bedingungen sehr aufwändig
+\end{itemize}
+
+Empfehlung
+\begin{itemize}
+   \item Kombination der ÄK-Bildung mit fehlerorientierter Verfahren bspw. Grenzwertanalyse
+\end{itemize}
+
+\subsection{Grenzwertanalyse}
+\begin{itemize}
+   \item Idee: Verzweigungen- und Schleifenbedingungen haben oft Grenzbereiche, für welche die Bedingungen gerade noch zutreffen. Solche Fallunterscheidungne snd fehlerträchtig
+   \item Beste Erfolge bei Kombination mit anderen Verfahren
+   \item Bei Kombination mit AK $\rightarrow$ Grenzen der ÄK (grösster und kleinster Wert) testen und jeder Rand einer ÄK muss in einer Testdatenkombination vorkommen
+\end{itemize}
+
+\begin{Figure}
+   \centering
+    \includegraphics[width=150px]{img/Grenzwertanalyse.png}
+        \captionof{figure}{Abbildung der Grenzwertanalyse}
+        \label{fig:Grenzwertanalyse}
+    \end{Figure}
+
+    \begin{Figure}
+      \centering
+       \includegraphics[width=150px]{img/BspGrenzwertanalyse.png}
+           \captionof{figure}{Beispiel einer Grenzwertanalyse}
+           \label{fig:Beispiel Grenzwertanalyse}
+       \end{Figure}
+
+\subsubsection{Testendkriterium}
+GW-Überdeckung = (Anzahl getestete GW / Gesamtzahl GW) * 100\%
+
+\subsubsection{Pro/Cons}
+Vorteil:
+\begin{itemize}
+   \item An den Grenzen von AK sind häufiger Fehler zu finden, als innerhalb dieser Klasse
+   \item Die Grenzwertanalyse ist bei richtiger Anwendung eine der nützlichsten Methoden für den Testfallentwurf».
+   \item Effiziente Kombination mit anderen Verfahren, die Freiheitsgrade in der Wahl der Testdaten lassen
+\end{itemize}
+
+Nachteil:
+\begin{itemize}
+   \item Rezepte für die Ausawhl von testdaten schwierig anzugeben
+   \item Bestimmung aller relevanten Grenzwerte schwierig
+   \item Kreativität zur Findung von erfolgreicher Testdaten gefordert
+   \item Oft nicht effizient genug angewendet, da sie zu einfach erscheint
+\end{itemize}
+
+\subsection{Zustandbasierter Test}
+\begin{itemize}
+   \item Ausgangsbasis bildet die Spezifikatoin des Programms als Zustandsgraph (endlicher Automat)
+   \item Zustände und Zustandsübergänge sind so beschrieben
+   \item Testfall besteht aus folgenden Teilen
+   \subitem Ausgangszustand
+   \subitem Ereignis (Eingabedaten)
+   \subitem Soll-Folge-Zustand (Soll-Zustand) 
+   \item Testumfang für einen betrachteten Zustand
+   \subitem Alle Ereignisse, die zu einem Zustandswechsel führen
+   \subitem Alle Ereignisse, die auftreten können, aber ignoriert werden
+   \subitem Alle Ereignisse, die auftreten können und eine Fehlerbehandlung erfordern
+\end{itemize}
+
+\begin{Figure}
+   \centering
+    \includegraphics[width=150px]{img/Zustandsgraph.png}
+        \captionof{figure}{Abbildung eines Zustandsgraphen}
+        \label{fig:Abbildung eines Zustandsgraphen}
+    \end{Figure}
+
+Ein vollständiger zustandsbezogener Testfall umfasst folgende Informationen:
+\begin{itemize}
+   \item Anfangszustand des Testobjektes (Komponente oder System)
+   \item Eingaben für das Testobjekt
+   \item Erwartete Ausgaben bzw. das erwartete Verhalten
+   \item Erwarteter Endzustand
+\end{itemize} 
+Ferner sind für jeden im Testfall erwarteten Zustandsübergang folgende Aspekte festzulegen:
+\begin{itemize}
+   \item Zustand vor dem Übergang
+   \item Auslösendes Ereignis, das den Übergang bewirkt
+   \item Erwartete Reaktion, ausgelöst durchden Übergang
+   \item Nächster erwartet Zustand
+\end{itemize}
+
+\subsubsection{Roundtrip-Folgen}
+\begin{itemize}
+   \item Beginnend im Startzustand
+   \item Endet in einem Endzustand oder in einem Zustand, der bereits in dieser oder einer anderne Roundtrip-Folge enthalten war 
+   \item (Zustands-) Übergangsbaum
+\end{itemize}
+
+\subsubsection{Beispiel zustandsbasierter Test}
+\begin{Figure}
+   \centering
+    \includegraphics[width=150px]{img/ZustandsbasierterTestBsp.png}
+        \captionof{figure}{Beispiel eines zustandbasierten Tests}
+        \label{fig:Beispiel eines zustandbasierten Tests}
+    \end{Figure}
+
+
+\subsubsection{Arbeitsschritte}
+\begin{enumerate}
+   \item Analyse des Zustandsdiagramm
+   \item Prüfung auf Vollständigkeit $\rightarrow$ Zustandsdiagramm hinsichtlich der Vollständigkeit untersuchen
+   \item Ableiten des Übergangsbaumes für den Zustands-Konformanztest
+   \subitem Anfangzustand ist die Wurzel
+   \subitem Für jeden möglichen Übergang vom Anfangzustand zu einem Folgezustand im Zustandsdiagramm erhält der Übergangsbaum von der Wurzel aus einen Zweig zu einem Knoten, der den Nachfolgezustand repräsentiert. Am Zweig wird das Ereignis (Operation) und ggf. die Wächterbedignung notiert
+   \subitem Letze Schritt wird für jedes Blatt des Übergangsbaums so lange wiederholt, bis eine der beiden Endbedingungen eintritt: 
+   \subsubitem [A] Der dem Blatt entsprechende Zustand ist auf einer höheren EBene bereits einmal im Baum enthalten; 
+   \subsubitem [B] Der dem Blatt entsprechende Zustand ist ein Endzustand und hat somit keine weiteren Übergänge, die zu berücksichtigen wären
+   \item Erweitern des Übergangsbaumes für den Zustands-Robustheitstest
+   \subitem Robustheit unter spezifikationsverletzenden Benutzungen prüfen
+   \subitem Für Botschaften, für die aus dem betrachteten Knoten kein Übergang spezifziert ist, den Übergangsbaum um einen neuen 'Fehler-Zustand' erweitern 
+   \item Generieren der Ereignisssequenzen und Ergänzender Parameter bei Aktoinen bzw. Methodenaufrufen
+   \subitem Pfade von Wurzel zu Blätter im erweiterten Übergangsbaum als Funktions-Sequenz auffassen
+   \subitem Stimulierung des Testobjekts mit den entsprechenden Funktionsaufrufen deckt alle Zustände und Zustandsübergänge im Zustandsdiagramm ab
+   \subitem Ergänzen der Funktions-Parameter 
+   \item Ausführen der Tests und Überdeckungsmessung
+\end{enumerate}
+
+\subsubsection{Ausführen der Tests}
+\begin{itemize}
+   \item Testfälle bzw. Ereigbnisfolgen in ein Testskript verkapseln
+   \item Unter Benutzung eines Testtreibers ausführen
+   \item Zustände über zustandserhaltende Operationen ermitteln und protokollieren
+\end{itemize}
+
+\subsubsection{Testendekriterien}
+Minimalkriterium: Jeder Zustand wurde mind. einmal eingenommen\\
+Z-Überdeckung = (Anzahl getestete Z / Gesamtzahl Z) * 100 \%\\
+
+Weitere Kriterien: Jeder Zustandsübergang wurde mind. einmal ausgeführt\\
+ZÜ-Überdeckung = (Anzahl getestete ZÜ / Gesamtzahl ZÜ) *100\%\\
+\begin{itemize}
+   \item Alle spezifikationsverletzenden Zustandsübergänge wurden angeregt
+   \item Jede Aktion (Funktion) wurde mind. einmal ausgeführt
+\end{itemize}
+
+Bei hoch kritischen Anwendungen:
+\begin{itemize}
+   \item Alle Zustandsübergänge und alle Zyklen im Zustandsdiagramm
+   \item Alle Zustandsübergange in jeder bel. Reihenfolge mit allen möglichen Zuständen, auch mehrfach hintereinander
+\end{itemize}
+
+\subsection{Entscheidungstabellentest}
+\begin{itemize}
+   \item Beschreibt sehr anschaulich die (Geschäfts-) Regeln der Art "wenn...dann...sonst"
+   \item typische Anwendungssituation: Abhängig von mehreren logischen Eingabewerten
+   \item untestützen durch ihren Aufbau die Vollständigkeit des Tests
+   \item Jede Tabellenspalte (Regel) entspricht einem Testfall
+   \item Regelüberdeckung: Je Regel wird mind. ein Testfall gewählt
+   \item Das Soll-Resultat ergibt sich durch die entsprechend ausgeführten Aktionen
+\end{itemize}
+
+\begin{Figure}
+   \centering
+    \includegraphics[width=150px]{img/Entscheidungstabellentest.png}
+        \captionof{figure}{Abbildung eines Entscheidungstabellentest}
+        \label{fig:Abbildung eines Entscheidungstabellentest}
+    \end{Figure}
+
+\subsubsection{Testfälle}
+\begin{itemize}
+   \item Jede Spalte (Regel) entspricht einem Testfall
+   \subitem Voraussetzung pro Tabelle gleich
+   \subitem Bedingungen beziehen sich auf Eingaben
+   \subitem Aktionen spiegeln erwaretetes Ergebnis wider 
+   \item Überdeckungskriterien
+   \subitem Alle Bedingungen mind. einmal N und J
+   \subitem Alle Aktionen mind. einmal x
+   \subitem Alle Spalten (alle Bedingungskombinationen)
+   \item Konkrete Testdaten aus Wertebereichen abeleiten
+   \subitem Äquivalenzklassenbildung
+   \subitem Grenzwartanalyse 
+\end{itemize}
+
+
+\section{Whitebox-Testverfahren}
+\begin{itemize}
+   \item Nutzung von Informationen über das Interna eines Testobjekts
+   \item Gesucht werden 'fehleraufdeckende' Stichproben der möglichen Programmabläuge und Datenverwendung
+   \item Alle Testverfahren, die zur Herleitung oder Auswahl der Testfälle sowie zur Bestimmung der Vollständigkeit der Prüfung (Überdeckungsgrad) Information über die inere Struktur des Testobjekts hernaziehen
+   \item Strukturelle oder strukturbasierte Testverfahren genannt
+   \item codebasierte Testverfahren
+   \item Kann in allen Teststufen genutzt werden, folgende vor allem in der Komponententeststufe eingesetzt
+   \item Gängige Verfahren
+   \subitem Anweisungstest
+   \subitem Entscheidungstest (Zweigtest)
+   \subitem Test der Bedingungen
+   \subitem Pfadtest 
+\end{itemize}
+
+\subsection{Anweisungstest und Anweisungsüberdeckung}
+\begin{itemize}
+   \item einzelne Anweisungen (statements) des Testobjekts stehen im Mittelpunkt
+   \item Testfälle zu identifizeiren, die ein zuvor festgelegte Mindestquote oder auch alle Anweisungen des Testobjekts zur Ausführung bringen
+   \item Verfahren kann sehr gut an einem Kontrollflussgraphen veranschaulicht und erklärt werden
+   \item Kriterium zur Beendigung der Tests
+   \subitem Anteil der ausgeführten Anweisungen (Statement coverage) $\rightarrow$ auch C0-Mass bezeichnet 
+   \item dynamisches, kontrollflussbasiertes Testverfahren, das die mindestens einmalige Ausführung aller Anweisungen des Testobjekts fordert
+   \subitem Anweisungsüberdeckung = (Anzahl durchlaufener Anweisungen / Gesamtzahl Anweisungen) * 100 \%
+   \item Jeder Testfalll wird anhand eines Pfads durch den Kontrollflussgraphen bestimmt
+   \subitem Bei dem Testfall müssen die auf dem Pfad liegenden Kanten des Graphen durchlaufen werden, d.h. die Anweisungen (Knoten) in der entsprechenden Reihenfolge zur Ausführung kommen 
+   \subitem Häufigkeit der Ausführung spielt keine Rolle, zählt nur ob eine Anweisung ausgeführt wurde 
+   \item Wenn der zuvor festgelegte Deckungsgrad erreicht ist, wird der Test als ausreichend angesehen und beendet
+\end{itemize}
+
+\begin{Figure}
+   \centering
+    \includegraphics[width=150px]{img/Anweisungsueberdeckung.png}
+        \captionof{figure}{Beispiel Anweisungsüberdeckung}
+        \label{fig:Beispiel Anweisungsueberdeckung}
+    \end{Figure}
+
+\subsubsection{Diskussion}
+\begin{itemize}
+   \item Anweisungsüberdeckung ist in der Aussage ein schwaches Kriterium
+   \item 100\%ige Überdeckung ist in der Praxis nicht immer erreichbar
+   \subitem bspw. wenn Ausnahmebedingungen im Programm vorkommen, die während der Testphase nur mit erheblichem Aufwand oder gar nicht herzustellen sind
+   \subitem Kann auch auf Dead-Code hinweisen, wobei hier eine statische Analyse gemacht werden müsste
+\end{itemize}
+
+\subsection{Entscheidungstest und Entscheidungsüberdeckung}
+\begin{itemize}
+   \item weiteres Kriterium ist die Überdeckung der Entscheidungen
+   \item Entscheidungen im Programmtext stehen im Mittelpunkt der Untersuchung
+   \item Nicht die Ausführung wird betrachtet, sondern die Auswertung einer Entscheidung
+   \item Aufgrund des Ergebnisses wird entschieden, welche Anweisung als nächste ausgeführt wird.
+   \item Kriterium zur Beendigung:
+   \subitem Anteil der ausgeführten Programmzweige (Branch coverage)
+   \subitem Grundlage bildet in der Regel der Kontrollflussgraph (Kantenüberdeckung) $\rightarrow$ auch C1-Mass genannt
+   \item kontrollflussbasiertes Testverfahren, fordert die Überdeckung aller Entscheidungen bzw. Zweige eines testobjekts zu allen Fällen
+   \item Zweigüberdeckung zielt auf alle Zweige im Kontrollflussgraphen abzudecken
+   \subitem Zweigüberdeckung = (Anzahl durchlaufener Zweig / Gesamtzahl Zweige) * 100\% 
+\end{itemize}
+
+\begin{Figure}
+   \centering
+    \includegraphics[width=150px]{img/Entscheidungsueberdeckung.png}
+        \captionof{figure}{Beispiel Entscheidungsüberdeckung}
+        \label{fig:Beispiel Entscheidungsueberdeckung}
+    \end{Figure}
+
+    \subsubsection{Diskussion Entscheidungsüberdeckung}
+\begin{itemize}
+   \item ist das umfassendere Kriterium
+   \item Entscheidungs- oder Zweigtest braucht mehr Testfälle als beim Anweisungstest
+   \subitem Anzahl zusätzlicher hängt von der Struktur des testobjekts ab
+   \item Fehlende Anweisungen in leeren IF-Statements können erkannt werden (bei Anweisungstests nicht)
+   \item 100\% Entscheidungsüberdeckung garantiert 100\% Anweisungsüberdeckung, aber nicht umgekehrt
+   \item Entscheidungen werden unabhängig voneinander betrachet und es werden keine bestimmten Kombinationen der einzelnen Programmteile gefordert
+\end{itemize}
+
+\subsection{Test der Bedienung}
+\begin{itemize}
+   \item Wahrheitswerte
+   \item Atomare Teilbedingungen
+   \item Zusammengesetzt Bedingnugen
+   \item Entscheidungen sind zusammengesetzte Bedingungen, die den Programmablauf steuern
+   \item Bei der Zweig-/Entscheidungsüberdeckung wird ausschliesslich der ermittelte Ergebnis-Wahrheitswert einer Bedingung berücksichtigt
+   \item Als Überdeckungskriterien werden Verhältnisse zwischen den bereits erreichten und allen geforderten Wahrheitswerten der (Teil-) Bedingungen gebildet
+   \item Bei Verfahren, welche die Komplexität der Bedingungen im Programmtext des Testobjekts in den Mittelpunkt der Prüfung stellen, ist es sinnvoll, eine vollständige Prüfung (100 Prozentige Überdeckung) anzustreben
+   \item Folgendes wird betrachtet
+   \subitem Einfache Bedingungsüberdeckung (Condition Testing)
+   \subitem Mehrfachbedingungsüberdeckung (Multiple Condition Testing)
+   \subitem Modifizierter bzw. minimaler Bedingungs-/Entscheidungstest (Modified Condition Decision Coverage Testing, MCDC)
+\end{itemize}
+
+\subsubsection{Einfache Bedingungsüberdeckung}
+\begin{itemize}
+   \item kontrollflussbasiertes, dynamisches Testverfahren, das die Überdeckung der atomaren Teilbedingungen einer Entscheidung mit 'wahr' oder 'falsch' fordert
+   \item Bei n atomaren Ausdrücken mindestens 2, höchstens $2^n$ Testfälle
+   \item Bedingungsüberdeckung = (Anzahl zu wahr und falsch gesteteten atomaren Ausdrücken / Gesamtzahl atomarer Ausdrücke) * 100 \%
+\end{itemize}
+
+SLIDE 18
+
+
+
+
+
+
+
+
+
+
 \end{document}
