@@ -1357,15 +1357,113 @@ Bei hoch kritischen Anwendungen:
    \item Bedingungsüberdeckung = (Anzahl zu wahr und falsch gesteteten atomaren Ausdrücken / Gesamtzahl atomarer Ausdrücke) * 100 \%
 \end{itemize}
 
-SLIDE 18
+\subsubsection{Mehrfachbedingungsüberdeckung}
+\begin{itemize}
+   \item Teste jede Kombination der Wahrheitswerte aller atomaren Ausdrücke
+   \item Bei n atomaren Ausdrücke ist die Testfall-Anzahl $2^n$
+   \subitem Wächst exponentiell mit der Anzahl unterschiedlicher atomarer Ausdrücke
+   \item Mehrfachbedingungsüberdeckung = (Anzahl getesteter Kombinationen atomarer Ausdrücke / $2^{GesamtzahlAtomarerAusdruecke}$) * 100 \% 
+   \item Bei der Auswertung der Gesamtbedingung ergeben sich auch beide Wahrheitswerte
+   \subitem Die Mehrfachbedingungsüberdeckung erfüllt somit auch die Kriterien der Anweisungs- und Entscheidungsüberdeckung
+   \subitem Sie ist ein umfassendes Kriterium, da sie auch die Komplexität bei zusammengesetzten Bedingungen berücksichtigt 
+\end{itemize}
 
+\subsubsection{Modifizierter Bedingungs- / Entscheidungstest}
+\begin{itemize}
+   \item Teste den (Gesamt-) Ausdruck einmal zu wahr und einmal zu falsch
+   \item sowie jede Kombination von Wahrheitswerten, bei denen die Änderung des Wahrheitswertes eines atomaren Ausdrucks den Wahrheitswert des zusammengesetzten Ausdrucks ändern kann (MM-Kombination)
+   \item Minimale Mehrfachbedingungsüberdeckung = (Anzah getesteter MM-Kombinationen / Gesamtzahl MM-Kombinationen) * 100 \%
+\end{itemize}
 
+\textbf{Beispiel}
+\begin{Figure}
+   \centering
+    \includegraphics[width=150px]{img/MMBeispielI.png}
+        \captionof{figure}{Beispiel MM Kombination Frage}
+        \label{fig:Beispiel MM Kombination Frage}
+    \end{Figure}
 
+    \textbf{Beispiel}
+    \begin{Figure}
+       \centering
+        \includegraphics[width=150px]{img/MMBeispielII.png}
+            \captionof{figure}{Beispiel MM Kombination Antwort}
+            \label{fig:Beispiel MM Kombination Antwort}
+        \end{Figure}
 
+\subsection{Bewertung der Whitebox-Verfahren}
+\begin{itemize}
+   \item Grundlage aller Verfahren ist der vorliegende Programmtext
+   \item In Abhängigkeit der Komplexität der Programmstruktur können die adäquaten Testverfahren ausgewählt und angewendet werden
+   \item Anhand des Programmtextes und der ausgewählten Verfahren wird die Intesität der Tests festgelegt
+   \item Eigenen sich für untere Teststufen
+   \item bei codebasierten Whitebox-Verfahren wird gefordert, dass bestimmte Programmteile zur Ausführung kommen bzw. Entscheidungne unterschiedliche Wahrheitswerte annehmen
+   \item Zur Ermittlung der Überdeckungsmasse können entsprechende Werkzeuge genutzt werden
+\end{itemize}
 
+\section{Erfahrungsbasierte Testfallermittlung}
+\begin{itemize}
+   \item Erfolg systematischer Testverfahren hängt stark von der Qualität der Dokumente ab, auf deren Grundlage Testfälle definiert werden
+   \subitem Qualtiät bedeutet Lesbarkeit, Testbarkeit, Vollständigkeit, Eindeutigkeit, Widerspruchsfreiheit
+   \subitem Oft sind auch Formalisierungsgrad und Granularität nicht adäquat, um formale bzw. systematische Testverfahren anzuwenden
+   \item Grundidee Erfahrungsbasierte Verfahren
+   \subitem Erfahrung und Wissen der Tester wird bei der Definition von Testfällen einbezogen
+   \subitem Kompensation der mangelnder Qualität der Eingangsdokumentation durch die Erfahrung nud durch das Wissen der Tester
+   \item Beispiel für Erfahrungsbasierte Verfahren
+   \subitem Intuitives Testen (Error Guessing)
+   \subitem Checklistenbasiertes Testen
+   \subitem exploratives Testen 
+\end{itemize}
 
+\subsection{Intuitive Testfallermittlung (Error Guessing)}
+\begin{itemize}
+   \item Testentwurfsverfahren, bei dem die Erfahrung und das Wissen der Tester genutzt wreden, um vorherhzusagen, welche Fehlerzustände in einer Kopmonenten / System aufgrund der Fehlhandlung vorkommen und um Testfälle so abzuleiten, dass diese Fehler aufgedeckt werden
+   \item Methode und Herleitung oder Auswahl der Testfälle, gestützt auf Efahrung und Wissen des Testers
+   \item Systematische Vorgehensweise
+   \subitem Erstelle einen Fehlerkatalog mit möglichen Fehlerzuständen und Fehlerwirkungen
+   \subitem Entwerfe Testfälle, die auf diese Fehler abzielen 
+\end{itemize}
 
+\subsection{Checklistenbasiertes Testen}
+\begin{itemize}
+   \item Checklisten als Grundlage
+   \subitem Enthält Aspekte (Testbedingungen), die getestet werden müssen
+   \subitem Zu diesen Aspekten gehören bspw. Fehlerbehandlungen und die Ausfallsicherheit
+   \item i.d.R. werden die Listen im Laufe der Zeit erstellt und aktualisiert
+   \item Sie basieren überwiegend auf den Erfahrungen des Testers
+   \item Auch hier kann eine Art Überdeckung in Abhängigkeit der geprüften Checklisteneinträgen angegeben werden
+   \subitem Wenn alle Punkte aus der Checkliste geprüft sind, ist eine 100 \%ige Überdeckung erreicht
+\end{itemize}
 
+\subsection{Exploratives Testen}
+\begin{itemize}
+   \item Bei schlechter oder fehlender Testbasis kann sogenanntes exploratives Testen helfen
+   \item Testaktvitäten werden nahezu parallel durchgeführt
+   \item Die möglichen Elemente des Testobjekts, die einzelnen Aufgaben und Funktionen werden 'erforscht'
+   \item Dann wird entschieden, welche Teile gestestet werden sollen
+   \item Dabei werden wenige Testfälle zur Ausführung gebracht und das Ergebnis analysiert
+   \item Mit der Ausführung wird sozusagen das unbekannte Verhalten des Tstobjektes weiter geklärt
+   \item Auffälligkeiten und weitere Informationen dienen zur Erstellung der nächsten Testfälle
+   \item Zur Strukturierung des explorativen Testens können sowohl definierte Testziele als auch zeitliche Beschränkungen vorgenommen werden
+   \item Eine Beschränknug auf bestimmte Elemente des Programms, auf bestimmte Aufgaben oder Funktionen ist beim explorativen Testen Ebenfalls sinnvoll (Test Charta)
+\end{itemize}
 
+\section{Auswahl von Testverfahren}
+\begin{itemize}
+   \item allgemeines Ziel: mit wenig Aufwand ausreichend untersch. Testfälle zu erstellen, die mit einer gewissen Wahrs. vorhanende Fehlerwirkungen nachweisen
+   \item Die Verfahren zur Erstellung der Testfälle sind dabei passend auszuwählen
+   \item Einige Testverfahren besonders gut auf bestimmten Teststufen, andere auf alle Stufen
+   \item Zur Erstellung wird i.d.R. eine Kombination der Verfahren ausgewählt
+   \item Vorgehensweise kann von sehr informell bis hin zu sehr formal sein
+   \item Passende Grad an Formalität hängt vom Kontext ab, bspw:
+   \subitem Art des Testobjekts
+   \subitem Komplexität der Komponente oder des Systems
+   \subitem Einhaltung von Standards
+   \subitem Kundenanforderungen
+   \subitem Testziele
+   \subitem Risiko
+   \subitem Verfügbare Dokumentation bzw. Werkzeuge
+   \subitem Zeit und Budget 
+\end{itemize}
 
 \end{document}
